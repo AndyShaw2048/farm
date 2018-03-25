@@ -10,13 +10,16 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $fillable = [
+      'password','remember_token'
+    ];
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token'
     ];
 
     //更新当前用户的IP和登录时间
@@ -27,5 +30,11 @@ class User extends Authenticatable
                                       'last_ip'=>Request::getClientIp()
                                   ]);
         return $status;
+    }
+    
+    public static function getIP($id)
+    {
+        $user = User::findOrFail($id);
+        return $last = ['time'=>$user->last_time,'ip'=>$user->last_ip];
     }
 }
