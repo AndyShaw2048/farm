@@ -22,6 +22,9 @@ class BuyController extends Controller
     public function store(Request $request)
     {
         $goods = Goods::find($request->goods_id);
+        $goods->stocks = $goods->stocks - $request->num;
+        $goods->save();
+
         $order_id = date('Ymds') . str_pad(mt_rand(1, 99999), 5, '0', STR_PAD_LEFT);
         //订单基本信息
         $order = new Order();

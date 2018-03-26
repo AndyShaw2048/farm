@@ -43,4 +43,5 @@ Route::prefix('goods')->group(function(){
     Route::get('/','Goods\GoodsController@index');
     Route::get('/detail/{id}','Goods\GoodsController@detail')->where('id','[0-9]+');
 
+    Route::get('/category','Goods\GoodsController@category');
 });
