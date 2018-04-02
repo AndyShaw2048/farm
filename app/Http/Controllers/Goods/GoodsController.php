@@ -24,10 +24,6 @@ class GoodsController extends Controller
 
     public function category($id = null)
     {
-//        $category = Category::find(3);
-//        foreach($category->goods as $value)
-//            dump($value) ;
-
         //获取所有种类ID和名称
         $cate = Category::all();
         $cate_array = null;
@@ -38,10 +34,15 @@ class GoodsController extends Controller
         }
         //获取种类下的商品信息
         $goods_array = null;
+//        foreach ($cate_array as $key => $item) {
+//            $goods_array[$item['item_id']] = Category::find($item['item_id']);
+//        }
         foreach ($cate_array as $key => $item) {
-            $goods_array[$item['item_id']] = Category::find($item['item_id']);
+            $goods_array[$item['item_id']] = Goods::where('goods_type',$item['item_id'])
+                                                    ->where('status',1)->get();
         }
 
+//        dd($goods_array);
         return view('goods.category',['cate_array' => $cate_array,'goods_array' => $goods_array]);
     }
 }

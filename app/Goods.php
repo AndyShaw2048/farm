@@ -10,6 +10,18 @@ class Goods extends Model
     
     public function category()
     {
-        return $this->belongsToMany('App\Category','goods_category','goods_id','category_id');
+
+    }
+
+    public function setPicsAttribute($pics)
+    {
+        if (is_array($pics)) {
+            $this->attributes['pics'] = json_encode($pics);
+        }
+    }
+
+    public function getPicsAttribute($pics)
+    {
+        return json_decode($pics, true);
     }
 }

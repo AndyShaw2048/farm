@@ -13,7 +13,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return Auth::user();
+        return view('home.index',['user'=>Auth::user()]);
     }
     
     //修改密码

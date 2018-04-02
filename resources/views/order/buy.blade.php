@@ -16,6 +16,14 @@
 <form action="self" method="post">
     @csrf
     <input type="text" name="goods_id" value="{{$goods->id}}" hidden>
-    <input type="text" name="num">
+    <p>购买数量：<input type="text" name="num"></p>
+    <p>真实姓名：<input type="text" name="name"></p>
+    <p>固定电话：<input type="text" name="phone"></p>
+    <p>移动电话：<input type="text" name="mobile"></p>
+    <p>省份：<input type="text" name="province"></p>
+    <p>城市：<input type="text" name="city"></p>
+    <p>区县：<input type="text" name="district"></p>
+    <p>地址：<input type="text" name="address"></p>
+    <p>邮编：<input type="text" name="zip"></p>
     <button type="submit">Sub</button>
 </form>

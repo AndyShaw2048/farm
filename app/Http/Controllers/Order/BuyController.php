@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Order;
 use App\Goods;
 use App\Order;
 use App\OrderGoods;
+use App\OrderShipping;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -41,6 +42,18 @@ class BuyController extends Controller
         $detail->price = $goods->price;
         $detail->total_fee = $request->num * $goods->price;
         $detail->save();
+        //订单物流详情
+        $shipping = new OrderShipping();
+        $shipping->order_id = $order_id;
+        $shipping->receiver_name = $request->name;
+        $shipping->receiver_phone = $request->phone;
+        $shipping->receiver_mobile = $request->mobile;
+        $shipping->receiver_province= $request->province;
+        $shipping->receiver_city = $request->city;
+        $shipping->receiver_district = $request->district;
+        $shipping->receiver_address = $request->address;
+        $shipping->receiver_zip = $request->zip;
+        $shipping->save();
 
         return redirect()->back()->withErrors(['success'=>'交易成功']);
     }
