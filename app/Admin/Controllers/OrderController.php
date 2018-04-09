@@ -74,10 +74,16 @@ class OrderController extends Controller
     {
         return Admin::grid(Order::class, function (Grid $grid) {
 
-            $grid->id('ID')->sortable();
             $grid->order_id('订单编号');
+            $grid->user_id('用户ID');
+            $grid->buyer_message('买家备注');
+            $grid->OrderGoods()->num('购买数量');
+            $grid->OrderGoods()->title('标题');
+            $grid->OrderGoods()->price('单价');
+            $grid->OrderGoods()->total_fee('总金额');
+            $grid->OrderShipping()->receiver_name('收货人姓名');
             $grid->status('状态');
-
+            $grid->column('详细信息')->drop('order');
             $grid->filter(function($filter){
 
                 // 去掉默认的id过滤器

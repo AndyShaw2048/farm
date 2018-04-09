@@ -12,7 +12,7 @@ class GoodsController extends Controller
 {
     public function index()
     {
-        $goods = Goods::all();
+        $goods = Goods::where('status',1)->get();
         return view('goods.index',['goods'=>$goods]);
     }
 
