@@ -12,8 +12,8 @@ class Order extends Model
         return $this->hasOne(OrderGoods::class,'order_id','order_id');
     }
 
-    public function OrderShipping()
+    public function UserAddress()
     {
-        return $this->hasOne(OrderShipping::class,'order_id','order_id');
+        return $this->hasOne(UserAddress::class,'id','shipping_id');
     }
 }

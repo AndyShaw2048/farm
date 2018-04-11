@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Order;
 use App\User;
+use App\UserAddress;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -13,7 +15,10 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('home.index',['user'=>Auth::user()]);
+        $id = Auth::id();
+        $orders = Order::where('user_id',$id)->get();
+        $addresses = UserAddress::where('user_id',$id)->get();
+        return view('home.index',['user'=>Auth::user(),'orders'=>$orders,'addresses'=>$addresses]);
     }
     
     //修改密码

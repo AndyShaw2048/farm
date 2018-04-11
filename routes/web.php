@@ -24,6 +24,14 @@ Route::middleware(['auth'])->group(function(){
         //个人资料
         Route::get('/account/info','Home\InfoController@index');
         Route::post('/account/info','Home\InfoController@updateInfo');
+        Route::post('/account/avatar','Home\InfoController@updateAvatar');
+
+        //购物车
+        Route::get('/account/cart','Cart\CartController@index');
+
+        //订购管理
+        Route::get('/purchase','Order\PurchaseController@index');
+
 
         //订单查看与管理
         Route::get('/order','Order\OrderController@index');

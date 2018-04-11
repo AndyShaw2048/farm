@@ -81,7 +81,7 @@ class OrderController extends Controller
             $grid->OrderGoods()->title('标题');
             $grid->OrderGoods()->price('单价');
             $grid->OrderGoods()->total_fee('总金额');
-            $grid->OrderShipping()->receiver_name('收货人姓名');
+            $grid->UserAddress()->receiver_name('收货人姓名');
             $grid->status('状态');
             $grid->column('详细信息')->drop('order');
             $grid->filter(function($filter){
@@ -106,7 +106,6 @@ class OrderController extends Controller
     {
         return Admin::form(Order::class, function (Form $form) {
             $form->display('id', 'ID');
-
         });
     }
 }

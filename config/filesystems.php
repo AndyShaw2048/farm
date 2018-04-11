@@ -69,6 +69,12 @@ return [
             'visibility' => 'public',
             'url' => env('APP_URL').'/uploads',
         ],
+        'avatars' => [
+            'driver' => 'local',
+            'root' => public_path('/'),
+            'visibility' => 'public',
+            'url' => env('APP_URL').'/users/avatars',
+        ],
 
     ],
 

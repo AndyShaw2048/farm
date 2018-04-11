@@ -19,8 +19,9 @@ class RegisterController extends Controller
         $user->nickname = '新用户';
         $user->telephone = $request->telephone;
         $user->password = bcrypt($request->password);
-        $user->grade = 12;
-        $user->pid = 12;
+        $user->grade = 1;
+        $user->pid = 1;
+        $user->avatar = 'users/avatars/default.jpg';
         $user->save();
         return redirect('/');
     }
