@@ -2,6 +2,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('blade',function(){
+   return view('child');
+});
 //游客访问
 Route::middleware(['guest'])->group(function(){
     Route::get('/register','RegisterController@index')->name('register');
