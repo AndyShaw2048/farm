@@ -21,18 +21,18 @@
         <img style="margin-left:100px;height:50px;cursor: pointer;" src="{{url('img/农牧云.png')}}" alt="">
             <span style="margin-left:80px;cursor: pointer;">
                 <small>
-                    <a href="">首页</a>
+                    <a href="/">首页</a>
                 </small>
             </span>
             <span style="margin-left:80px;cursor: pointer;">
-                <small>云上集市</small>
+                <small><a href="/goods">云上集市</a></small>
             </span>
             <span style="margin-left:80px;cursor: pointer;">
-                <small>云上农场</small>
+                <small><a href="/cloudfarm">云上农场</a></small>
             </span>
         <strong style="margin-left:80px;cursor: pointer;">个人中心</strong>
             <span style="margin-left:80px;cursor: pointer;">
-                <small>关于我们</small>
+                <small><a href="#"></a>关于我们</small>
             </span>
     </div>
 

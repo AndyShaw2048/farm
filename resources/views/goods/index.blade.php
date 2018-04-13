@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="css/cloudShop.css" />
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" href="css/amazeui.min.css">
-<title></title>
+<title>农牧云 - 云上集市</title>
 </head>
 
 <body>
@@ -22,25 +22,25 @@
     <div class="nav-ul">
         <ul class="main-menu">
             <li>
-                <a href="index.html" id="fir-page">首页</a>
+                <a href="/" id="fir-page">首页</a>
             </li>
             <li>
-                <a href="map.html" id="shar-page">云上集市</a>
+                <a href="/goods" id="shar-page">云上集市</a>
             </li>
             <li>
-                <a href="share.html">云上农场</a>
+                <a href="/cloudfarm">云上农场</a>
             </li>
             <li>
-                <a href="partime-job.html">最新动态</a>
+                <a href="#">最新动态</a>
             </li>
             <li>
-                <a href="sell.html">关于我们</a>
+                <a href="#">关于我们</a>
             </li>
             <li>
-                <span id="login" href="">个人中心</span>
+                <span id="login" href="/home">个人中心</span>
                 <ul class="sub-menu">
                     <li>
-                        <a href="">购物车</a>
+                        <a href="/home/account/cart">购物车</a>
                     </li>
                     <li>
                         <a href="">信息中心</a>
@@ -183,7 +183,7 @@
                     <br>
                     <span>{{$good->name}}</span>
                     <span> ￥{{$good->price}}</span>
-                    <button style="margin:0 auto;" type="button" class="am-btn am-btn-danger" data-am-modal="{target: '#my-popup'}">立即购买</button>
+                    <a href="/goods/buy/{{$good->id}}" style="margin:0 auto;" type="button" class="am-btn am-btn-danger">立即购买</a>
                 </li>
                 <li>
                 @endforeach
@@ -634,69 +634,7 @@
         </div>
     </div>
 </div>
-<div class="am-popup" id="my-popup" style="height:533.5px;">
-    <div class="am-popup-inner">
-        <div class="am-popup-hd">
-            <h4 class="am-popup-title">商品详细信息</h4>
-            <span data-am-modal-close class="am-close">&times;</span>
-        </div>
-        <div class="am-popup-bd">
-            <div class="am-g">
-                <div class="am-u-sm-5">
-                    <img src="img/荔枝.jpg" alt="">
-                </div>
-                <div style="margin-left:35px;width:305px;" class="am-u-sm-5">
-                    <ul class="am-list" style="text-align:center;height:100%">
-                        <li style="height:51.6px;line-height:50px;">
-                            <span style="font-size:1.3em;font-weight: bolder;">多汁荔枝</span>
-                            <span style="margin-left:5px;color:red">
-                                <small>
-                                    <span id="price">25</span>￥/份(500g)
-                                </small>
 
-                            </span>
-                        </li>
-                        <li style="height:51.6px;line-height:50px;">
-                            <span>
-                                <strong>来源:</strong> 农牧场水果基地</span>
-                        </li>
-
-                        <li style="height:51.6px;line-height:50px;">
-                            <span id="count">购买数量:
-                                <input id="count-input" type="number" value="1" min="0" max="99">
-                            </span>
-                        </li>
-                        <li style="height:51.6px;line-height:50px;">
-                            <span>
-                                <strong>总价:
-                                    <span id="total-price">11</span>
-                                </strong>
-                            </span>
-                        </li>
-                        <li style="height:54.6px;line-height:50px;">
-                            <button id="add-cart" type="button" class="am-btn am-btn-danger">加入购物车</button>
-                        </li>
-                    </ul>
-                </div>
-
-
-            </div>
-            <div style="margin-top:20px;">
-                <ul class="am-avg-sm-3 am-thumbnails">
-                    <li>
-                        <img class="am-thumbnail" style="width:192px;height:110px;" src="img/荔枝.jpg" />
-                    </li>
-                    <li>
-                        <img class="am-thumbnail" style="width:192px;height:110px;" src="img/荔枝.jpg" />
-                    </li>
-                    <li>
-                        <img class="am-thumbnail" style="width:192px;height:110px;" src="img/荔枝.jpg" />
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="subscription">
     <div class="subscription-title">
         <h1>认购中心</h1>

@@ -1,10 +1,13 @@
 <?php
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
-Route::get('blade',function(){
-   return view('child');
+Route::get('/cloudfarm',function(){
+   return view('cloudfarm');
 });
+
+
+
 //游客访问
 Route::middleware(['guest'])->group(function(){
     Route::get('/register','RegisterController@index')->name('register');
