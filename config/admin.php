@@ -5,7 +5,7 @@ return [
     /*
      * Laravel-admin name.
      */
-    'name' => 'Farm',
+    'name' => '农牧云后台管理',
 
     /*
      * Logo in admin panel header.
@@ -37,7 +37,7 @@ return [
     /*
      * Laravel-admin html title.
      */
-    'title' => 'Admin',
+    'title' => '农牧云后台管理',
 
     /*
      * Use `https`.
@@ -140,12 +140,12 @@ return [
     |               | sidebar-mini                            |
     |---------------------------------------------------------|
      */
-    'layout' => ['sidebar-mini', 'sidebar-collapse'],
+    'layout' => ['sidebar-mini' ],
 
     /*
      * Version displayed in footer.
      */
-    'version' => '1.0.0',
+    'version' => '1.0.1',
 
     /*
      * Settings for extensions.

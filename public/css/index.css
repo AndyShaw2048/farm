@@ -52,7 +52,7 @@ a::after {
 .nav {
     position: absolute;
     height: 100px;
-    top: 100px;
+    top: 30px;
 }
 
 .nav-table td {
@@ -61,8 +61,8 @@ a::after {
     text-align: center;
 }
 
-.nav-table td:hover {
-    color: rgb(53, 144, 218);
+.nav-table td a:hover {
+    color: rgb(250, 223, 43);
 }
 
 .logo {
@@ -71,6 +71,9 @@ a::after {
 
 .logo img {
     height: 100px;
+    position: relative;
+    top:10px;
+    left: 50px;
 }
 
 .serch {

@@ -47,6 +47,10 @@ class Drop extends AbstractDisplayer
       <b>
             <table class="table table-bordered table-hover" style="table-layout:fixed;">
                 <tr>
+                    <td>头像</td>
+                    <td><img src="http://farm.com/{$this->row->avatar}" height=50/></td>
+                </tr>
+                <tr>
                     <td>用户ID</td>
                     <td>{$this->row->id}</td>
                 </tr>
@@ -64,14 +68,14 @@ class Drop extends AbstractDisplayer
                 </tr>
                 <tr>
                     <td>等级</td>
-                    <td>{$this->row->grade}</td>
+                    <td>Vip {$this->row->grade}</td>
                 </tr>
                 <tr>
                     <td>省份</td>
-                    <td>{$this->row->pid}</td>
+                    <td>四川省</td>
                 </tr>
                 <tr>
-                    <td>收获地址</td>
+                    <td>收货地址</td>
                     <td>{$this->row->address}</td>
                 </tr>
                 <tr>
@@ -100,9 +104,8 @@ EOT;
 <div class="modal fade" id="{$this->row->id}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog  modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-body" style="margin-top:100px">
+      <div class="modal-body" style="margin-top:20%;height:350px">
       <b>
-
         <div style="display:inline-block; width:49%">
                 <table class="table table-bordered table-hover" style="table-layout:fixed;">
                 <tr>
@@ -122,10 +125,6 @@ EOT;
                     <td>{$this->row->post_fee}</td>
                 </tr>
                 <tr>
-                    <td>状态</td>
-                    <td>{$this->row->status}</td>
-                </tr>
-                <tr>
                     <td>物流名称</td>
                     <td>{$this->row->shipping_name}</td>
                 </tr>
@@ -134,36 +133,33 @@ EOT;
                     <td>{$this->row->shipping_code}</td>
                 </tr>
                 <tr>
-            </table>
-        </div>
-        <div style="display:inline-block;float:right; width:49%">
-            <table class="table table-bordered table-hover" style="table-layout:fixed;">
-                <td>买家ID</td>
-                    <td>{$this->row->user_id}</td>
-                </tr>
-                <tr>
-                    <td>买家备注</td>
-                    <td>{$this->row->buyer_message}</td>
-                </tr>
-                <tr>
-                    <td>买家昵称</td>
-                    <td>{$this->row->buyer_nick}</td>
-                </tr>
-                <tr>
-                    <td>评价内容</td>
-                    <td>{$this->row->buyer_review}</td>
-                </tr>
-                <tr>
-                    <td>买家昵称</td>
-                    <td>{$this->row->buyer_nick}</td>
-                </tr>
-                <tr>
                     <td>创建时间</td>
                     <td>{$this->row->created_at}</td>
                 </tr>
                 <tr>
                     <td>更新时间</td>
                     <td>{$this->row->updated_at}</td>
+                </tr>
+                <tr>
+            </table>
+        </div>
+        <div style="display:inline-block;float:right; width:49%">
+            <table class="table table-bordered table-hover" style="table-layout:fixed;">
+                <tr>
+                    <td>买家ID</td>
+                    <td>{$this->row->user_id}</td>
+                </tr>
+                <tr>
+                    <td>买家姓名</td>
+                    <td>{$this->row->user_address['receiver_name']}</td>
+                </tr>
+                <tr>
+                    <td>买家昵称</td>
+                    <td>{$this->row->buyer_nick}</td>
+                </tr>
+                <tr>
+                    <td>买家备注</td>
+                    <td>{$this->row->buyer_message}</td>
                 </tr>
                 <tr>
                     <td>支付时间</td>
@@ -180,10 +176,6 @@ EOT;
                 <tr>
                     <td>交易关闭时间</td>
                     <td>{$this->row->close_time}</td>
-                </tr>
-                <tr>
-                    <td>收货人真实姓名</td>
-                    <td>{$this->row->ordershipping['receiver_name']}</td>
                 </tr>
             </table>
         </div>

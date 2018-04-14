@@ -24,8 +24,8 @@ class OrderController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header('订单管理');
+            $content->description('列表');
 
 //            $content->body(view('test'));
             $content->body($this->grid());
@@ -42,8 +42,8 @@ class OrderController extends Controller
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header('订单管理');
+            $content->description('编辑');
 
             $content->body($this->form()->edit($id));
         });
@@ -58,8 +58,8 @@ class OrderController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header('订单管理');
+            $content->description('新建');
 
             $content->body($this->form());
         });
@@ -93,6 +93,7 @@ class OrderController extends Controller
                 $filter->like('order_id', '订单编号');
 
             });
+            $grid->disableCreateButton();
         });
 
     }

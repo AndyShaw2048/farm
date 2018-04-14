@@ -5,7 +5,9 @@ Route::get('/', function () {
 Route::get('/cloudfarm',function(){
    return view('cloudfarm');
 });
-
+Route::get('/about',function(){
+    return view('company');
+});
 
 
 //游客访问
