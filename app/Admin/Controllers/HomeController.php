@@ -18,21 +18,14 @@ class HomeController extends Controller
             $content->header('情况总览');
 
             $content->row(Dashboard::title());
-
-            $content->row(function (Row $row) {
-
-                $row->column(4, function (Column $column) {
-                    $column->append(Dashboard::environment());
-                });
-
-                $row->column(4, function (Column $column) {
-                    $column->append(Dashboard::extensions());
-                });
-
-                $row->column(4, function (Column $column) {
-                    $column->append(Dashboard::dependencies());
-                });
-            });
+            $chart = Charts::create('line', 'highcharts')
+                           ->setView('custom.line.chart.view') // Use this if you want to use your own template
+                           ->setTitle('My nice chart')
+                           ->setLabels(['First', 'Second', 'Third'])
+                           ->setValues([5,10,20])
+                           ->setDimensions(1000,500)
+                           ->setResponsive(false);
+            $content->body(view('test', ['chart' => $chart]));
         });
     }
 }
