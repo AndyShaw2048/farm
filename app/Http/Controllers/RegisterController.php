@@ -16,13 +16,13 @@ class RegisterController extends Controller
     public function store(RegisterValidate $request)
     {
         $user = new User();
-        $user->nickname = '新用户';
+        $user->nickname = '新用户'.substr($request->telephone,7,4);
         $user->telephone = $request->telephone;
         $user->password = bcrypt($request->password);
         $user->grade = 1;
         $user->pid = 1;
         $user->avatar = 'users/avatars/default.jpg';
         $user->save();
-        return redirect('/');
+        return redirect('/login');
     }
 }

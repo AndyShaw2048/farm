@@ -15,24 +15,27 @@ class HomeController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('情况总览');
-
-            $content->row(Dashboard::title());
-
-            $content->row(function (Row $row) {
-
-                $row->column(4, function (Column $column) {
-                    $column->append(Dashboard::environment());
-                });
-
-                $row->column(4, function (Column $column) {
-                    $column->append(Dashboard::extensions());
-                });
-
-                $row->column(4, function (Column $column) {
-                    $column->append(Dashboard::dependencies());
-                });
-            });
+            $content->header('控制台');
+            $content->description('Version 2.0x');
+//            $content->row(Dashboard::title());
+//
+//            $content->row(function (Row $row) {
+//
+//                $row->column(4, function (Column $column) {
+//                    $column->append(Dashboard::environment());
+//                });
+//
+//                $row->column(4, function (Column $column) {
+//                    $column->append(Dashboard::extensions());
+//                });
+//
+//                $row->column(4, function (Column $column) {
+//                    $column->append(Dashboard::dependencies());
+//                });
+//            });
+            $content->row(view('admin.dashboard.overview'));
+            $content->row(view('admin.dashboard.charts'));
+            $content->row(view('admin.dashboard.orders'));
         });
     }
 }

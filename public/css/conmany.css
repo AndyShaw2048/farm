@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
+
+a::before {
+    color: black;
+}
+
+a::after {
+    color: black;
+}
+
+.nav-table {
+    width: 100%;
+    height: 120px;
+}
+
+.head {
+    position: fixed;
+    height: 100px;
+    z-index: 9999;
+}
+
+.nav {
+    height: 100px;
+    background: none;
+}
+
+.nav-table td {
+    font-family: 微软雅黑;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nav-table td:hover {
+    color: black(53, 144, 218);
+}
+
+.logo {
+    width: 30%;
+}
+
+.logo span {
+    font-size: 2em;
+    font-family: 华文楷体;
+    color: rgb(240, 240, 240);
+}
+
+.logo-img {
+    float: right;
+}
+
+.logo-img img {
+    height: 120px;
+    /* padding-left: 260px; */
+    margin-top: 5px;
+}
+
+.logo-title {
+    padding-top: 25px;
+    float: right;
+}
+
+.title {
+    height: 80px;
+}
+
+.serch {
+    width: 20%；
+}
+
+.am-input-group {
+    width: 70%;
+}
+
+.nav-table a {
+    color: white;
+}
+
+.content {
+    width: 80vw;
+    margin-top: 30px;
+    /* margin-bottom: 30px; */
+}
+
+.discrible {
+    margin-top: 180px;
+}
+
+.discrible span {
+    font-family: PingFangSC-Semibold;
+    font-size: 24px;
+    font-weight: 700;
+    color: #3e3a39;
+    margin-bottom: 8px;
+}
+
+.other {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.desc-list {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.desc {
+    margin-top: 20px;
+    height: 300px;
+    background-size: 100% auto;
+}
+
+.desc:first-child {
+    background-image: url("../img/牛.jpg");
+}
+
+.desc:nth-child(2) {
+    background-image: url("../img/desc1 (2).jpg");
+}
+
+.desc:last-child {
+    background-image: url("../img/desc1 (1).jpg");
+    margin-bottom: 20px;
+}
+
+.desc h1 {
+    font-size: 3em;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.desc p {
+    font-size: 2em;
+    margin-left: 120px;
+}
+
+.foot {
+    width: 100%;
+    height: 200px;
+    background: black;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: -6px;
+}
+
+.foot a {
+    color: rgb(39, 139, 197);
+}
+
+.foot p {
+    margin: 0;
+    padding: 0;
+}
+
+.foot p:first-child {
+    padding-top: 50px;
+}
+
+.foot p:last-child {
+    padding-top: 20px;
+}

@@ -15,9 +15,16 @@ use Faker\Generator as Faker;
 
 $factory->define(App\User::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
+        'nickname' => $faker->name,
+        'password' => bcrypt('secret'), // secret
+        'telephone' => $faker->phoneNumber,
         'email' => $faker->unique()->safeEmail,
-        'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+        'last_time' => $faker->time('Y-m-d H:i:s',time()),
+        'last_ip' => $faker->ipv4,
+        'grade' => $faker->numberBetween(1,8),
+        'pid' => $faker->numberBetween(1,56),
+        'avatar' => 'users/avatars/default.jpg',
+        'address' => '西华师范大学',
         'remember_token' => str_random(10),
     ];
 });

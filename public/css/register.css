@@ -1,0 +1,195 @@
+body{
+    min-width: 1500px;
+    background-color: #F9F9F9;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+button{
+    outline: none;
+}
+input{
+    outline:none;
+    border: none;
+}
+a{
+    text-decoration: none;
+}
+ul,li{
+    list-style:none;
+}
+.clearfloat:after{
+    content:"";
+    display:table;
+    height:0;
+    clear:both;
+    visibility: hidden;
+}
+.clear:before{
+    content:"";
+    display:table;
+    clear:both;
+    height:0;
+    visibility: hidden;
+}
+/*header*/
+
+header {
+    height: 130px;
+    border: 1px solid #dedede;
+}
+
+.position {
+    background-color: #4c9c55;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    padding: 0 8% 0 6%;
+}
+
+.posit li {
+    float: left;
+    list-style: none;
+    /*    width: 100px;*/
+    text-align: center;
+    margin: 0 10px;
+    color: white;
+}
+
+.load {
+    float: right;
+}
+
+.load li {
+    list-style: none;
+    float: left;
+}
+
+.load a {
+    color: black;
+    text-decoration: none;
+    color: white;
+}
+
+.load a:hover {
+    color: #db9019;
+}
+
+
+/*logo*/
+
+.logo {
+    height: 95px;
+    width: 25%;
+    margin-left: 3%;
+    float: left;
+}
+
+/*����*/
+header .tabs{
+    height:95px;
+    width:40%;
+    float:right;
+    position: relative;
+}
+header .tabs .tab_item{
+    display: inline-block;
+    width:20%;
+    line-height:95px;
+    text-align: center;
+    z-index:200;
+    position: relative;
+}
+header .tabs .tab_item a{
+    display:inline-block;
+    width:100%;
+    height:95px;
+    z-index:250;
+    font-family: "΢���ź�";
+    color:#474747;
+    font-size:18px;
+    font-weight: 100;
+}
+header .tabs .moving_bg{
+    width:20%;
+    height:95px;
+    background-color:#4c9c55 ;
+    position: absolute;
+    z-index:190;
+}
+/***********container***********/
+main{
+    width:100%;
+}
+.container{
+    width:100%;
+    height:650px;
+    background-image: url("../img/register_bg.png");
+    background-size: cover;
+
+}
+.container .register{
+    width:24%;
+    height:70%;
+    background: rgba(255,255,255,0.5);
+    margin-top:3%;
+    margin-left:65%;
+    border-radius: 14px;
+    box-shadow:3px 3px 20px #b6cdc5;
+    box-sizing: border-box;
+    padding-top:0px;
+}
+.container .register .register_title{
+    width:95%;
+    height:157px;
+    margin:0 auto;
+    background-image: url("../img/register_title.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top:1px;
+}
+.container .register form{
+    width:87%;
+    margin:0 auto;
+}
+.container .register p{
+    display:inline-block;
+}
+.container .register .input{
+    display:inline-block;
+    width:70%;
+    height: 40px;
+    font-size: 14px;
+    text-indent: 10px;
+    border: 1px solid #acd598;
+    border-radius: 6px;
+    margin-bottom:10px;
+    box-sizing: border-box;
+    padding:0 5px;
+}
+.container .register form .input:focus{
+    border:1px solid #36A601;
+}
+.container .register span{
+    color:#36A601;
+    font-size:18px;
+    font-family: "΢���ź�";
+    vertical-align: middle;
+    margin-right:10px;
+}
+.container .register form .btn{
+    width:100%;
+    height:40px;
+    background-color: #54af48;
+    border-radius: 6px;
+    margin-top:10px;
+    color: #fff;
+    font-size: 17px;
+}
+/******/
+footer iframe{
+    width:100%;
+    height:306px;
+    margin-bottom:30px;
+}

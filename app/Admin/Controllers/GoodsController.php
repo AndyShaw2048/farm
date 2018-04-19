@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Category;
+use App\Farm;
 use App\Goods;
 
 use App\GoodsCategory;
@@ -13,6 +14,9 @@ use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
 use App\Admin\Extensions\Tools\ShelfPost;
+use Mockery\CountValidator\Exception;
+use Illuminate\Support\MessageBag;
+
 
 class GoodsController extends Controller
 {
@@ -77,7 +81,15 @@ class GoodsController extends Controller
         return Admin::grid(Goods::class, function (Grid $grid) {
             $grid->id('编号')->sortable();
             $grid->name('名称');
-            $grid->description('描述')->editable('textarea');
+            $grid->description('描述')->display(function($value){
+                if(!$value)
+                    return '无';
+                return str_limit($value,50,'...');
+            });
+            $grid->farm('产地')->display(function($value){
+                $kind = Farm::GetNameByID($value);
+                return "<span class='label label-primary'>{$kind}</span>";
+            });
             $grid->goods_type('种类')->display(function($value){
                 $kind = Category::GetNameByID($value);
                 return "<span class='label label-success'>{$kind}</span>";
@@ -120,11 +132,25 @@ class GoodsController extends Controller
                 'on'  => ['value' => 1, 'text' => '上架', 'color' => 'success'],
             ];
             $form->switch('status','状态')->states($states);
-            $form->select('goods_type','分类')->options('/api/category');
+            $form->select('goods_type','分类')->options('/api/category')->rules('required',[
+                'required' => '请选择水果分类'
+            ]);
+            $form->select('farm','农牧场')->options('/api/farm')->rules('required',[
+                'required' => '请选择农牧场'
+            ]);
             $form->image('logo','Logo')->removable()->uniqueName();
             $form->multipleImage('pics','实物图')->removable()->uniqueName();
             $form->display('created_at', '创建于');
             $form->display('updated_at', '更新于');
+//            $form->saving(function (Form $form){
+//                if($form->goods_type == null){
+//                    $error = new MessageBag([
+//                                                'title' => '请选择物品种类',
+//                                            ]);
+//
+//                    return back()->with(compact('error'));
+//                }
+//            });
         });
     }
 }

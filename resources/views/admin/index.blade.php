@@ -40,6 +40,7 @@
 
     {{--<script src="/layui/layui.js"></script>--}}
     {{--<link rel="stylesheet" href="/layui/css/layui.css" media="all">--}}
+    <script src="js/echarts.js"></script>
 
 </head>
 

@@ -1,14 +1,12 @@
-
-
 <!DOCTYPE html>
 <html>
 
 <head lang="en">
     <meta charset="UTF-8">
     <title>农牧云——登陆</title>
-    <link rel="stylesheet" href="layui/css/layui.css">
-    <link rel="stylesheet" href="css/login.css" />
-    <link rel="stylesheet" href="css/footer.css"/>
+    <link rel="stylesheet" href="{{url('layui/css/layui.css')}}">
+    <link rel="stylesheet" href="{{url('css/login.css')}}" />
+    <link rel="stylesheet" href="{{url('css/footer.css')}}"/>
 </head>
 
 <body>
@@ -21,14 +19,13 @@
             <li>县</li>
         </ul>
         <ul class="load">
-            <li><a href="#">登陆/注册</a></li>
+            <li><a href="/login">登陆/注册</a></li>
         </ul>
     </div>
     <div>
         <div class="logo"></div>
         <div class='tabs'>
-            <div class='moving_bg'></div>
-            <span class='tab_item'><a href="#">首页</a></span><span class='tab_item'><a href="#">关于我们</a></span><span class='tab_item'><a href="#">用户中心</a></span><span class='tab_item'><a href="#">云上集市</a></span><span class='tab_item'><a href="#">云上农场</a></span>
+            <div class='moving_bg'></div><span class='tab_item'><a href="/">首页</a></span><span class='tab_item'><a href="/about">关于我们</a></span><span class='tab_item'><a href="/home">用户中心</a></span><span class='tab_item'><a href="/goods">云上集市</a></span><span class='tab_item'><a href="/cloudfarm">云上农场</a></span>
         </div>
     </div>
 </header>
@@ -69,7 +66,7 @@
                 </select>
                 <input type="submit" value="登录" class="btn" />
             </form>
-            <a href="#" class="free">免费注册></a>
+            <a href="/register" class="free">免费注册></a>
             <a href="#" class="forget">忘记密码?</a>
         </div>
     </div>
@@ -77,27 +74,25 @@
 <footer>
     <div id="foot-box">
         <div>
-            <img src="img/rg.png">
+            <img src="{{url('img/rg.png')}}">
             <p>认购</p>
         </div>
         <div>
-            <img src="img/green.png">
+            <img src="{{url('img/green.png')}}">
             <p>绿色</p>
         </div>
         <div>
-            <img src="img/gx.png">
+            <img src="{{url('img/gx.png')}}">
             <p>共享</p>
         </div>
         <div>
-            <img src="img/fp.png">
+            <img src="{{url('img/fp.png')}}">
             <p>扶贫</p>
         </div>
         <p style="clear:both;"></p>
     </div>
     <div id="foot-other">
-
         <div class="logo">
-
         </div>
         <!-- 2、中 ：买家帮助，卖家帮助 ...-->
         <div class="foot-list">
@@ -140,8 +135,8 @@
                     <a href="#">联系我们</a>
                 </li>
                 <li>
-                    <img src="img/wechat.png">
-                    <img src="img/sinablog.png">
+                    <img src="{{url('img/wechat.png')}}">
+                    <img src="{{url('img/sinablog.png')}}">
                 </li>
             </ul>
         </div>
@@ -149,13 +144,13 @@
         <div class="client">
             <!-- 1、二维码 ：右浮动 -->
             <div class="qrCode">
-                <img src="img/erweima.png">
+                <img src="{{url('img/erweima.png')}}">
             </div>
             <!-- 2、农牧云客户端 ：右浮动-->
             <div class="service">
                 <p>农牧云客户端</p>
-                <img src="img/ios.png">
-                <img src="img/android.png">
+                <img src="{{url('img/ios.png')}}">
+                <img src="{{url('img/android.png')}}">
             </div>
         </div>
 

@@ -17,5 +17,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//获取种类目录
-Route::get('/category','ApiDataController@getCategory');
+
+Route::get('/category','ApiDataController@getCategory');//获取种类目录
+Route::get('/farm','ApiDataController@getFarm');//获取农牧场目录
