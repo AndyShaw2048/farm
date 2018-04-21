@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
+
+    <link href="{{url('css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="{{url('css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{url('css/amazeui.min.css')}}">
+    <link rel="stylesheet" href="{{url('css/style.css')}}" type="text/css" media="all" />
     <link rel="stylesheet" type="text/css" href="{{url('css/cloudShop.css')}}" />
     <script src="{{url('assets/js/jquery.js')}} " type="text/javascript " charset="utf-8 "></script>
     <script src="{{url('assets/js/amazeui.js')}} "></script>
@@ -20,14 +24,13 @@
                         <img class="title" src="{{url('img/标题.png')}}" alt="">
                     </div>
                     <div class="logo-img">
-                        <img src="{{url('img/农牧云1.png')}}" alt="">
+                        <img src="{{url('img/农牧云3.png')}}" alt="">
                     </div>
-
                 </td>
                 <td>
                     <a href="/">首页
                         <br>
-                        <span>Home&nbsp; Page</span>
+                        <span>Home&nbsp;Page</span>
                     </a>
 
                 </td>
@@ -110,16 +113,16 @@
                     <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
                         <ul class="am-slides">
                             <li>
-                                <img src="{{url('img/shop-carousel1.jpg')}}" />
+                                <img src="img/shop-carousel1.jpg" />
                             </li>
                             <li>
-                                <img src="{{url('img/shop-carousel2.jpg')}}" />
+                                <img src="img/shop-carousel2.jpg" />
                             </li>
                             <li>
-                                <img src="{{url('img/shop-carousel3.jpg')}}" />
+                                <img src="img/shop-carousel3.jpg" />
                             </li>
                             <li>
-                                <img src="{{url('img/shop-carousel4.jpg')}}" />
+                                <img src="img/shop-carousel4.jpg" />
                             </li>
                         </ul>
                     </div>
@@ -141,10 +144,11 @@
 
                     </div>
                     <div class="food-name">
-                        <span>多汁猕猴桃</span>
-                        <span>清甜蜜柚</span>
-                        <span>柑橘</span>
-                        <span>石榴</span>
+                        @foreach($goods as $good)
+                            @if($good->goods_type == 1)
+                            <a href="/goods/buy/{{$good->id}}">{{$good->name}}</a>
+                            @endif
+                        @endforeach
                     </div>
                 </div>
                 <div class="right-side" id="right-side-2">
@@ -157,10 +161,11 @@
 
                     </div>
                     <div class="food-name">
-                        <span>菠菜</span>
-                        <span>大白菜</span>
-                        <span>莴苣</span>
-                        <span>空心菜</span>
+                        @foreach($goods as $good)
+                            @if($good->goods_type == 4)
+                                <a href="/goods/buy/{{$good->id}}">{{$good->name}}</a>
+                            @endif
+                        @endforeach
                     </div>
                 </div>
                 <div class="right-side" id="right-side-3">
@@ -173,10 +178,11 @@
 
                     </div>
                     <div class="food-name">
-                        <span>精品猪后腿肉</span>
-                        <span>牛腿肉</span>
-                        <span>牛腩</span>
-                        <span>滋补羊肉</span>
+                        @foreach($goods as $good)
+                            @if($good->goods_type == 3)
+                                <a href="/goods/buy/{{$good->id}}">{{$good->name}}</a>
+                            @endif
+                        @endforeach
                     </div>
                 </div>
                 <div class="right-side" id="right-side-4">
@@ -189,731 +195,273 @@
 
                     </div>
                     <div class="food-name">
-                        <span>黑鸡蛋</span>
-                        <span>鸭蛋</span>
-                        <span>鹅蛋</span>
-                        <span>土鸡蛋</span>
+                        @foreach($goods as $good)
+                            @if($good->goods_type == 5)
+                                <a href="/goods/buy/{{$good->id}}">{{$good->name}}</a>
+                            @endif
+                        @endforeach
                     </div>
                 </div>
             </div>
-            <img id="big-img" style="width: 100%" src="{{url('img/集市3.png')}}" alt=" ">
+            <img id="big-img" style="width: 100%" src="img/集市3.png" alt=" ">
         </div>
 
     </div>
 </div>
-<div class="body">
 
+<div class="body">
     <div class="am-g commodity-list">
         <div style="clear:both"></div>
         <div class="hot-goods" id="hot-goods">
             <table cellspacing="0">
                 <tr class="cloud-shop">
-                    <td colspan="4 ">云上集市</td>
+
                 </tr>
                 <tr class="hot-title">
-                    <td colspan="4 ">******************瓜果蔬菜******************</td>
+                    <td colspan="4 ">
+                        <img src="img/瓜果蔬菜.png" alt="">
+                        <div style="height: 10px"></div>
+                    </td>
                 </tr>
                 <tr class="kinds">
                     <td id="kinds1" class="hot-goods-class">
                         <p>
                             <i class="fa fa-bars " aria-hidden="true "></i>
                         </p>
-                        <p>热门瓜果蔬菜</p>
+                        <p>全部商品</p>
                     </td>
                     <td id="kinds2">
                         <p>
                             <i class="fa fa-coffee " aria-hidden="true "></i>
                         </p>
-                        <p>柑橘类</p>
+                        <p>瓜果类</p>
                     </td>
                     <td id="kinds3">
                         <p>
                             <i class="fa fa-graduation-cap " aria-hidden="true "></i>
                         </p>
-                        <p>瓜类</p>
+                        <p>蔬菜类</p>
                     </td>
                     <td id="kinds4">
                         <p>
                             <i class="fa fa-mobile " aria-hidden="true "></i>
                         </p>
-                        <p>其他</p>
+                        <p>其他类</p>
                     </td>
                 </tr>
 
             </table>
             <ul class="hot-goods-img" id="hot-goods-1">
-                <li>
-                    <div class="goods-li">
-                        <div class="goods-imgs">
-                            <img src="img/多汁石榴.jpg" alt=" ">
+                @foreach($goods as $good)
+                    @if($good->goods_type == 1 || $good->goods_type == 4)
+                    <li>
+                        <div class="goods-li">
+                            <div class="goods-imgs">
+                                <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
+                            </div>
+                            <span class="goods-price">￥{{$good->price}}</span>
+                            <span class="sales-volume">月销量: {{$good->sales}}</span>
+                            <br>
+                            <p class="goods-desc">
+                                <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
+                            </p>
+                                <span class="goods-origin">{{$good->thisFarm->name}}</span>
+                            <br>
                         </div>
-                        <span class="goods-price">￥25.00</span>
-                        <span class="express-delivery">包邮</span>
-                        <span class="sales-volume">354人付款</span>
-                        <br>
-                        <p class="goods-desc">
-                            <strong>描述:</strong> 每份500g，多汁石榴新鲜，每颗籽都饱满、清甜，让你流连忘返</p>
-                            <span class="goods-disc">
-                                <strong>来自:</strong> 农牧云水果基地</span>
-                        <br>
-                            <span>
-                                <strong>
-                                    <strong>名称:</strong>
-                                </strong>
-                            </span>
-                        <span class="goods-name">多汁石榴</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="goods-li">
-                        <div class="goods-imgs">
-                            <img src="img/多汁石榴.jpg" alt=" ">
-                        </div>
-                        <span class="goods-price">￥25.00</span>
-                        <span class="express-delivery">包邮</span>
-                        <span class="sales-volume">354人付款</span>
-                        <br>
-                        <p class="goods-desc">
-                            <strong>描述:</strong>每份500g，多汁石榴新鲜，每颗籽都饱满、清甜，让你流连忘返</p>
-                        <!-- <br> -->
-                            <span class="goods-disc">
-                                <strong>来自:</strong>农牧云水果基地</span>
-                        <br>
-                            <span>
-                                <strong>名称:</strong>
-                            </span>
-                        <span class="goods-name">多汁石榴</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="goods-li">
-                        <div class="goods-imgs">
-                            <img src="img/多汁石榴.jpg" alt=" ">
-                        </div>
-                        <span class="goods-price">￥25.00</span>
-                        <span class="express-delivery">包邮</span>
-                        <span class="sales-volume">354人付款</span>
-                        <br>
-                        <p class="goods-desc">
-                            <strong>描述:</strong>每份500g，多汁石榴新鲜，每颗籽都饱满、清甜，让你流连忘返</p>
-                        <!-- <br> -->
-                            <span class="goods-disc">
-                                <strong>来自:</strong>农牧云水果基地</span>
-                        <br>
-                            <span>
-                                <strong>名称:</strong>
-                            </span>
-                        <span class="goods-name">多汁石榴</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="goods-li">
-                        <div class="goods-imgs">
-                            <img src="img/多汁石榴.jpg" alt=" ">
-                        </div>
-                        <span class="goods-price">￥25.00</span>
-                        <span class="express-delivery">包邮</span>
-                        <span class="sales-volume">354人付款</span>
-                        <br>
-                        <p class="goods-desc">
-                            <strong>描述:</strong>每份500g，多汁石榴新鲜，每颗籽都饱满、清甜，让你流连忘返</p>
-                        <!-- <br> -->
-                            <span class="goods-disc">
-                                <strong>来自:</strong>农牧云水果基地</span>
-                        <br>
-                            <span>
-                                <strong>名称:</strong>
-                            </span>
-                        <span class="goods-name">多汁石榴</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="goods-li">
-                        <div class="goods-imgs">
-                            <img src="img/多汁石榴.jpg" alt=" ">
-                        </div>
-                        <span class="goods-price">￥25.00</span>
-                        <span class="express-delivery">包邮</span>
-                        <span class="sales-volume">354人付款</span>
-                        <br>
-                        <p class="goods-desc">
-                            <strong>描述:</strong>每份500g，多汁石榴新鲜，每颗籽都饱满、清甜，让你流连忘返</p>
-                        <!-- <br> -->
-                            <span class="goods-disc">
-                                <strong>来自:</strong>农牧云水果基地</span>
-                        <br>
-                            <span>
-                                <strong>名称:</strong>
-                            </span>
-                        <span class="goods-name">多汁石榴</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="goods-li">
-                        <div class="goods-imgs">
-                            <img src="img/多汁石榴.jpg" alt=" ">
-                        </div>
-                        <span class="goods-price">￥25.00</span>
-                        <span class="express-delivery">包邮</span>
-                        <span class="sales-volume">354人付款</span>
-                        <br>
-                        <p class="goods-desc">
-                            <strong>描述:</strong>每份500g，多汁石榴新鲜，每颗籽都饱满、清甜，让你流连忘返</p>
-                        <!-- <br> -->
-                            <span class="goods-disc">
-                                <strong>来自:</strong>农牧云水果基地</span>
-                        <br>
-                            <span>
-                                <strong>名称:</strong>
-                            </span>
-                        <span class="goods-name">多汁石榴</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="goods-li">
-                        <div class="goods-imgs">
-                            <img src="img/多汁石榴.jpg" alt=" ">
-                        </div>
-                        <span class="goods-price">￥25.00</span>
-                        <span class="express-delivery">包邮</span>
-                        <span class="sales-volume">354人付款</span>
-                        <br>
-
-                        <p class="goods-desc">
-                            <strong>描述:</strong>每份500g，多汁石榴新鲜，每颗籽都饱满、清甜，让你流连忘返</p>
-                        <!-- <br> -->
-                            <span class="goods-disc">
-                                <strong>来自:</strong>农牧云水果基地</span>
-                        <br>
-                            <span>
-                                <strong>名称:</strong>
-                            </span>
-                        <span class="goods-name">多汁石榴</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="goods-li">
-                        <div class="goods-imgs">
-                            <img src="img/多汁石榴.jpg" alt=" ">
-                        </div>
-                        <span class="goods-price">￥25.00</span>
-                        <span class="express-delivery">包邮</span>
-                        <span class="sales-volume">354人付款</span>
-                        <br>
-                        <p class="goods-desc">
-                            <strong>描述:</strong>每份500g，多汁石榴新鲜，每颗籽都饱满、清甜，让你流连忘返</p>
-                        <!-- <br> -->
-                            <span class="goods-disc">
-                                <strong>来自:</strong>农牧云水果基地</span>
-                        <br>
-                            <span>
-                                <strong>名称:</strong>
-                            </span>
-                        <span class="goods-name">多汁石榴</span>
-                    </div>
-                </li>
+                    </li>
+                    @endif
+                @endforeach
             </ul>
             <ul class="hot-goods-img" id="hot-goods-2">
-                <li>
-                    <img src="img/多汁石榴.jpg" alt=" ">
-                    <br>
-                    <span>多汁石榴</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/荔枝.jpg" alt=" ">
-                    <br>
-                    <span>荔枝</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/多汁石榴.jpg" alt=" ">
-                    <br>
-                    <span>多汁石榴</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/荔枝.jpg" alt=" ">
-                    <br>
-                    <span>荔枝</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
+                @foreach($goods as $good)
+                    @if($good->goods_type == 1)
+                        <li>
+                            <div class="goods-li">
+                                <div class="goods-imgs">
+                                    <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
+                                </div>
+                                <span class="goods-price">￥{{$good->price}}</span>
+                                <span class="sales-volume">月销量: {{$good->sales}}</span>
+                                <br>
+                                <p class="goods-desc">
+                                    <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
+                                </p>
+                                <span class="goods-origin">{{$good->thisFarm->name}}</span>
+                                <br>
+                            </div>
+                        </li>
+                    @endif
+                @endforeach
             </ul>
             <ul class="hot-goods-img" id="hot-goods-3">
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/荔枝.jpg" alt=" ">
-                    <br>
-                    <span>荔枝</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/多汁石榴.jpg" alt=" ">
-                    <br>
-                    <span>多汁石榴</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/荔枝.jpg" alt=" ">
-                    <br>
-                    <span>荔枝</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/多汁石榴.jpg" alt=" ">
-                    <br>
-                    <span>多汁石榴</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
+                @foreach($goods as $good)
+                    @if($good->goods_type == 4)
+                        <li>
+                            <div class="goods-li">
+                                <div class="goods-imgs">
+                                    <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
+                                </div>
+                                <span class="goods-price">￥{{$good->price}}</span>
+                                <span class="sales-volume">月销量: {{$good->sales}}</span>
+                                <br>
+                                <p class="goods-desc">
+                                    <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
+                                </p>
+                                <span class="goods-origin">{{$good->thisFarm->name}}</span>
+                                <br>
+                            </div>
+                        </li>
+                    @endif
+                @endforeach
             </ul>
             <ul class="hot-goods-img" id="hot-goods-4">
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/多汁石榴.jpg" alt=" ">
-                    <br>
-                    <span>多汁石榴</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/荔枝.jpg" alt=" ">
-                    <br>
-                    <span>荔枝</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/多汁石榴.jpg" alt=" ">
-                    <br>
-                    <span>多汁石榴</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/荔枝.jpg" alt=" ">
-                    <br>
-                    <span>荔枝</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
+                @foreach($goods as $good)
+                    @if($good->goods_type == 1)
+                        <li>
+                            <div class="goods-li">
+                                <div class="goods-imgs">
+                                    <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
+                                </div>
+                                <span class="goods-price">￥{{$good->price}}</span>
+                                <span class="sales-volume">月销量: {{$good->sales}}</span>
+                                <br>
+                                <p class="goods-desc">
+                                    <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
+                                </p>
+                                <span class="goods-origin">{{$good->thisFarm->name}}</span>
+                                <br>
+                            </div>
+                        </li>
+                    @endif
+                @endforeach
             </ul>
         </div>
         <div style="clear:both"></div>
         <div class="hot-goods" id="hot-goods">
             <table cellspacing="0 ">
                 <tr class="hot-title meat" id="meat">
-                    <td colspan="4 ">******************牧产品******************</td>
+                    <td colspan="4 ">
+                        <div style="height:50px;"></div>
+                        <img src="img/农牧产品.png" alt="">
+                        <div style="height:10px;"></div>
+                    </td>
                 </tr>
                 <tr class="kinds">
                     <td id="meat1" class="hot-goods-class">
                         <p>
                             <i class="fa fa-bars " aria-hidden="true"></i>
                         </p>
-                        <p>热门水果</p>
+                        <p>所有商品</p>
                     </td>
                     <td id="meat2">
                         <p>
                             <i class="fa fa-coffee" aria-hidden="true"></i>
                         </p>
-                        <p>柑橘类</p>
+                        <p>家禽类</p>
                     </td>
                     <td id="meat3">
                         <p>
                             <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                         </p>
-                        <p>瓜类</p>
+                        <p>禽蛋类</p>
                     </td>
                     <td id="meat4">
                         <p>
                             <i class="fa fa-mobile" aria-hidden="true"></i>
                         </p>
-                        <p>其他</p>
+                        <p>鲜肉类</p>
                     </td>
                 </tr>
 
             </table>
             <ul class="hot-goods-img" id="hot-meat-1">
-                <li>
-                    <img src="img/多汁石榴.jpg" alt=" ">
-                    <br>
-                    <span>多汁石榴</span>
-                    <span> ￥25.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥25.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/多汁石榴.jpg" alt=" ">
-                    <br>
-                    <span>多汁石榴</span>
-                    <span> ￥5.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥15.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/荔枝.jpg" alt=" ">
-                    <br>
-                    <span>荔枝</span>
-                    <span> ￥25.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥25.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/多汁石榴.jpg" alt=" ">
-                    <br>
-                    <span>多汁石榴</span>
-                    <span> ￥5.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥15.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
+                @foreach($goods as $good)
+                    @if($good->goods_type == 2 || $good->goods_type == 3 || $good->goods_type == 5 )
+                        <li>
+                            <div class="goods-li">
+                                <div class="goods-imgs">
+                                    <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
+                                </div>
+                                <span class="goods-price">￥{{$good->price}}</span>
+                                <span class="sales-volume">月销量: {{$good->sales}}</span>
+                                <br>
+                                <p class="goods-desc">
+                                    <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
+                                </p>
+                                <span class="goods-origin">{{$good->thisFarm->name}}</span>
+                                <br>
+                            </div>
+                        </li>
+                    @endif
+                @endforeach
             </ul>
             <ul class="hot-goods-img" id="hot-meat-2">
-                <li>
-                    <img src="img/多汁石榴.jpg" alt=" ">
-                    <br>
-                    <span>多汁石榴</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/荔枝.jpg" alt=" ">
-                    <br>
-                    <span>荔枝</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/多汁石榴.jpg" alt=" ">
-                    <br>
-                    <span>多汁石榴</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/荔枝.jpg" alt=" ">
-                    <br>
-                    <span>荔枝</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥26.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
+                @foreach($goods as $good)
+                    @if($good->goods_type == 2)
+                        <li>
+                            <div class="goods-li">
+                                <div class="goods-imgs">
+                                    <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
+                                </div>
+                                <span class="goods-price">￥{{$good->price}}</span>
+                                <span class="sales-volume">月销量: {{$good->sales}}</span>
+                                <br>
+                                <p class="goods-desc">
+                                    <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
+                                </p>
+                                <span class="goods-origin">{{$good->thisFarm->name}}</span>
+                                <br>
+                            </div>
+                        </li>
+                    @endif
+                @endforeach
             </ul>
             <ul class="hot-goods-img" id="hot-meat-3">
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/荔枝.jpg" alt=" ">
-                    <br>
-                    <span>荔枝</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/多汁石榴.jpg" alt=" ">
-                    <br>
-                    <span>多汁石榴</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/荔枝.jpg" alt=" ">
-                    <br>
-                    <span>荔枝</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/多汁石榴.jpg" alt=" ">
-                    <br>
-                    <span>多汁石榴</span>
-                    <span> ￥27.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
+                @foreach($goods as $good)
+                    @if($good->goods_type == 5)
+                        <li>
+                            <div class="goods-li">
+                                <div class="goods-imgs">
+                                    <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
+                                </div>
+                                <span class="goods-price">￥{{$good->price}}</span>
+                                <span class="sales-volume">月销量: {{$good->sales}}</span>
+                                <br>
+                                <p class="goods-desc">
+                                    <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
+                                </p>
+                                <span class="goods-origin">{{$good->thisFarm->name}}</span>
+                                <br>
+                            </div>
+                        </li>
+                    @endif
+                @endforeach
             </ul>
             <ul class="hot-goods-img" id="hot-meat-4">
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/多汁石榴.jpg" alt=" ">
-                    <br>
-                    <span>多汁石榴</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/荔枝.jpg" alt=" ">
-                    <br>
-                    <span>荔枝</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/多汁石榴.jpg" alt=" ">
-                    <br>
-                    <span>多汁石榴</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/猕猴桃.jpg" alt=" ">
-                    <br>
-                    <span>猕猴桃</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
-                <li>
-                    <img src="img/荔枝.jpg" alt=" ">
-                    <br>
-                    <span>荔枝</span>
-                    <span> ￥28.00</span>
-                    <button style="margin:0 auto; " type="button" class="am-btn am-btn-danger" data-am-modal="{target:
-                        '#my-popup'} ">立即购买</button>
-                </li>
+                @foreach($goods as $good)
+                    @if($good->goods_type == 3)
+                        <li>
+                            <div class="goods-li">
+                                <div class="goods-imgs">
+                                    <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
+                                </div>
+                                <span class="goods-price">￥{{$good->price}}</span>
+                                <span class="sales-volume">月销量: {{$good->sales}}</span>
+                                <br>
+                                <p class="goods-desc">
+                                    <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
+                                </p>
+                                <span class="goods-origin">{{$good->thisFarm->name}}</span>
+                                <br>
+                            </div>
+                        </li>
+                    @endif
+                @endforeach
             </ul>
         </div>
     </div>
 </div>
-<div class="am-popup " id="my-popup" style="height:533.5px;">
+<div class="am-popup" id="my-popup" style="height:533.5px;">
     <div class="am-popup-inner">
         <div class="am-popup-hd">
             <h4 class="am-popup-title">商品详细信息</h4>
@@ -976,72 +524,9 @@
         </div>
     </div>
 </div>
-<div class="subscription">
-    <div class="subscription-title">
-        <h1>认购中心</h1>
-        <p class="subscription-disc">多种自然生长牲畜类任你领养</p>
-        <p class="subscription-line">&nbsp&nbsp&nbsp&nbsp</p>
-    </div>
-    <div class="subscription-animals">
-        <div class="animals-img">
-            <img src="img/清甜雪梨.jpg" alt=" ">
-            <div class="animals-buy ">
-                <h1>农牧云农场</h1>
-                <h2>清甜雪梨</h2>
-                <p>￥30/期
-                    <span>(共3期)</span>
-                </p>
-                <button>确定认购</button>
-            </div>
-        </div>
-        <div class="animals-disc">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨</div>
-        <div style="clear:both"></div>
-
-        <div class="animals-disc">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨</div>
-        <div class="animals-img">
-            <img src="img/清甜雪梨.jpg" alt=" ">
-            <div class="animals-buy ">
-                <h1>农牧云农场</h1>
-                <h2>清甜雪梨</h2>
-                <p>￥30/期
-                    <span>(共3期)</span>
-                </p>
-                <button>确定认购</button>
-            </div>
-        </div>
-        <div class="animals-img">
-            <img src="img/清甜雪梨.jpg" alt=" ">
-            <div class="animals-buy">
-                <h1>农牧云农场</h1>
-                <h2>清甜雪梨</h2>
-                <p>￥30/期
-                    <span>(共3期)</span>
-                </p>
-                <button>确定认购</button>
-            </div>
-        </div>
-        <div class="animals-disc ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨</div>
-        <div style="clear:both"></div>
-
-        <div class="animals-disc">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨清甜雪梨</div>
-        <div class="animals-img">
-            <img src="img/清甜雪梨.jpg" alt=" ">
-            <div class="animals-buy ">
-                <h1>农牧云农场</h1>
-                <h2>清甜雪梨</h2>
-                <p>￥30/期
-                    <span>(共3期)</span>
-                </p>
-                <button>
-                    <a href="index.html">确定认购</a>
-                </button>
-            </div>
-        </div>
-    </div>
-
-</div>
 <div style="clear:both"></div>
-<div class="foot ">
+
+<div class="foot" style="margin-top: 20px">
     <p>©2018 - 版权所有 </p>
     <p>PC版 | 本站自己手动搭建 |
         <a href=" ">管理登录</a>
@@ -1049,12 +534,12 @@
 </div>
 
 <script type="text/javascript ">
-    $(window).bind("scroll", function () {
+    $(window).bind("scroll", function() {
         var top = $(this).scrollTop();
-        if (top > 1) {
+        if (top >= 1) {
             $(".nav").css({
                 "background": "white",
-//                "opacity": "0.8",
+                "opacity": "1",
                 "transition": "background-color 1s"
             });
             $(".nav-table a").css("color", "black");
@@ -1080,7 +565,7 @@
     $(".right-side-carousel").css("display", "block");
     });
     var price = $("#price").text();
-    $("#add-cart").click(function () {
+    $("#add-cart").click(function() {
         alert("成功加入购物车");
         $("#count-input").val(1);
         $("#total-price").html(price);
@@ -1098,12 +583,12 @@
     $("#right-side-" + newId[1]).css("display", "block");
     });
     $("#total-price").html(price)
-    $("#count-input").click(function () {
+    $("#count-input").click(function() {
         let totalPrice = this.value * price
         $("#total-price").html(totalPrice)
     });
 
-    $("#kinds1").click(function () {
+    $("#kinds1").click(function() {
         for (var i = 0; i < 4; i++) {
             $("#kinds" + (i + 1)).removeClass();
             $("#hot-goods-" + (i + 1)).css("display", "none");
@@ -1111,7 +596,7 @@
         $("#kinds1").addClass("hot-goods-class");
         $("#hot-goods-1").css("display", "block");
     });
-    $("#kinds2").click(function () {
+    $("#kinds2").click(function() {
         for (var i = 0; i < 4; i++) {
             $("#kinds" + (i + 1)).removeClass();
             $("#hot-goods-" + (i + 1)).css("display", "none");
@@ -1119,7 +604,7 @@
         $("#kinds2").addClass("hot-goods-class");
         $("#hot-goods-2").css("display", "block");
     });
-    $("#kinds3").click(function () {
+    $("#kinds3").click(function() {
         for (var i = 0; i < 4; i++) {
             $("#kinds" + (i + 1)).removeClass();
             $("#hot-goods-" + (i + 1)).css("display", "none");
@@ -1127,7 +612,7 @@
         $("#kinds3").addClass("hot-goods-class");
         $("#hot-goods-3").css("display", "block");
     });
-    $("#kinds4").click(function () {
+    $("#kinds4").click(function() {
         for (var i = 0; i < 4; i++) {
             $("#kinds" + (i + 1)).removeClass();
             $("#hot-goods-" + (i + 1)).css("display", "none");
@@ -1135,7 +620,7 @@
         $("#kinds4").addClass("hot-goods-class");
         $("#hot-goods-4").css("display", "block");
     });
-    $("#meat1").click(function () {
+    $("#meat1").click(function() {
         for (var i = 0; i < 4; i++) {
             $("#meat" + (i + 1)).removeClass();
             $("#hot-meat-" + (i + 1)).css("display", "none");
@@ -1143,7 +628,7 @@
         $("#meat1").addClass("hot-goods-class");
         $("#hot-meat-1").css("display", "block");
     });
-    $("#meat2").click(function () {
+    $("#meat2").click(function() {
         for (var i = 0; i < 4; i++) {
             $("#meat" + (i + 1)).removeClass();
             $("#hot-meat-" + (i + 1)).css("display", "none");
@@ -1151,7 +636,7 @@
         $("#meat2").addClass("hot-goods-class");
         $("#hot-meat-2").css("display", "block");
     });
-    $("#meat3").click(function () {
+    $("#meat3").click(function() {
         for (var i = 0; i < 4; i++) {
             $("#meat" + (i + 1)).removeClass();
             $("#hot-meat-" + (i + 1)).css("display", "none");
@@ -1159,7 +644,7 @@
         $("#meat3").addClass("hot-goods-class");
         $("#hot-meat-3").css("display", "block");
     });
-    $("#meat4").click(function () {
+    $("#meat4").click(function() {
         for (var i = 0; i < 4; i++) {
             $("#meat" + (i + 1)).removeClass();
             $("#hot-meat-" + (i + 1)).css("display", "none");

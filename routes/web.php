@@ -49,10 +49,12 @@ Route::middleware(['auth'])->group(function(){
         Route::post('/order/rating','Order\OrderController@ratingStore')->where('id','[0-9]+');
     });
 
-    //商品购买
-    Route::get('/goods/buy/{id?}','Order\BuyController@index');
-    Route::post('/goods/buy/{id?}','Order\BuyController@store');
+
 });
+
+//商品购买
+Route::get('/goods/buy/{id?}','Order\BuyController@index');
+Route::post('/goods/buy/{id?}','Order\BuyController@store');
 
 //商品信息
 Route::prefix('goods')->group(function(){

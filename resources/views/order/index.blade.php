@@ -80,12 +80,13 @@
                         <th>操作</th>
                     </tr>
                     </thead>
+                    @foreach($orders as $order)
                     <tbody>
                     <tr style="margin-bottom: 10px;border: 1px solid grey">
                         <td colspan="7">
-                            <span>2018-3-31 11:15:56</span>
+                            <span>{{$order->created_at}}</span>
                             <span style="margin: 0 40px 0 40px;">订单号</span>
-                            <span style="font-weight: bold">54161235133</span>
+                            <span style="font-weight: bold">{{$order->order_id}}</span>
                         </td>
                     </tr>
                     <tr>
@@ -93,7 +94,7 @@
                             <img style="width: 100px;height: 100px;" src="{{url('img/多汁石榴.jpg')}}" alt="">
                         </td>
                         <td>
-                                    <span style="font-size: 0.8em;font-weight: bold">农牧云水果基地&nbsp;&nbsp;多汁石榴&nbsp;&nbsp;
+                                    <span style="font-size: 0.8em;font-weight: bold">{{$order->GoodName->title}}
                                         <br>500g/份
                                         <br>新鲜采集水果
                                     </span>
@@ -104,7 +105,7 @@
                         <td>
                             <span style="font-size: 0.8em;">张三</span>
                             <i class="am-icon-user"></i>
-                        </td>
+                        </td>He
                         <td>
                                     <span style="color: rgb(180, 180, 180);font-size: 0.8em;border-bottom: 1px solid  rgb(180, 180, 180);padding-bottom: 5px;">
                                         总额￥25.00
@@ -113,7 +114,7 @@
                             <span style="font-size: 0.8em;color: rgb(180, 180, 180);margin-left:10px; ">在线支付</span>
                         </td>
                         <td>
-                            <span style="color: rgb(180, 180, 180)">已完成</span>
+                            <span style="color: red;font-weight: bold">未付款</span>
                             <br>
                                     <span>
                                         <i class="am-icon-sellsy"></i>
@@ -130,18 +131,14 @@
                             <p style="color: red;margin: 2px 0 0 15px;cursor: pointer;">删除订单 </p>
                         </td>
                     </tr>
-
-
                     </tbody>
-                </table>
-                <table class="am-table am-table-bd am-table-striped admin-content-table" style="margin-bottom:15px;">
-
+                        @endforeach
                     <tbody>
                     <tr style="margin-bottom: 10px;border: 1px solid grey">
                         <td colspan="7">
-                            <span>2018-3-31 11:15:56</span>
+                            <span>{{$order->created_at}}</span>
                             <span style="margin: 0 40px 0 40px;">订单号</span>
-                            <span style="font-weight: bold">54161235133</span>
+                            <span style="font-weight: bold">{{$order->order_id}}</span>
                         </td>
                     </tr>
                     <tr>
@@ -169,7 +166,7 @@
                             <span style="font-size: 0.8em;color: rgb(180, 180, 180);margin-left:10px; ">在线支付</span>
                         </td>
                         <td>
-                            <span style="color: rgb(180, 180, 180)">已完成</span>
+                            <span style="">已完成</span>
                             <br>
                                     <span>
                                         <i class="am-icon-sellsy"></i>
@@ -186,64 +183,6 @@
                             <p style="color: red;margin: 2px 0 0 15px;cursor: pointer;">删除订单 </p>
                         </td>
                     </tr>
-
-
-                    </tbody>
-                </table>
-                <table class="am-table am-table-bd am-table-striped admin-content-table" style="margin-bottom:15px;">
-
-                    <tbody>
-                    <tr style="margin-bottom: 10px;border: 1px solid grey">
-                        <td colspan="7">
-                            <span>2018-3-31 11:15:56</span>
-                            <span style="margin: 0 40px 0 40px;">订单号</span>
-                            <span style="font-weight: bold">54161235133</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img style="width: 100px;height: 100px;" src="{{url('img/多汁石榴.jpg')}}" alt="">
-                        </td>
-                        <td>
-                                    <span style="font-size: 0.8em;font-weight: bold">农牧云水果基地&nbsp;&nbsp;多汁石榴&nbsp;&nbsp;
-                                        <br>500g/份
-                                        <br>新鲜采集水果
-                                    </span>
-                        </td>
-                        <td>
-                            <span>x1</span>
-                        </td>
-                        <td>
-                            <span style="font-size: 0.8em;">张三</span>
-                            <i class="am-icon-user"></i>
-                        </td>
-                        <td>
-                                    <span style="color: rgb(180, 180, 180);font-size: 0.8em;border-bottom: 1px solid  rgb(180, 180, 180);padding-bottom: 5px;">
-                                        总额￥25.00
-                                    </span>
-                            <br>
-                            <span style="font-size: 0.8em;color: rgb(180, 180, 180);margin-left:10px; ">在线支付</span>
-                        </td>
-                        <td>
-                            <span style="color: rgb(180, 180, 180)">已完成</span>
-                            <br>
-                                    <span>
-                                        <i class="am-icon-sellsy"></i>
-                                        <span style="color: red;font-size: 0.7em;">+110经验</span>
-                                    </span>
-                            <br>
-                                    <span style="font-size: 0.8em;">
-                                        订单详情
-                                    </span>
-                        </td>
-                        <td>
-                            <button type="button" class="am-btn am-btn-default">再次购买</button>
-                            <br>
-                            <p style="color: red;margin: 2px 0 0 15px;cursor: pointer;">删除订单 </p>
-                        </td>
-                    </tr>
-
-
                     </tbody>
                 </table>
             </div>

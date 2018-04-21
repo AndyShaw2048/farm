@@ -17,8 +17,18 @@ a::after {
 }
 
 .head a {
+     color: white;
+ }
+
+.head a:hover {
     color: white;
+    text-decoration: none;
 }
+.head a:visited {
+    color: white;
+    text-decoration: none;
+}
+
 
 .head {
     width: 100%;
@@ -151,12 +161,12 @@ a::after {
 }
 
 .disc {
-    margin-top:-10px ;
+    margin-top:-16px ;
     color: darkgray;
 }
 
 .line {
-    margin: -40px auto 0 auto;
+    margin: -34px auto 0 auto;
     font-size: 12px;
     margin-bottom: 10px;
     border-bottom: 2.3px solid #ffae00;
@@ -177,6 +187,9 @@ a::after {
     /* 限制行数 */
     -webkit-line-clamp: 9;
     overflow: hidden;
+}
+.farm-word:hover {
+    background-color: #f6f6f6;
 }
 
 .farm-word-left p {
@@ -308,4 +321,60 @@ a::after {
 
 .foot p:last-child {
     padding-top: 20px;
+}
+
+.subscription-body {
+    width: 1200px;
+}
+.order-nav {
+    border-bottom: 1px solid gray;
+}
+
+.order-nav-all {
+    float: left;
+}
+
+.order-nav-all span {
+    font-size: 2.5em;
+    color: green;
+    margin-left: 45px;
+}
+
+.order-nav-list {
+    float: right;
+    margin-right: 45px;
+    margin-top: 5px;
+}
+
+.order-nav-list ul {
+    list-style: none;
+}
+
+.order-nav-list li {
+    float: left;
+    display: block;
+    height: 50px;
+    width: 70px;
+    background: green;
+    color: white;
+    line-height: 50px;
+    border-radius: 15px;
+}
+
+.order-nav-list li a {
+    text-decoration: none;
+    color: white;
+}
+
+.order-nav-list li {
+    margin-right: 10px;
+}
+
+.order-nav-list li:hover {
+    background: orange;
+    transition: background 0.5s;
+}
+
+.order-nav-list li:last-child {
+    margin: 0;
 }

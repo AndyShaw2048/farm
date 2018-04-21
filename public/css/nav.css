@@ -24,6 +24,7 @@
     font-family: 微软雅黑;
     cursor: pointer;
     text-align: center;
+    text-decoration: none;
 }
 
 .nav-table td:not(1) {

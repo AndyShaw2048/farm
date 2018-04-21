@@ -13,6 +13,11 @@ class Goods extends Model
 
     }
 
+    public function thisFarm()
+    {
+        return $this->hasOne('App\Farm','id','farm');
+    }
+
     public function setPicsAttribute($pics)
     {
         if (is_array($pics)) {

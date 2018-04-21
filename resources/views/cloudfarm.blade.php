@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{url('assets/css/amazeui.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('css/cloudShop.css')}}" />
+    <link href="{{url('css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{url('css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{url('css/amazeui.min.css')}}">
+    <link rel="stylesheet" href="{{url('css/style.css')}}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{url('css/cloudFarm.css')}}">
     <title>农牧云|云上农场</title>
 </head>
@@ -19,7 +23,7 @@
                         <img class="title1" src="{{url('img/标题.png')}}" alt="">
                     </div>
                     <div class="logo-img">
-                        <img src="{{url('img/农牧云1.png')}}" alt="">
+                        <img src="{{url('img/农牧云3.png')}}" alt="">
                     </div>
                 </td>
                 <td>
@@ -72,8 +76,143 @@
     </div>
 </div>
 <div class="am-g backImg">
-    <img id="show-bgimg" src="{{url('img/1.jpg')}}" alt="">
+    <img id="show-bgimg" src="{{url('img/景.png')}}" alt="">
 </div>
+
+
+<div class="am-g subscription-body">
+    <div class="am-g subscription">
+        <div class="title" style="margin-top: 20px">
+            <h1>认购中心</h1>
+            <p class="disc">多种自然生长牲畜类任你领养</p>
+            <p class="line">&nbsp&nbsp&nbsp&nbsp</p>
+        </div>
+        <div class="am-g order-nav">
+            <div class="order-nav-all">
+                <span>所有物品</span>
+            </div>
+            <div class="order-nav-list">
+                <ul>
+                    <li>
+                        <a href="">全部</a>
+                    </li>
+                    <li>
+                        <a href="">水果认购</a>
+                    </li>
+                    <li>
+                        <a href="">牛类认购</a>
+                    </li>
+                    <li>
+                        <a href="">鸡类认购</a>
+                    </li>
+                    <li>
+                        <a href="">羊类认购</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+        <div class="gallery">
+            <div class="container">
+                <div class="gallery-grids">
+                    <div class="col-md-4 gallery-grid" style="height: 300px; overflow:hidden;">
+                        <div class="grid">
+                            <figure class="effect-roxy">
+                                <a class="example-image-link" href="img/images/g5.jpg">
+                                    <img src="animals/猪.jpg" alt=""/>
+                                    <figcaption>
+                                        <h3><span>香香猪</span></h3>
+                                        <p></p>
+                                        <p>每期￥125 共三期</p>
+                                        <p class="click-order">点击立即认购</h3>
+                                    </figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery-grid" style="height: 300px; overflow:hidden;">
+                        <div class="grid">
+                            <figure class="effect-roxy">
+                                <a class="example-image-link" href="img/images/g5.jpg">
+                                    <img src="animals/牛.jpg" alt=""/>
+                                    <figcaption>
+                                        <h3><span>牦牛</span></h3>
+                                        <p></p>
+                                        <p>每期￥236共三期</p>
+                                        <p class="click-order">点击立即认购</h3>
+                                    </figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery-grid" style="height: 300px; overflow:hidden;">
+                        <div class="grid">
+                            <figure class="effect-roxy">
+                                <a class="example-image-link" href="img/images/g5.jpg">
+                                    <img src="animals/羊.jpg" alt=""/>
+                                    <figcaption>
+                                        <h3><span>蒙古羊</span></h3>
+                                        <p></p>
+                                        <p>每期￥186共三期</p>
+                                        <p class="click-order">点击立即认购</h3>
+                                    </figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery-grid" style="height: 300px; overflow:hidden;">
+                        <div class="grid">
+                            <figure class="effect-roxy">
+                                <a class="example-image-link" href="img/images/g5.jpg">
+                                    <img src="animals/鸡.jpg" alt=""/>
+                                    <figcaption>
+                                        <h3><span>农村本地鸡</span></h3>
+                                        <p></p>
+                                        <p>每期￥72共三期</p>
+                                        <p class="click-order">点击立即认购</h3>
+                                    </figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery-grid" style="height: 300px; overflow:hidden;">
+                        <div class="grid">
+                            <figure class="effect-roxy">
+                                <a class="example-image-link" href="img/images/g5.jpg">
+                                    <img src="animals/鸭.jpg" alt=""/>
+                                    <figcaption>
+                                        <h3><span>连城白鸭</span></h3>
+                                        <p></p>
+                                        <p>每期￥79共三期</p>
+                                        <p class="click-order">点击立即认购</h3>
+                                    </figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gallery-grid" style="height: 300px; overflow:hidden;">
+                        <div class="grid">
+                            <figure class="effect-roxy">
+                                <a class="example-image-link" href="img/images/g5.jpg">
+                                    <img src="animals/猪 (2).jpg" alt=""/>
+                                    <figcaption>
+                                        <h3><span>大白猪</span></h3>
+                                        <p></p>
+                                        <p>每期￥163共三期</p>
+                                        <p class="click-order">点击立即认购</h3>
+                                    </figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="farm-list">
     <div class="title">
         <h1>优质牧场</h1>
@@ -254,7 +393,7 @@
         if (top > 1) {
             $(".nav").css({
                 "background": "white",
-                "opacity": "0.8",
+                "opacity": "1",
                 "transition": "background-color 1s"
             });
             $(".nav-table a").css("color", "black");

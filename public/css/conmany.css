@@ -118,7 +118,7 @@ a::after {
 }
 
 .desc:first-child {
-    background-image: url("../img/牛.jpg");
+    background-image: url("../img/蓝天空.png");
 }
 
 .desc:nth-child(2) {
@@ -134,11 +134,13 @@ a::after {
     font-size: 3em;
     margin-top: 50px;
     margin-left: 100px;
+    color: #dadada;
 }
 
 .desc p {
     font-size: 2em;
     margin-left: 120px;
+    color: #fff;
 }
 
 .foot {

@@ -22,6 +22,9 @@ class BuyController extends Controller
 
     public function store(Request $request)
     {
+        if(!Auth::check())
+            return redirect('/login');
+
         $goods = Goods::find($request->goods_id);
         $goods->stocks = $goods->stocks - $request->num;
         $goods->save();
@@ -43,18 +46,18 @@ class BuyController extends Controller
         $detail->total_fee = $request->num * $goods->price;
         $detail->save();
         //订单物流详情
-        $shipping = new OrderShipping();
-        $shipping->order_id = $order_id;
-        $shipping->receiver_name = $request->name;
-        $shipping->receiver_phone = $request->phone;
-        $shipping->receiver_mobile = $request->mobile;
-        $shipping->receiver_province= $request->province;
-        $shipping->receiver_city = $request->city;
-        $shipping->receiver_district = $request->district;
-        $shipping->receiver_address = $request->address;
-        $shipping->receiver_zip = $request->zip;
-        $shipping->save();
+//        $shipping = new OrderShipping();
+//        $shipping->order_id = $order_id;
+//        $shipping->receiver_name = $request->name;
+//        $shipping->receiver_phone = $request->phone;
+//        $shipping->receiver_mobile = $request->mobile;
+//        $shipping->receiver_province= $request->province;
+//        $shipping->receiver_city = $request->city;
+//        $shipping->receiver_district = $request->district;
+//        $shipping->receiver_address = $request->address;
+//        $shipping->receiver_zip = $request->zip;
+//        $shipping->save();
 
-        return redirect()->back()->withErrors(['success'=>'交易成功']);
+        return redirect('/home/order')->withErrors(['success'=>'交易成功']);
     }
 }

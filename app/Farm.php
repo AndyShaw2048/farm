@@ -12,4 +12,9 @@ class Farm extends Model
     {
         return Farm::findOrFail($id)->name;
     }
+
+    public function Good()
+    {
+        return $this->hasMany('App\Goods','farm','id');
+    }
 }

@@ -1,150 +1,208 @@
- <!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="{{url('layui/css/layui.css')}}">
-    <link rel="stylesheet" href="{{url('css/register.css')}}"/>
-    <link rel="stylesheet" href="{{url('css/footer.css')}}"/>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>农牧云|账号注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/login-animate.css">
+    <link rel="stylesheet" href="css/login-bootstrap.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="css/login-style.css">
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <link rel="stylesheet" href="css/nav.css">
+    <style>
+        .head a {
+            color: white
+        }
+    </style>
 </head>
+
 <body>
-<header>
-    <div class="position">
-        <ul class="posit">
-            <li>您当前的位置：</li>
-            <li>省</li>
-            <li>市</li>
-            <li>县</li>
-        </ul>
-        <ul class="load">
-            <li><a href="#">登陆/注册</a></li>
-        </ul>
+
+
+<div class="am-g head" style="background: none;color: white;position: fixed;">
+    <div class="nav">
+        <table class="nav-table">
+            <tr>
+                <td class="logo">
+                    <div class="logo-title">
+                        <img class="title" src="img/标题.png" alt="">
+                    </div>
+                    <div class="logo-img">
+                        <img src="img/农牧云1.png" alt="">
+                    </div>
+                </td>
+                <td>
+                    <a href="/">首页
+                        <br>
+                        <span>Home&nbsp; Page</span>
+                    </a>
+
+                </td>
+                <td>
+                    <a href="/goods">
+                        云上集市
+                        <br>
+                        <span>Cloud&nbsp;Shop</span>
+                    </a>
+                </td>
+                <td>
+                    <a href="/cloudfarm">
+                        云上农场
+                        <br>
+                        <span>Cloud&nbsp;Farm</span>
+                    </a>
+                </td>
+                <td>
+                    <a href="/home"> 个人中心
+                        <br>
+                        <span>Personal&nbsp;Center</span>
+                    </a>
+
+                </td>
+                <td class="company">
+                    <a href="#">
+                        关于我们
+                        <br>
+                        <span>About&nbsp;Us</span>
+                    </a>
+                </td>
+                <td class="serch">
+                    <div class="am-input-group">
+                        <input type="text" class="am-form-field" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                            <span class="am-input-group-btn">
+                                <button class="am-btn am-btn-default" type="button" style="border-bottom-right-radius: 15px;border-top-right-radius: 15px;">
+                                    <span class="am-icon-search"></span>
+                                </button>
+                            </span>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </div>
-    <div>
-        <div class="logo"></div>
-        <div class='tabs'>
-            <div class='moving_bg'></div><span class='tab_item'><a href="/">首页</a></span><span class='tab_item'><a href="/about">关于我们</a></span><span class='tab_item'><a href="/home">用户中心</a></span><span class='tab_item'><a href="/goods">云上集市</a></span><span class='tab_item'><a href="/cloudfarm">云上农场</a></span>
+</div>
+<header id="gtco-header" class="gtco-cover" role="banner" style="background-image: url(img/1.jpg)">
+    <div class="overlay"></div>
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0 text-left">
+                <div class="row row-mt-15em">
+                    <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+                            <span class="intro-text-small">Welcome to 农牧云
+                                <br>
+                                <br>
+                            </span>
+                        <h1>绿色 共享 扶贫
+                            <br> </h1>
+                    </div>
+                    <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+                        <div class="form-wrap" style="margin-top: -60px">
+                            <div class="tab">
+                                <ul class="tab-menu">
+                                    <li class="active gtco-first">
+                                        <a href="/register" data-tab="signup">注册</a>
+                                    </li>
+                                    <li class="gtco-second">
+                                        <a href="/login" data-tab="login">登录</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-content-inner active" data-content="signup">
+                                        @if($errors->any())
+                                            <div class="error">{{$errors->first()}}</div>
+                                        @endif
+                                        <form action="/register" method="post">
+                                            @csrf
+                                            <div class="row form-group">
+                                                <label for="username">电话号码</label>
+                                                <input name="telephone" type="text" class="form-control" value="{{old('telephone')}}">
+                                            </div>
+                                            <div class="row form-group">
+
+                                                <label for="password">密码</label>
+                                                <input name="password" type="password" class="form-control">
+                                            </div>
+                                            <div class="row form-group">
+                                                <label for="password">确认密码</label>
+                                                <input name="password_confirmation" type="password" class="form-control">
+                                            </div>
+                                            <div class="row form-group">
+                                                <label for="password">电子邮件</label>
+                                                <input name="email" type="email" class="form-control">
+                                            </div>
+
+                                            <div class="row form-group" style="text-align: center">
+                                                <input type="submit" class="btn btn-primary" value="注册">
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="tab-content-inner" data-content="login">
+                                        @if($errors->any())
+                                            <div class="error">{{$errors->first()}}</div>
+                                        @endif
+                                        <form action="/login" method="post">
+                                            @csrf
+                                            <div class="row form-group">
+                                                    <label for="username">账号</label>
+                                                    <input name="telephone" type="text" class="form-control">
+                                            </div>
+                                            <div class="row form-group">
+                                                    <label for="password">密码</label>
+                                                    <input name="password" type="password" class="form-control">
+                                            </div>
+
+                                            <div class="row form-group" style="text-align: center">
+                                                    <input type="submit" class="btn btn-primary" value="登录">
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </div>
 </header>
-<main>
-    <div class="container clear">
-        <div class="register">
-            <div class="register_title"></div>
-            <!--表单-->
-            @if($errors->any())
-                @foreach($errors->all() as $error)
-                    <div>{{$error}}</div>
-                @endforeach
-            @endif
-            <form action="/register" method="post">
-                @csrf
-                <span>电话号码</span>
-                <input type="tel" name="telephone" class="uname input"/><br>
 
-                <span>用户密码</span>
-                <input type="password" name="password" class="pwd input"/><br>
 
-                <span>确认密码</span>
-                <input type="password" name="password_confirmation" class="pwd input"/><br>
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<!-- Waypoints -->
+<script src="js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- Magnific Popup -->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<!-- Main -->
+<script src="js/main.js"></script>
 
-                <span>电子邮箱</span>
-                <input type="email" name="email" class="uname input"/><br>
-
-                <input type="submit" value="点击注册" class="btn"/>
-            </form>
-        </div>
-    </div>
-</main>
-<footer>
-    <div id="foot-box">
-        <div>
-            <img src="{{url('img/rg.png')}}">
-            <p>认购</p>
-        </div>
-        <div>
-            <img src="{{url('img/green.png')}}">
-            <p>绿色</p>
-        </div>
-        <div>
-            <img src="{{url('img/gx.png')}}">
-            <p>共享</p>
-        </div>
-        <div>
-            <img src="{{url('img/fp.png')}}">
-            <p>扶贫</p>
-        </div>
-        <p style="clear:both;"></p>
-    </div>
-    <div id="foot-other">
-        <div class="logo">
-        </div>
-        <!-- 2、中 ：买家帮助，卖家帮助 ...-->
-        <div class="foot-list">
-            <!-- 列表1 -->
-            <ul type="none">
-                <li>
-                    <h3>买家帮助</h3>
-                </li>
-                <li>
-                    <a href="#">新手指南</a>
-                </li>
-                <li>
-                    <a href="#">服务保障</a>
-                </li>
-                <li>
-                    <a href="#">常见问题</a>
-                </li>
-            </ul>
-            <!-- 列表2 -->
-            <ul type="none" class="mid">
-                <li>
-                    <h3>商家帮助</h3>
-                </li>
-                <li>
-                    <a href="#">商家入驻</a>
-                </li>
-                <li>
-                    <a href="#">商家后台</a>
-                </li>
-            </ul>
-            <!-- 列表3 -->
-            <ul type="none">
-                <li>
-                    <h3>关于我们</h3>
-                </li>
-                <li>
-                    <a href="#">关于农牧云</a>
-                </li>
-                <li>
-                    <a href="#">联系我们</a>
-                </li>
-                <li>
-                    <img src="{{url('img/wechat.png')}}">
-                    <img src="{{url('img/sinablog.png')}}">
-                </li>
-            </ul>
-        </div>
-        <!-- 3、右 ：客户端 & 二维码-->
-        <div class="client">
-            <!-- 1、二维码 ：右浮动 -->
-            <div class="qrCode">
-                <img src="{{url('img/erweima.png')}}">
-            </div>
-            <!-- 2、农牧云客户端 ：右浮动-->
-            <div class="service">
-                <p>农牧云客户端</p>
-                <img src="{{url('img/ios.png')}}">
-                <img src="{{url('img/android.png')}}">
-            </div>
-        </div>
-
-        <!-- 增加空块级元素 -->
-        <p style="clear:both;"></p>
-    </div>
-</footer>
 </body>
-<script src="{{url('js/jquery.js')}}" type="text/javascript"></script>
-<script src="{{url('js/index.js')}}" type="text/javascript"></script>
-<script src="{{url('layui/layui.js')}}"></script>
+
 </html>

@@ -20,7 +20,7 @@
                         <img class="title" src="{{url('img/标题.png')}}" alt="">
                     </div>
                     <div class="logo-img">
-                        <img src="{{url('img/农牧云1.png')}}" alt="">
+                        <img src="{{url('img/农牧云3.png')}}" alt="">
                     </div>
                 </td>
                 <td>
@@ -28,7 +28,6 @@
                         <br>
                         <span>Home&nbsp; Page</span>
                     </a>
-
                 </td>
                 <td>
                     <a href="/goods">
@@ -81,16 +80,16 @@
 </div>
 <div class="am-g desc-list">
     <div class="am-g desc">
-        <h1>新鲜健康</h1>
-        <p>平台所有商品都是绿色食物，每天早上按时采摘保证新鲜。</p>
+        <h1>云养殖-线上养殖</h1>
+        <p>每期定期支付，农户、农场、牧场帮您养殖；养殖属于您自己的健康食物。</p>
     </div>
     <div class="am-g desc">
-        <h1>实时查看</h1>
-        <p>无论你在哪儿，你都可以随时可以查看订购物品的成长状态。</p>
+        <h1>云养殖-实时查看</h1>
+        <p>无论你在哪儿，你都可以随时可以查看订购商品的成长状态。</p>
     </div>
     <div class="am-g desc">
-        <h1>全国联盟</h1>
-        <p>全国各大牧场农场共同联盟，保证商品的多样性。</p>
+        <h1>云养殖-战略合作</h1>
+        <p>全国各大牧场农场共同联盟，保证商品的多样性、商品的新鲜性。</p>
     </div>
 </div>
 <div class="foot">
@@ -110,7 +109,7 @@
         if (top > 1) {
             $(".nav").css({
                 "background": "white",
-                "opacity": "0.8",
+                "opacity": "1",
                 "transition": "background-color 1s"
             });
             $(".nav-table a").css("color", "black");
@@ -127,26 +126,26 @@
             $(".nav-table a").css("color", "white");
             $(".company a").css("color", "white");
             $(".logo span").css("color", "white");
-            $(".am-input-group").css("opacity", "0.5")
+            $(".am-input-group").css("opacity", "1")
             $(".title").attr("src", "img/标题.png")
         }
     });
-    var seconds = 0;
-    var changeImg = '<img src="img/景.jpg" style="width:100%;transition:2s;" alt="">';
-    $(() => {
-        function setTime() {
-        seconds++;
-        console.log(seconds)
-        if (seconds == 20) {
-            $("#vedio").css("display", "none");
-            $("#changeImg").append(changeImg)
-            clearInterval(time);
-        }
-    }
-    var time = setInterval(setTime, 1000);
-    var vedio = $("#vedio");
-    vedio.attr("loop", "");
-    });
+//    var seconds = 0;
+//    var changeImg = '<img src="img/1.jpg" style="width:100%;transition:2s;" alt="">';
+//    $(() => {
+//        function setTime() {
+//        seconds++;
+//        console.log(seconds)
+//        if (seconds == 20) {
+//            $("#vedio").css("display", "none");
+//            $("#changeImg").append(changeImg)
+//            clearInterval(time);
+//        }
+//    }
+//    var time = setInterval(setTime, 1000);
+//    var vedio = $("#vedio");
+//    vedio.attr("loop", "");
+//    });
 </script>
 
 </html>
