@@ -13,7 +13,7 @@
     <title>农牧云|云上农场</title>
 </head>
 
-<body>
+<body style="width: 100%;">
 <div class="am-g">
     <div class="nav head">
         <table class="nav-table ">
@@ -261,10 +261,10 @@
         <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
             <ul class="am-slides">
                 <li>
-                    <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg" />
+                    <img src="{{url('img/bing-1.jpg')}}" />
                 </li>
                 <li>
-                    <img src="http://s.amazeui.org/media/i/demos/bing-2.jpg" />
+                    <img src="{{url('img/bing-2.jpg')}}" />
                 </li>
             </ul>
         </div>

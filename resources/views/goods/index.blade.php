@@ -79,7 +79,7 @@
 <div class="am-g">
     <div class="am-u-lg-12" style="padding: 0;">
         <div class="am-g">
-            <div class="am-g dropdown-nav" style="position: absolute;top: 11vw;left: 23vw;">
+            <div class="am-g dropdown-nav" style="position: absolute;top: 11vw;left: 16vw;">
                 <div class="dropdown">
                     <ul class="buy-list">
                         <li id="left-0">
@@ -112,9 +112,6 @@
                 <div class="right-side right-side-carousel">
                     <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
                         <ul class="am-slides">
-                            <li>
-                                <img src="img/shop-carousel1.jpg" />
-                            </li>
                             <li>
                                 <img src="img/shop-carousel2.jpg" />
                             </li>
@@ -260,7 +257,7 @@
                                 <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
                             </div>
                             <span class="goods-price">￥{{$good->price}}</span>
-                            <span class="sales-volume">月销量: {{$good->sales}}</span>
+                            <span class="sales-volume">月销量: {{$good->stocks}}</span>
                             <br>
                             <p class="goods-desc">
                                 <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
@@ -281,7 +278,7 @@
                                     <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
                                 </div>
                                 <span class="goods-price">￥{{$good->price}}</span>
-                                <span class="sales-volume">月销量: {{$good->sales}}</span>
+                                <span class="sales-volume">月销量: {{$good->stocks}}</span>
                                 <br>
                                 <p class="goods-desc">
                                     <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
@@ -302,7 +299,7 @@
                                     <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
                                 </div>
                                 <span class="goods-price">￥{{$good->price}}</span>
-                                <span class="sales-volume">月销量: {{$good->sales}}</span>
+                                <span class="sales-volume">月销量: {{$good->stocks}}</span>
                                 <br>
                                 <p class="goods-desc">
                                     <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
@@ -323,7 +320,7 @@
                                     <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
                                 </div>
                                 <span class="goods-price">￥{{$good->price}}</span>
-                                <span class="sales-volume">月销量: {{$good->sales}}</span>
+                                <span class="sales-volume">月销量: {{$good->stocks}}</span>
                                 <br>
                                 <p class="goods-desc">
                                     <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
@@ -383,7 +380,7 @@
                                     <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
                                 </div>
                                 <span class="goods-price">￥{{$good->price}}</span>
-                                <span class="sales-volume">月销量: {{$good->sales}}</span>
+                                <span class="sales-volume">月销量: {{$good->stocks}}</span>
                                 <br>
                                 <p class="goods-desc">
                                     <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
@@ -404,7 +401,7 @@
                                     <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
                                 </div>
                                 <span class="goods-price">￥{{$good->price}}</span>
-                                <span class="sales-volume">月销量: {{$good->sales}}</span>
+                                <span class="sales-volume">月销量: {{$good->stocks}}</span>
                                 <br>
                                 <p class="goods-desc">
                                     <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
@@ -425,7 +422,7 @@
                                     <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
                                 </div>
                                 <span class="goods-price">￥{{$good->price}}</span>
-                                <span class="sales-volume">月销量: {{$good->sales}}</span>
+                                <span class="sales-volume">月销量: {{$good->stocks}}</span>
                                 <br>
                                 <p class="goods-desc">
                                     <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
@@ -446,7 +443,7 @@
                                     <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
                                 </div>
                                 <span class="goods-price">￥{{$good->price}}</span>
-                                <span class="sales-volume">月销量: {{$good->sales}}</span>
+                                <span class="sales-volume">月销量: {{$good->stocks}}</span>
                                 <br>
                                 <p class="goods-desc">
                                     <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>

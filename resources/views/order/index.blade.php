@@ -80,6 +80,9 @@
                         <th>操作</th>
                     </tr>
                     </thead>
+                    @if($orders->isEmpty())
+
+                    @else
                     @foreach($orders as $order)
                     <tbody>
                     <tr style="margin-bottom: 10px;border: 1px solid grey">
@@ -91,12 +94,12 @@
                     </tr>
                     <tr>
                         <td>
-                            <img style="width: 100px;height: 100px;" src="{{url('img/多汁石榴.jpg')}}" alt="">
+                            <img style="width: 100px;height: 100px;" src="{{url('animals/牛.jpg')}}" alt="">
                         </td>
                         <td>
                                     <span style="font-size: 0.8em;font-weight: bold">{{$order->GoodName->title}}
                                         <br>500g/份
-                                        <br>新鲜采集水果
+                                        <br>新鲜牛肉
                                     </span>
                         </td>
                         <td>
@@ -105,7 +108,7 @@
                         <td>
                             <span style="font-size: 0.8em;">张三</span>
                             <i class="am-icon-user"></i>
-                        </td>He
+                        </td>
                         <td>
                                     <span style="color: rgb(180, 180, 180);font-size: 0.8em;border-bottom: 1px solid  rgb(180, 180, 180);padding-bottom: 5px;">
                                         总额￥25.00
@@ -133,12 +136,13 @@
                     </tr>
                     </tbody>
                         @endforeach
+                    @endif
                     <tbody>
                     <tr style="margin-bottom: 10px;border: 1px solid grey">
                         <td colspan="7">
-                            <span>{{$order->created_at}}</span>
+                            <span>2016-2-3 2:5:20</span>
                             <span style="margin: 0 40px 0 40px;">订单号</span>
-                            <span style="font-weight: bold">{{$order->order_id}}</span>
+                            <span style="font-weight: bold">2016012356985236</span>
                         </td>
                     </tr>
                     <tr>

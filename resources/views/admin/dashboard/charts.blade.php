@@ -9,7 +9,7 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body">
-        <div id="pv" style="width: 600px;height:400px;float: left;"></div>
+        <div id="pv" style="width: 500px;height:400px;float: left;"></div>
         <script type="text/javascript">
             // 基于准备好的dom，初始化echarts实例
             var myChart = echarts.init(document.getElementById('pv'));
@@ -36,7 +36,7 @@
             myChart.setOption(option);
         </script>
 
-        <div id="users" style="width: 600px;height:400px;float: right"></div>
+        <div id="users" style="width: 500px;height:400px;float: right"></div>
         <script type="text/javascript">
             // 基于准备好的dom，初始化echarts实例
             var myChart = echarts.init(document.getElementById('users'));

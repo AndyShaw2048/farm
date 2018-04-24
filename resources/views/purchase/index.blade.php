@@ -93,7 +93,7 @@
                             </ul>
                         </div>
                         <div id="number-disc-1" class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0" style="display: none">
-                            <video src="../农牧云2.mp4" width="383px;" controls></video>
+                            <video src="{{url('audio/农牧云2.mp4')}}" width="383px;" controls></video>
                         </div>
                         <div id="number-disc-2" class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0" style="display: none">
                             <p>亲，您订购的商品还处于第二期成长中。</p>

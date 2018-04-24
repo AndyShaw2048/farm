@@ -26,7 +26,7 @@
                         <img class="title" src="{{url('img/标题-黑.png')}}" alt="">
                     </div>
                     <div class="logo-img">
-                        <img src="{{url('img/农牧云1.png')}}" alt="">
+                        <img src="{{url('img/农牧云3.png')}}" alt="">
                     </div>
                 </td>
                 <td>

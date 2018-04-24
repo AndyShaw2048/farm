@@ -19,7 +19,6 @@ class RegisterController extends Controller
         $rules = [
             'telephone' => 'bail|required|digits:11',
             'password' => 'bail|required|min:6|max:20|alpha_num|confirmed',
-            'email' => 'email|nullable',
         ];
         $msg = [
             'telephone.required' => '电话号码禁止为空',
@@ -29,7 +28,6 @@ class RegisterController extends Controller
             'password.man' => '密码最大长度为20位',
             'password.alpha_num' => '密码只能为大写字母、小写字母、数字',
             'password.confirmed' => '两次输入密码不符合',
-            'email.email' => 'Email格式错误',
         ];
         $validator = Validator::make($request->all(),$rules,$msg);
         if ($validator->fails())
@@ -41,7 +39,6 @@ class RegisterController extends Controller
         $user->nickname = '新用户'.substr($request->telephone,7,4);
         $user->telephone = $request->telephone;
         $user->password = bcrypt($request->password);
-        $user->email = $request->email;
         $user->grade = 1;
         $user->pid = 1;
         $user->avatar = 'users/avatars/default.jpg';

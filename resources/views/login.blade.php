@@ -146,10 +146,6 @@
                                                 <label for="password">确认密码</label>
                                                 <input name="password_confirmation" type="password" class="form-control">
                                             </div>
-                                            <div class="row form-group">
-                                                <label for="password">电子邮件</label>
-                                                <input name="email" type="email" class="form-control">
-                                            </div>
 
                                             <div class="row form-group" style="text-align: center">
                                                 <input type="submit" class="btn btn-primary" value="注册">

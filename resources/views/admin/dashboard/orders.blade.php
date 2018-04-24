@@ -11,8 +11,8 @@
     </div>
     <!-- /.box-header -->
 
-    <div class="box-body">
-        <div id="orders" style="width: 1500px;height:400px;margin: 0 auto 0 auto"></div>
+    <div class="box-body" style="text-align: center">
+        <div id="orders" style="width: 96%;height:400px;"></div>
         <script type="text/javascript">
             // 基于准备好的dom，初始化echarts实例
             var myChart = echarts.init(document.getElementById('orders'));

@@ -1,7 +1,7 @@
 <div style="text-align: center">
 
 <div style="display: inline-block;">
-    <div style="display: inline-block;width: 250px;height: 100px;background-color: white;box-shadow: 0px 2px 5px #888888;">
+    <div style="display: inline-block;width: 200px;height: 100px;background-color: white;box-shadow: 0px 2px 5px #888888;">
         <img src="img/overview/访问量.jpg" alt="" width="100px"  height="100px" style="float: left">
         <p style="color: #5f5c5c;margin-left: 110px">今日访问量</p>
         <p style="font-weight:bold;margin-left: 110px">213,112</p>
