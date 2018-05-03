@@ -118,41 +118,12 @@
                     <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
                         <div class="form-wrap" style="margin-top: -60px">
                             <div class="tab">
-                                <ul class="tab-menu">
-                                    <li class="gtco-first">
-                                        <a href="#" data-tab="signup">注册</a>
-                                    </li>
+                                <div class="tab-menu">
                                     <li class="active gtco-second">
                                         <a href="#" data-tab="login">登录</a>
                                     </li>
-                                </ul>
+                                </div>
                                 <div class="tab-content">
-                                    <div class="tab-content-inner" data-content="signup">
-                                        @if($errors->any())
-                                            <div class="error">{{$errors->first()}}</div>
-                                        @endif
-                                        <form action="/register" method="post">
-                                            @csrf
-                                            <div class="row form-group">
-                                                <label for="username">电话号码</label>
-                                                <input name="telephone" type="text" class="form-control" value="{{old('telephone')}}">
-                                            </div>
-                                            <div class="row form-group">
-
-                                                <label for="password">密码</label>
-                                                <input name="password" type="password" class="form-control">
-                                            </div>
-                                            <div class="row form-group">
-                                                <label for="password">确认密码</label>
-                                                <input name="password_confirmation" type="password" class="form-control">
-                                            </div>
-
-                                            <div class="row form-group" style="text-align: center">
-                                                <input type="submit" class="btn btn-primary" value="注册">
-                                            </div>
-                                        </form>
-                                    </div>
-
                                     <div class="tab-content-inner active" data-content="login">
                                         @if($errors->any())
                                             <div class="error">{{$errors->first()}}</div>

@@ -44,6 +44,7 @@ class BuyController extends Controller
         $detail->title = $goods->name;
         $detail->price = $goods->price;
         $detail->total_fee = $request->num * $goods->price;
+        $detail->pics = $goods->logo;
         $detail->save();
         //订单物流详情
 //        $shipping = new OrderShipping();

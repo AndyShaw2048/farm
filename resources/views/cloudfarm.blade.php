@@ -89,7 +89,7 @@
         </div>
         <div class="am-g order-nav">
             <div class="order-nav-all">
-                <span>所有物品</span>
+                <span>热门认购</span>
             </div>
             <div class="order-nav-list">
                 <ul>
@@ -118,7 +118,7 @@
                     <div class="col-md-4 gallery-grid" style="height: 300px; overflow:hidden;">
                         <div class="grid">
                             <figure class="effect-roxy">
-                                <a class="example-image-link" href="img/images/g5.jpg">
+                                <a class="example-image-link" href="/adoption/buy/6">
                                     <img src="animals/猪.jpg" alt=""/>
                                     <figcaption>
                                         <h3><span>香香猪</span></h3>

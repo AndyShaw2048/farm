@@ -324,7 +324,7 @@ h1, h2, h3, h4, h5, h6, figure {
   list-style: none;
   display: inline;
   float: left;
-  width: 50%;
+  width: 100%;
   text-align: center;
 }
 #gtco-header .form-wrap .tab-menu li a {
@@ -355,7 +355,8 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
   clear: both;
   background: #fff;
-  padding: 30px;
+  padding: 40px;
+  padding-top: 10px;
   padding-bottom: 1px;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;

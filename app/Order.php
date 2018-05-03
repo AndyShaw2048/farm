@@ -17,8 +17,9 @@ class Order extends Model
         return $this->hasOne(UserAddress::class,'id','shipping_id');
     }
     
-    public function GoodName()
+    public function Good()
     {
         return $this->hasOne('App\OrderGoods','order_id','order_id');
     }
+
 }

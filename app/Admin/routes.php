@@ -16,6 +16,7 @@ Route::group([
     $router->resource('category', CategoryController::class);
     $router->resource('member', UserController::class);
     $router->resource('farms', FarmController::class);
+    $router->resource('adoptiongoods', AdoptionGoodController::class);
 
     $router->post('goods/shelf', 'PostController@onShelf');
 

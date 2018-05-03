@@ -61,6 +61,9 @@
                     <th>操作</th>
                 </tr>
                 </thead>
+                @if($a_orders->isEmpty())
+                @else
+                @foreach($a_orders as $order)
                 <tbody>
                 <tr style="margin-bottom: 10px;border: 1px solid grey">
                     <td colspan="8">
@@ -70,35 +73,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 400px;">
-                        <ul style="padding-left: 60px;" class="am-nav am-nav-tabs">
-                            <li id="number-0" class="am-active">
-                                <a href="#">第一期</a>
-                            </li>
-                            <li id="number-1">
-                                <a href="#">第二期</a>
-                            </li>
-                            <li id="number-2">
-                                <a href="#">第三期</a>
-                            </li>
-                        </ul>
-                        <div id="number-disc-0" class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0" style="display: block">
-                            <ul class="am-slides">
-                                <li>
-                                    <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg" />
-                                </li>
-                                <li>
-                                    <img src="http://s.amazeui.org/media/i/demos/bing-2.jpg" />
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="number-disc-1" class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0" style="display: none">
-                            <video src="{{url('audio/农牧云2.mp4')}}" width="383px;" controls></video>
-                        </div>
-                        <div id="number-disc-2" class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0" style="display: none">
-                            <p>亲，您订购的商品还处于第二期成长中。</p>
-                            <p>敬请期待它的成长。</p>
-                        </div>
+                    <td>
+                        <img src="{{url('uploads/')}}" alt="">
                     </td>
                     <td style="padding-top: 80px;padding-left: 10px;">
                                 <span style="font-weight: bold;">农牧云水果基地&nbsp;&nbsp;
@@ -142,6 +118,8 @@
                     </td>
                 </tr>
                 </tbody>
+                @endforeach
+                @endif
             </table>
 
         </div>

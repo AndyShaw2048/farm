@@ -63,3 +63,13 @@ Route::prefix('goods')->group(function(){
 
     Route::get('/category','Goods\GoodsController@category');
 });
+
+//认购信息
+Route::prefix('adoption')->group(function(){
+    Route::get('/','Adoption\AdoptionController@index');
+    Route::get('/buy/{id}','Adoption\AdoptionController@detail');
+    Route::post('/buy/{id}','Adoption\AdoptionController@store');
+});
+
+
+Route::get('test','TestController@upload');

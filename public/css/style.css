@@ -125,6 +125,7 @@ figure.effect-roxy figcaption::before {
     bottom: 30px;
     left: 30px;
     border: 1px solid #fff;
+    height:250px;
     content: '';
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;

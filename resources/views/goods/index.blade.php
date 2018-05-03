@@ -155,7 +155,6 @@
                                     更多>>
                                 </span>
                         </h1>
-
                     </div>
                     <div class="food-name">
                         @foreach($goods as $good)

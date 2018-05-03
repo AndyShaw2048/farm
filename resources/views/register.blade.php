@@ -120,10 +120,7 @@
                             <div class="tab">
                                 <ul class="tab-menu">
                                     <li class="active gtco-first">
-                                        <a href="/register" data-tab="signup">注册</a>
-                                    </li>
-                                    <li class="gtco-second">
-                                        <a href="/login" data-tab="login">登录</a>
+                                        <a href="/register">注册</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content">
@@ -146,30 +143,13 @@
                                                 <label for="password">确认密码</label>
                                                 <input name="password_confirmation" type="password" class="form-control">
                                             </div>
-
+                                            <div class="row form-group">
+                                                <label>验证码</label>
+                                                <input name="code" type="text" class="form-control" width=50>
+                                                <span>获取验证码</span>
+                                            </div>
                                             <div class="row form-group" style="text-align: center">
                                                 <input type="submit" class="btn btn-primary" value="注册">
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                    <div class="tab-content-inner" data-content="login">
-                                        @if($errors->any())
-                                            <div class="error">{{$errors->first()}}</div>
-                                        @endif
-                                        <form action="/login" method="post">
-                                            @csrf
-                                            <div class="row form-group">
-                                                    <label for="username">账号</label>
-                                                    <input name="telephone" type="text" class="form-control">
-                                            </div>
-                                            <div class="row form-group">
-                                                    <label for="password">密码</label>
-                                                    <input name="password" type="password" class="form-control">
-                                            </div>
-
-                                            <div class="row form-group" style="text-align: center">
-                                                    <input type="submit" class="btn btn-primary" value="登录">
                                             </div>
                                         </form>
                                     </div>
