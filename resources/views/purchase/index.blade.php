@@ -55,66 +55,66 @@
                     </th>
                     <th colspan="2">订购详情</th>
                     <th>成长期数</th>
-                    <th>订购人</th>
                     <th>每期金额</th>
                     <th>状态</th>
                     <th>操作</th>
                 </tr>
                 </thead>
-                @if($a_orders->isEmpty())
+                @if($adoptions->isEmpty())
                 @else
-                @foreach($a_orders as $order)
+                @foreach($adoptions as $adoption)
                 <tbody>
                 <tr style="margin-bottom: 10px;border: 1px solid grey">
                     <td colspan="8">
-                        <span>2018-3-31 11:15:56</span>
-                        <span style="margin: 0 40px 0 40px;">订购单号</span>
-                        <span style="font-weight: bold">54161235133</span>
+                        <span>{{$adoption->created_at}}</span>
+                        <span style="margin: 0 40px 0 40px;">认购单号</span>
+                        <span style="font-weight: bold">{{$adoption->order_id}}</span>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <img src="{{url('uploads/')}}" alt="">
+                        <img src="{{url('uploads/'.$adoption->Good->pic)}}" alt="" height="200px">
                     </td>
                     <td style="padding-top: 80px;padding-left: 10px;">
-                                <span style="font-weight: bold;">农牧云水果基地&nbsp;&nbsp;
-                                    <br> 多汁石榴&nbsp;&nbsp;
-                                    <br>新鲜采集水果
-                                </span>
-                    </td>
-                    <td style="padding-top: 80px;padding-left: 10px;">
-                        <span>x1(500g)</span>
+                                <span style="font-weight: bold;font-size: 1em">{{$adoption->name}}</span>
+                                <br><span style="font-size: 0.6em;color: darkgray">{{$adoption->Farm->name}}</span>
 
                     </td>
                     <td style="padding-top: 80px;padding-left: 10px;">
-                        <span>第2期</span>
+                        <span>x{{$adoption->adopt_num}}({{$adoption->Good->unit}})</span>
 
                     </td>
                     <td style="padding-top: 80px;padding-left: 10px;">
-                        <span>张三</span>
-                        <i class="am-icon-user"></i>
+                        <span>共 {{$adoption->total_stage}} 期</span>
                     </td>
                     <td style="padding-top: 80px;padding-left: 10px;">
-                                <span style="color: rgb(180, 180, 180);border-bottom: 1px solid  rgb(180, 180, 180);padding-bottom: 5px;">
+                                <span style="border-bottom: 1px solid  rgb(180, 180, 180);padding-bottom: 5px;">
                                     总额￥25.00
                                 </span>
                         <br>
-                        <span style="color: rgb(180, 180, 180);margin-left:10px; ">在线支付</span>
+                        <span style="margin-left:10px; ">在线支付</span>
                     </td>
                     <td style="padding-top: 80px;padding-left: 10px;">
-                        <span style="color: rgb(180, 180, 180)">第二期成长中</span>
+                        <span style="font-weight: bold;">第二期成长中</span>
                         <br>
-                                <span>
-                                    <i class="am-icon-sellsy"></i>
-                                    <span style="color: red;font-size: 0.7em;">+110经验</span>
-                                </span>
+                                        <span>
+                                            <i class="am-icon-sellsy"></i>
+                                            <span style="color: red;font-size: 0.7em;">+110经验</span>
+                                        </span>
                         <br>
-
+                                        <span>代售
+                                            <span style="color: red">￥10</span>
+                                        </span>
+                        <br>
                     </td>
-                    <td style="padding-top: 80px;padding-left: 10px;">
-                        <button type="button" class="am-btn am-btn-default">再次购买</button>
+                    </td>
+                    <td style="padding-top: 50px;padding-left: 10px;">
+                        <a href="/adoption/grow/{{$adoption->order_id}}" type="button" class="am-btn am-btn-primary" style="margin-bottom: 2px;color: white;">成长详情</a>
                         <br>
-                        <p style="color: red;margin: 2px 0 0 15px;cursor: pointer;">删除订单 </p>
+                        <a type="button" class="am-btn am-btn-secondary" style="margin-bottom: 2px;color: #fff;">再次购买</a>
+                        <br>
+                        <a type="button" class="am-btn am-btn-danger" style="color: white">删除订单</a>
+                        <br>
                     </td>
                 </tr>
                 </tbody>

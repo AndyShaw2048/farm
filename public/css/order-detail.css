@@ -1,0 +1,200 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
+
+a::before {
+    color: black;
+}
+
+a::after {
+    color: black;
+}
+
+/* 导航栏 */
+
+.nav-table {
+    width: 100%;
+    height: 120px;
+}
+
+.head {
+    /* position: fixed; */
+    height: 100px;
+    z-index: 9999;
+    position: unset;
+}
+
+.nav {
+    height: 100px;
+    background: black;
+}
+
+.nav-table td {
+    font-family: 微软雅黑;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nav-table td:hover {
+    color: black(53, 144, 218);
+}
+
+.logo {
+    width: 30%;
+}
+
+.logo-img {
+    float: right;
+}
+
+.logo-img img {
+    height: 120px;
+    /* padding-left: 260px; */
+    margin-top: 5px;
+}
+
+.logo-title {
+    padding-top: 25px;
+    float: right;
+}
+
+.title {
+    height: 80px;
+}
+
+.serch {
+    width: 20%；
+}
+
+.am-input-group {
+    width: 70%;
+}
+
+.head a {
+    color: white;
+}
+
+/* 评论区CSS */
+
+.body {
+    width: 1200px;
+    margin: 20px auto;
+}
+
+.detail-table {
+    width: 100%;
+}
+
+.detail-table th {
+    text-align: center;
+    border: 1px solid rgb(220, 220, 220);
+}
+
+.detail-table td {
+    border: 1px solid rgb(220, 220, 220);
+}
+
+/* 评论 */
+
+.remark-list {
+    margin-bottom: 10px;
+}
+
+.remark-list span {
+    font-size: 2em;
+    color: orange;
+    padding-bottom: 5px;
+    border-bottom: 2px solid orange;
+}
+
+.remark {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.remark-table {
+    width: 100%;
+    background: rgb(136, 251, 171);
+    margin-bottom: 10px;
+}
+
+.remark-desc {
+    width: 50%;
+}
+
+.remark-date {
+    width: 150px;
+    height: 150px;
+    background: rgb(96, 209, 86);
+}
+
+.remark-date h1,
+h2,
+p {
+    text-align: center;
+    margin: 0;
+}
+
+.remark-date h1 {
+    font-size: 3em;
+}
+
+.remark-article p {
+    margin: 0;
+    margin-left: 5px;
+    text-align: initial;
+}
+
+.remark-img {
+    width: 50%;
+    height: 200px;
+}
+
+.remark-img img {
+    height: 100%;
+}
+
+.remark-img img:hover {
+    transform: scale(1.4);
+    transition: all 0.6s;
+}
+
+.editor {
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.foot {
+    width: 100%;
+    height: 200px;
+    background: black;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: -6px;
+}
+
+.foot a {
+    color: rgb(39, 139, 197);
+}
+
+.foot p {
+    margin: 0;
+    padding: 0;
+}
+
+.foot p:first-child {
+    padding-top: 50px;
+}
+
+.foot p:last-child {
+    padding-top: 20px;
+}

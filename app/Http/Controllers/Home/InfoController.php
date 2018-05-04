@@ -14,7 +14,7 @@ class InfoController extends Controller
     public function index()
     {
         $user = User::where('id',Auth::id())->first();
-        return view('home\info',['user'=>$user]);
+        return view('home.info',['user'=>$user]);
     }
 
     //保存个人信息

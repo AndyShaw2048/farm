@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>农牧云|账号注册</title>
+    <title>农牧云-注册</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -40,67 +40,7 @@
 <body>
 
 
-<div class="am-g head" style="background: none;color: white;position: fixed;">
-    <div class="nav">
-        <table class="nav-table">
-            <tr>
-                <td class="logo">
-                    <div class="logo-title">
-                        <img class="title" src="img/标题.png" alt="">
-                    </div>
-                    <div class="logo-img">
-                        <img src="img/农牧云1.png" alt="">
-                    </div>
-                </td>
-                <td>
-                    <a href="/">首页
-                        <br>
-                        <span>Home&nbsp; Page</span>
-                    </a>
-
-                </td>
-                <td>
-                    <a href="/goods">
-                        云上集市
-                        <br>
-                        <span>Cloud&nbsp;Shop</span>
-                    </a>
-                </td>
-                <td>
-                    <a href="/cloudfarm">
-                        云上农场
-                        <br>
-                        <span>Cloud&nbsp;Farm</span>
-                    </a>
-                </td>
-                <td>
-                    <a href="/home"> 个人中心
-                        <br>
-                        <span>Personal&nbsp;Center</span>
-                    </a>
-
-                </td>
-                <td class="company">
-                    <a href="#">
-                        关于我们
-                        <br>
-                        <span>About&nbsp;Us</span>
-                    </a>
-                </td>
-                <td class="serch">
-                    <div class="am-input-group">
-                        <input type="text" class="am-form-field" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
-                            <span class="am-input-group-btn">
-                                <button class="am-btn am-btn-default" type="button" style="border-bottom-right-radius: 15px;border-top-right-radius: 15px;">
-                                    <span class="am-icon-search"></span>
-                                </button>
-                            </span>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-</div>
+@include('layouts.nav')
 <header id="gtco-header" class="gtco-cover" role="banner" style="background-image: url(img/1.jpg)">
     <div class="overlay"></div>
     <div class="gtco-container">

@@ -11,7 +11,7 @@ class PurchaseController extends Controller
 {
     public function index()
     {
-        $a_orders = AdoptionOrder::where('user_id',Auth::id())->get();
-        return view('purchase.index',['a_orders'=>$a_orders]);
+        $adoptions = AdoptionOrder::where('user_id',Auth::id())->get();
+        return view('purchase.index',['adoptions'=>$adoptions]);
     }
 }

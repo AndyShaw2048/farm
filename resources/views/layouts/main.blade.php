@@ -51,6 +51,13 @@
                     </a>
                 </td>
                 <td>
+                    <a href="#">
+                        云游天下
+                        <br>
+                        <span>Travel&nbsp;world</span>
+                    </a>
+                </td>
+                <td>
                     <a href="/home">
                         个人中心
                         <br>

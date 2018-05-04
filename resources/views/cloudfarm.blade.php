@@ -14,71 +14,10 @@
 </head>
 
 <body style="width: 100%;">
-<div class="am-g">
-    <div class="nav head">
-        <table class="nav-table ">
-            <tr>
-                <td class="logo">
-                    <div class="logo-title">
-                        <img class="title1" src="{{url('img/标题.png')}}" alt="">
-                    </div>
-                    <div class="logo-img">
-                        <img src="{{url('img/农牧云3.png')}}" alt="">
-                    </div>
-                </td>
-                <td>
-                    <a href="/">首页
-                        <br>
-                        <span>Home&nbsp; Page</span>
-                    </a>
-
-                </td>
-                <td>
-                    <a href="/goods">
-                        云上集市
-                        <br>
-                        <span>Cloud&nbsp;Shop</span>
-                    </a>
-                </td>
-                <td>
-                    <a href="/cloudfarm">
-                        云上农场
-                        <br>
-                        <span>Cloud&nbsp;Farm</span>
-                    </a>
-                </td>
-                <td>
-                    <a href="/home"> 个人中心
-                        <br>
-                        <span>Personal&nbsp;Center</span>
-                    </a>
-
-                </td>
-                <td class="company">
-                    <a href="#">
-                        关于我们
-                        <br>
-                        <span>About&nbsp;Us</span>
-                    </a>
-                </td>
-                <td class="serch">
-                    <div class="am-input-group">
-                        <input type="text" class="am-form-field" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
-                            <span class="am-input-group-btn">
-                                <button class="am-btn am-btn-default" type="button" style="border-bottom-right-radius: 15px;border-top-right-radius: 15px;">
-                                    <span class="am-icon-search"></span>
-                                </button>
-                            </span>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-</div>
+@include('layouts.nav')
 <div class="am-g backImg">
     <img id="show-bgimg" src="{{url('img/景.png')}}" alt="">
 </div>
-
 
 <div class="am-g subscription-body">
     <div class="am-g subscription">
@@ -89,7 +28,7 @@
         </div>
         <div class="am-g order-nav">
             <div class="order-nav-all">
-                <span>热门认购</span>
+                <span>最新认购</span>
             </div>
             <div class="order-nav-list">
                 <ul>
@@ -115,96 +54,27 @@
         <div class="gallery">
             <div class="container">
                 <div class="gallery-grids">
-                    <div class="col-md-4 gallery-grid" style="height: 300px; overflow:hidden;">
-                        <div class="grid">
-                            <figure class="effect-roxy">
-                                <a class="example-image-link" href="/adoption/buy/6">
-                                    <img src="animals/猪.jpg" alt=""/>
-                                    <figcaption>
-                                        <h3><span>香香猪</span></h3>
-                                        <p></p>
-                                        <p>每期￥125 共三期</p>
-                                        <p class="click-order">点击立即认购</h3>
-                                    </figcaption>
-                                </a>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-md-4 gallery-grid" style="height: 300px; overflow:hidden;">
-                        <div class="grid">
-                            <figure class="effect-roxy">
-                                <a class="example-image-link" href="img/images/g5.jpg">
-                                    <img src="animals/牛.jpg" alt=""/>
-                                    <figcaption>
-                                        <h3><span>牦牛</span></h3>
-                                        <p></p>
-                                        <p>每期￥236共三期</p>
-                                        <p class="click-order">点击立即认购</h3>
-                                    </figcaption>
-                                </a>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-md-4 gallery-grid" style="height: 300px; overflow:hidden;">
-                        <div class="grid">
-                            <figure class="effect-roxy">
-                                <a class="example-image-link" href="img/images/g5.jpg">
-                                    <img src="animals/羊.jpg" alt=""/>
-                                    <figcaption>
-                                        <h3><span>蒙古羊</span></h3>
-                                        <p></p>
-                                        <p>每期￥186共三期</p>
-                                        <p class="click-order">点击立即认购</h3>
-                                    </figcaption>
-                                </a>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-md-4 gallery-grid" style="height: 300px; overflow:hidden;">
-                        <div class="grid">
-                            <figure class="effect-roxy">
-                                <a class="example-image-link" href="img/images/g5.jpg">
-                                    <img src="animals/鸡.jpg" alt=""/>
-                                    <figcaption>
-                                        <h3><span>农村本地鸡</span></h3>
-                                        <p></p>
-                                        <p>每期￥72共三期</p>
-                                        <p class="click-order">点击立即认购</h3>
-                                    </figcaption>
-                                </a>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-md-4 gallery-grid" style="height: 300px; overflow:hidden;">
-                        <div class="grid">
-                            <figure class="effect-roxy">
-                                <a class="example-image-link" href="img/images/g5.jpg">
-                                    <img src="animals/鸭.jpg" alt=""/>
-                                    <figcaption>
-                                        <h3><span>连城白鸭</span></h3>
-                                        <p></p>
-                                        <p>每期￥79共三期</p>
-                                        <p class="click-order">点击立即认购</h3>
-                                    </figcaption>
-                                </a>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-md-4 gallery-grid" style="height: 300px; overflow:hidden;">
-                        <div class="grid">
-                            <figure class="effect-roxy">
-                                <a class="example-image-link" href="img/images/g5.jpg">
-                                    <img src="animals/猪 (2).jpg" alt=""/>
-                                    <figcaption>
-                                        <h3><span>大白猪</span></h3>
-                                        <p></p>
-                                        <p>每期￥163共三期</p>
-                                        <p class="click-order">点击立即认购</h3>
-                                    </figcaption>
-                                </a>
-                            </figure>
-                        </div>
-                    </div>
+                    @if($goods->isEmpty())
+                    @else
+                        @foreach($goods as $good)
+                            <div class="col-md-4 gallery-grid" style="height: 300px; overflow:hidden;">
+                                <div class="grid">
+                                    <figure class="effect-roxy">
+                                        <a class="example-image-link" href="/adoption/buy/{{$good->id}}">
+                                            <img src="{{url('uploads/'.$good->pic)}}" alt=""/>
+                                            <figcaption>
+                                                <h3><span>{{$good->name}}</span></h3>
+                                                <p></p>
+                                                <p>每期￥{{$good->price}} 共 {{$good->total_stage}} 期</p>
+                                                <p class="click-order">点击立即认购</p>
+                                            </figcaption>
+                                        </a>
+                                    </figure>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
+
                     <div class="clearfix"> </div>
                 </div>
             </div>
@@ -388,8 +258,9 @@
 <script src="{{url('assets/js/jquery.js')}}"></script>
 <script src="{{url('assets/js/amazeui.js')}}"></script>
 <script>
-    $(window).bind("scroll", function () {
-        var top = $(this).scrollTop();
+    $(window).bind("scroll", function() {
+        var top = $(this).scrollTop(); // 当前窗口的滚动距离
+        // console.log($(this))
         if (top > 1) {
             $(".nav").css({
                 "background": "white",
@@ -400,7 +271,7 @@
             $(".company a").css("color", "black");
             $(".logo span").css("color", "black");
             $(".am-input-group").css("opacity", "1")
-            $(".title1").attr("src", "img/标题-黑.png")
+            $(".title").attr("src", "img/标题-黑.png")
         }
         if (top == 0) {
             $(".nav").css({
@@ -410,8 +281,8 @@
             $(".nav-table a").css("color", "white");
             $(".company a").css("color", "white");
             $(".logo span").css("color", "white");
-            $(".am-input-group").css("opacity", "0.5")
-            $(".title1").attr("src", "img/标题.png")
+            $(".am-input-group").css("opacity", "1")
+            $(".title").attr("src", "img/标题.png")
         }
     });
 </script>

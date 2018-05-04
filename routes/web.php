@@ -3,7 +3,8 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/cloudfarm',function(){
-   return view('cloudfarm');
+    $goods = \App\Adoption\AdoptionGood::orderBy('created_at','asc')->limit(6)->get();
+   return view('cloudfarm',['goods'=>$goods]);
 });
 Route::get('/about',function(){
     return view('company');
@@ -47,6 +48,11 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/order/receive/{id}','Order\OrderController@receive')->where('id','[0-9]+');
         Route::get('/order/rating/{id}','Order\OrderController@ratingIndex')->where('id','[0-9]+');
         Route::post('/order/rating','Order\OrderController@ratingStore')->where('id','[0-9]+');
+    });
+
+    //认购相关路由
+    Route::prefix('adoption')->group(function(){
+        Route::get('/grow/{order_id}','Adoption\AdoptionController@growDetail')->where('order_id','[0-9]+');
     });
 
 

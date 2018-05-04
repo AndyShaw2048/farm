@@ -115,9 +115,9 @@
                     <span style="font-size: 30px;color: red;margin-left: 20px;" id="price">￥{{$goods->price}}/期</span>
                 </li>
                 <li>
-                    <span>总共期数:</span>
+                    <span>总共期数 </span>
                     <span style="margin-left: 10px;color: red;font-size: 1.2em;">{{$goods->total_stage}}期</span>
-                    <span style="color: rgb(180, 180, 180)">（每期为20天）</span>
+                    <span style="color: rgb(180, 180, 180)">（每期为{{$goods->days_per_stage}}天）</span>
                 </li>
                 {{--<li>--}}
                         <span>
@@ -130,13 +130,13 @@
                     {{--</span> -->--}}
                 {{--</li>--}}
                 <li>
-                        <span>来源
+                        <span>产地
                             <strong style="margin-left: 45px;">{{$goods->thisFarm->name}}</strong>
                         </span>
                 </li>
                 <li>
                         <span id="count">购买数量
-                            <input style="height: 40px;margin-left: 15px;" id="count-input" type="number" value="1" min="1" max="99" name="adopt_num">
+                            <input style="height: 25px;margin-left: 15px;" id="count-input" type="number" value="1" min="1" max="99" name="adopt_num">
                         </span>
                 </li>
                 <div style="margin-top: 20px">
