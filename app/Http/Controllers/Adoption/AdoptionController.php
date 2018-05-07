@@ -31,7 +31,7 @@ class AdoptionController extends Controller
         $good = AdoptionGood::where('id',$id)->first();
         $order = new AdoptionOrder();
         $order->name = $good->name;
-        $order->farm = $good->farm;
+        $order->farm_id = $good->farm;
         $order->good_id = $id;
         $order->order_id = $order_id;
         $order->user_id = Auth::id();
@@ -40,6 +40,8 @@ class AdoptionController extends Controller
         $order->days_per_stage = $good->days_per_stage;
         $order->adopt_num = $request->adopt_num;
         $order->current_stage = 1;
+        $order->status = 1;
+        $order->delete = 0;
         $order->estimate_end_time = date("Y-m-d",strtotime("{$t} +".$good->total_stage*$good->days_per_stage." day"));
         $order->save();
         return redirect('/home/purchase');
@@ -47,10 +49,28 @@ class AdoptionController extends Controller
     
     public function growDetail($order_id)
     {
-        $order = AdoptionOrder::where('order_id',$order_id)
-                       ->where('user_id',Auth::id())->get();
-        if($order->isEmpty()) return abort(404);
-        return view('adoption.grow',['order'=>$order]);
+        $adoption = AdoptionOrder::where('order_id',$order_id)
+                       ->where('user_id',Auth::id())->first();
+        if(is_null($adoption)) return abort(404);
+        $diff = floor((strtotime($adoption->estimate_end_time) - strtotime('now')) / 86400);
+        return view('adoption.grow',['adoption'=>$adoption,'diff'=>$diff]);
+    }
+
+    //Ajax删除订单
+    public function delOrder(Request $request)
+    {
+        $order = AdoptionOrder::where('order_id',$request->order_id)
+                                ->where('user_id',Auth::id())
+                                ->get();
+
+        if($order->isEmpty())
+        {
+            return response()->json(array(['code' => 100, 'msg' => '失败']));
+        }
+        AdoptionOrder::where('order_id',$request->order_id)
+                       ->update(['delete' => 1]);
+        return response()->json(array(['code' => 200, 'msg' => '成功']));
+
     }
 }
 

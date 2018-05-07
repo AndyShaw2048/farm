@@ -15,22 +15,22 @@
 <div class="am-g body">
     <table class="detail-table">
         <tr>
-            <th colspan="6" style="font-size: 3em;">认购物品成长详细</th>
+            <th colspan="6" style="font-size: 3em;">生长详情</th>
         </tr>
         <tr>
             <th>订单号:
-                <span>54161235133</span>
+                <span>{{$adoption->order_id}}</span>
             </th>
-            <th>农牧云水果基地</th>
+            <th>{{$adoption->Farm->name}}</th>
 
-            <th>多汁石榴</th>
+            <th>{{$adoption->Good->name}}</th>
             <th>正处于
-                <span style="color: red;">第二期</span>成长(距第三期:
+                <span style="color: red;">第 {{$adoption->current_stage}} 期</span>成长(距下一期:
                 <span style="color: red;">12天</span> )
             </th>
-            <th>成长总期数:3期(1期30为天)</th>
+            <th>成长总期数: {{$adoption->total_stage}} 期({{$adoption->days_per_stage}} 天/期)</th>
             <th>距离收获还剩:
-                <span style="color: red">42天</span>
+                <span style="color: red">{{$diff}}天</span>
             </th>
         </tr>
         <tr>

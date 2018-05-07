@@ -94,7 +94,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <img style="width: 100px;height: 100px;" src="{{url('uploads/'.$order->Good->pics)}}" alt="">
+                            <img style="height: 100px;" src="{{url('uploads/'.$order->Good->pics)}}" alt="">
                         </td>
                         <td>
                                     <span style="font-size: 0.8em;font-weight: bold">{{$order->Good->title}}
@@ -140,10 +140,6 @@
                 </table>
             </div>
         </div>
-        <footer class=" admin-content-footer ">
-            <hr>
-            <p class="am-padding-left ">© 2018 搭建.</p>
-        </footer>
     </div>
 </div>
 @endsection

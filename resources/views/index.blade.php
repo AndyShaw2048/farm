@@ -14,9 +14,12 @@
 @include('layouts.nav')
 <div class="am-g">
     <div class="mp4" id="changeImg">
-        <video id="vedio" width="100%" height="100%" autoplay loop="true">
+        <video id="vid" width="100%" height="100%" autoplay="autoplay" loop="true">
             <source src="{{url('audio/农牧云2.mp4')}}" type="video/mp4"> 您的浏览器不支持此种视频格式。
         </video>
+        <script>
+            document.getElementById('vid').play();
+        </script>
     </div>
 </div>
 <div class="am-g desc-list">

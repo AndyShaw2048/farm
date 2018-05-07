@@ -39,4 +39,10 @@ class User extends Authenticatable
         $user = User::findOrFail($id);
         return $last = ['time'=>$user->last_time,'ip'=>$user->last_ip];
     }
+
+    public static function getUser($id)
+    {
+        $user = User::find($id);
+        return $user;
+    }
 }

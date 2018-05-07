@@ -8,11 +8,12 @@
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
+    <meta name="_token" content="{{ csrf_token() }}">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <link rel="stylesheet" href="{{url('assets/css/amazeui.min.css')}}" />
     <link rel="stylesheet" href="{{url('assets/css/admin.css')}}">
     <link rel="stylesheet" href="{{url('css/nav.css')}}">
-
+    <link rel="stylesheet" href="{{url('css/message.css')}}">
     @yield('script-top')
 </head>
 
@@ -98,7 +99,7 @@
                 </li>
                 <li>
                     <a href="/home/account/info">
-                        <span class="am-icon-male"></span> 个人资料</a>
+                        <span class="am-icon-male"></span>&nbsp;&nbsp;个人资料</a>
                 </li>
                 <li>
                     <a href="/home/account/cart">
@@ -113,7 +114,7 @@
                 </li>
                 <li>
                     <a href="/home/purchase">
-                        <span class="am-icon-table"></span> 我的订购</a>
+                        <span class="am-icon-table"></span> 我的认购</a>
                 </li>
                 <li>
                     <a href="#">
@@ -145,6 +146,7 @@
 <script src="{{url('assets/js/amazeui.min.js')}}"></script>
 <script src="{{url('assets/js/app.js')}}"></script>
 <script src="{{url('js/jquery.nicescroll.js')}}"></script>
+<script src="{{url('js/message.min.js')}}"></script>
 <script>
     $('#admin-offcanvas').niceScroll({
         cursorcolor: "#ccc",//#CC0071 光标颜色

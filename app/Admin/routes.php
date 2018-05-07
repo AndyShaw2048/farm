@@ -17,7 +17,10 @@ Route::group([
     $router->resource('member', UserController::class);
     $router->resource('farms', FarmController::class);
     $router->resource('adoptiongoods', AdoptionGoodController::class);
+    $router->resource('adoptionorders', AdoptionOrderController::class);
+    $router->resource('adoptiondetails', AdoptionDetailController::class);
 
+    $router->get('adoptiondetails/upload/{order_id}','AdoptionDetailController@upload');
     $router->post('goods/shelf', 'PostController@onShelf');
 
 });

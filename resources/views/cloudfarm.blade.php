@@ -16,7 +16,7 @@
 <body style="width: 100%;">
 @include('layouts.nav')
 <div class="am-g backImg">
-    <img id="show-bgimg" src="{{url('img/景.png')}}" alt="">
+    <img id="show-bgimg" src="{{url('img/cloudfarm_back.jpg')}}" alt="">
 </div>
 
 <div class="am-g subscription-body">

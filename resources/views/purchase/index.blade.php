@@ -9,8 +9,8 @@
 <div class="admin-content-body">
     <div class="am-cf am-padding">
         <div class="am-fl am-cf">
-            <strong class="am-text-primary am-text-lg">我的订购</strong> /
-            <small>MyOrder</small>
+            <strong class="am-text-primary am-text-lg">我的认购</strong> /
+            <small>MyAdoption</small>
         </div>
     </div>
     <div class="am-g">
@@ -18,23 +18,17 @@
             <table class="am-table am-table-bd am-table-striped admin-content-table">
                 <thead>
                 <tr>
-                    <th style="color: red">
-                        <span>全部订购&nbsp;&nbsp;&nbsp;</span>
+                    <th>
+                        <a href="/home/purchase"  style="color: red">全部认购</a>
                     </th>
                     <th>
-                                <span>
-                                    <small>待付款</small>
-                                </span>
+                        <a href="/home/purchase/waittingforpay">待付款</a>
                     </th>
                     <th>
-                                <span>
-                                    <small>待收货</small>
-                                </span>
+                        <a href="/home/purchase/waittingforreceive">待收货</a>
                     </th>
                     <th>
-                                <span style="cursor: pointer;">
-                                    <small>订购回收站</small>
-                                </span>
+                        <a href="/home/purchase/recycle">认购回收站</a>
                     </th>
                     <th>
                         <input style="font-size: 0.9em;font-weight: lighter" type="search" placeholder="订购商品名称/订购单号">
@@ -48,9 +42,9 @@
                 <tr>
                     <th style="width: 200px;">
                         <select style="text-decoration: none;font-weight:initial;font-size: 0.8em;" id="doc-select-1">
-                            <option value="option1">近三个月订单</option>
-                            <option value="option2">今年内订单</option>
-                            <option value="option3">2017年订单</option>
+                            <option value="option1">近一个周订单</option>
+                            <option value="option2">近三个月订单</option>
+                            <option value="option3">近一年订单</option>
                         </select>
                     </th>
                     <th colspan="2">订购详情</th>
@@ -67,8 +61,9 @@
                 <tr style="margin-bottom: 10px;border: 1px solid grey">
                     <td colspan="8">
                         <span>{{$adoption->created_at}}</span>
-                        <span style="margin: 0 40px 0 40px;">认购单号</span>
-                        <span style="font-weight: bold">{{$adoption->order_id}}</span>
+                        <span style="margin: 0 10px 0 40px;">认购单号</span>
+                        <span style="">{{$adoption->order_id}}</span>
+                        <input type="text" id="orderID" hidden value="{{$adoption->order_id}}">
                     </td>
                 </tr>
                 <tr>
@@ -95,26 +90,28 @@
                         <span style="margin-left:10px; ">在线支付</span>
                     </td>
                     <td style="padding-top: 80px;padding-left: 10px;">
-                        <span style="font-weight: bold;">第二期成长中</span>
+                        <span style="font-weight: bold;">第 {{$adoption->current_stage}} 期成长中</span>
                         <br>
                                         <span>
                                             <i class="am-icon-sellsy"></i>
                                             <span style="color: red;font-size: 0.7em;">+110经验</span>
                                         </span>
                         <br>
-                                        <span>代售
-                                            <span style="color: red">￥10</span>
-                                        </span>
-                        <br>
+                                        {{--<span>代售--}}
+                                            {{--<span style="color: red">￥10</span>--}}
+                                        {{--</span>--}}
+                        {{--<br>--}}
                     </td>
                     </td>
                     <td style="padding-top: 50px;padding-left: 10px;">
-                        <a href="/adoption/grow/{{$adoption->order_id}}" type="button" class="am-btn am-btn-primary" style="margin-bottom: 2px;color: white;">成长详情</a>
+                        @if(!$adoption->delete)
+                        <a href="/adoption/grow/{{$adoption->order_id}}" type="button" target="_blank" class="am-btn am-btn-primary" style="margin-bottom: 2px;color: white;">成长详情</a>
                         <br>
-                        <a type="button" class="am-btn am-btn-secondary" style="margin-bottom: 2px;color: #fff;">再次购买</a>
+                        <a href="/adoption/buy/{{$adoption->good_id}}" type="button" class="am-btn am-btn-secondary" style="margin-bottom: 2px;color: #fff;">再次购买</a>
                         <br>
-                        <a type="button" class="am-btn am-btn-danger" style="color: white">删除订单</a>
+                        <a onclick="del({{$adoption->order_id}})" type="button" class="am-btn am-btn-danger" style="color: white">删除订单</a>
                         <br>
+                            @endif
                     </td>
                 </tr>
                 </tbody>
@@ -124,16 +121,49 @@
 
         </div>
     </div>
-    <footer class=" admin-content-footer ">
-        <hr>
-        <p class="am-padding-left ">© 2018 搭建.</p>
-    </footer>
+    <div class="admin-content-footer" style="height: 100px;">
+
+    </div>
 </div>
 </div>
+
 @endsection
 
 @section('script-bottom')
 <script>
+    function del(orderID)
+    {
+        $.ajax({
+            type: 'POST',
+            url: '/adoption/order/del',
+            data: {order_id:orderID},
+            dataType: 'json',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            },
+            success: function(data){
+                if (data[0].code == 200){
+                    window.setTimeout("window.location='/home/purchase'",1500);
+                    $.message({
+                        message:'操作成功',
+                        time:'1000',
+                        type:'success'
+                    });
+                }
+                else{
+                    $.message({
+                        message: '删除失败',
+                        type: 'error'
+                    });
+
+                }
+            },
+            error: function(xhr, type){
+                alert('Ajax error!')
+            }
+        });
+    }
+
     var count
     $(() => {
         count = $(".am-nav-tabs li").length

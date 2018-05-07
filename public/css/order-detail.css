@@ -120,8 +120,9 @@ a::after {
 
 .remark-table {
     width: 100%;
-    background: rgb(136, 251, 171);
+    background: rgb(242, 244, 248);
     margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 .remark-desc {
@@ -131,7 +132,7 @@ a::after {
 .remark-date {
     width: 150px;
     height: 150px;
-    background: rgb(96, 209, 86);
+    border-right: 1px solid #dfdfdf;
 }
 
 .remark-date h1,
@@ -147,7 +148,7 @@ p {
 
 .remark-article p {
     margin: 0;
-    margin-left: 5px;
+    margin-left: 20px;
     text-align: initial;
 }
 

@@ -1852,3 +1852,13 @@ form label {
     color: #ff7c13;
     border: 1px solid #ff7c13;
 }
+
+.login a {
+  color: #ff7c13;
+  font-size: 0.5em;
+}
+.login a:hover {
+  color: #ff7c13;
+  font-size: 0.8em;
+  transition: font-size 0.8s;
+}

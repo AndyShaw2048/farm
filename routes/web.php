@@ -39,7 +39,7 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/account/cart','Cart\CartController@index');
 
         //订购管理
-        Route::get('/purchase','Order\PurchaseController@index');
+        Route::get('/purchase/{option?}','Order\PurchaseController@index');
 
 
         //订单查看与管理
@@ -53,6 +53,7 @@ Route::middleware(['auth'])->group(function(){
     //认购相关路由
     Route::prefix('adoption')->group(function(){
         Route::get('/grow/{order_id}','Adoption\AdoptionController@growDetail')->where('order_id','[0-9]+');
+        Route::post('/order/del','Adoption\AdoptionController@delOrder');
     });
 
 

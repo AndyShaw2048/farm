@@ -15,7 +15,7 @@
 
         <ul class="am-avg-sm-1 am-avg-md-4 am-margin am-padding am-text-center admin-content-list ">
             <li>
-                <img class="am-img-thumbnail am-circle" style="height:98px;float:left;margin-left:45px;" src="{{url($user->avatar)}}" alt="">
+                <img class="am-img-thumbnail am-circle" style="height:98px;float:left;" src="{{url($user->avatar)}}" alt="">
                 <a href="#" class="am-text-secondary">
                     <span class="am-icon-btn am-icon-user"></span>
                     <br/>欢迎，{{$user->nickname}}
@@ -26,13 +26,13 @@
             <li>
                 <a href="#" class="am-text-warning">
                     <span class="am-icon-btn am-icon-plane"></span>
-                    <br/>运输中订单
+                    <br/>集市订单数量
                     <br/>10</a>
             </li>
             <li>
                 <a href="#" class="am-text-warning">
                     <span class="am-icon-btn am-icon-briefcase"></span>
-                    <br/>订购订单
+                    <br/>农场认购数量
                     <br/>10</a>
             </li>
             <li>
@@ -49,7 +49,7 @@
                 <table class="am-table am-table-bd am-table-striped admin-content-table">
                     <thead>
                     <tr>
-                        <a href="">详细订单</a>
+                        <a href="/home/order">详细订单</a>
                     </tr>
                     <tr>
                         <th>订单号</th>

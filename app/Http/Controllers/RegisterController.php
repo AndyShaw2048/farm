@@ -6,6 +6,7 @@ use App\Http\Requests\RegisterValidate;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Response;
 
 class RegisterController extends Controller
 {
@@ -17,12 +18,13 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'telephone' => 'bail|required|digits:11',
+            'telephone' => 'bail|required|digits:11|unique:users',
             'password' => 'bail|required|min:6|max:20|alpha_num|confirmed',
         ];
         $msg = [
             'telephone.required' => '电话号码禁止为空',
             'telephone.digits' => '电话号码为11位纯数字',
+            'telephone.unique' => '该电话号码已存在',
             'password.required' => '密码禁止为空',
             'password.min' => '密码最小长度为6位',
             'password.man' => '密码最大长度为20位',
@@ -31,9 +33,9 @@ class RegisterController extends Controller
         ];
         $validator = Validator::make($request->all(),$rules,$msg);
         if ($validator->fails())
-        {
-            return redirect()->back()->withErrors($validator);
-        }
+            return Response::json(array(['code' => 100,
+                                      'msg' => $validator->getMessageBag()->toArray()
+                                  ]));
 
         $user = new User();
         $user->nickname = '新用户'.substr($request->telephone,7,4);
@@ -43,6 +45,9 @@ class RegisterController extends Controller
         $user->pid = 1;
         $user->avatar = 'users/avatars/default.jpg';
         $user->save();
-        return redirect('/login')->withErrors(['e'=>'注册成功']);
+        return response()->json(array([
+                                          'code' => 200,
+                                          'msg' => '注册成功',
+                                      ]));
     }
 }
