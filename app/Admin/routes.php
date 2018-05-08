@@ -21,6 +21,7 @@ Route::group([
     $router->resource('adoptiondetails', AdoptionDetailController::class);
 
     $router->get('adoptiondetails/upload/{order_id}','AdoptionDetailController@upload');
+    $router->post('adoptiondetails/uploadfile/img','AdoptionDetailController@uploadimg');
     $router->post('goods/shelf', 'PostController@onShelf');
 
 });

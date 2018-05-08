@@ -12,6 +12,8 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
 
 class AdoptionDetailController extends Controller
 {
@@ -109,5 +111,14 @@ class AdoptionDetailController extends Controller
             $content->description('编辑');
             $content->body(view('adoption.upload',['order'=>$order]));
         });
+    }
+
+    public function uploadimg(Request $request)
+    {
+        $path = $request->file('img')->storeAs('adoption/images',time().rand(100,999),'adoptionImages');
+        return Response::json(array([
+            'status' => 'success',
+            'path' => $path
+                                    ]));
     }
 }

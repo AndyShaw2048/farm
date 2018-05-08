@@ -75,6 +75,18 @@ return [
             'visibility' => 'public',
             'url' => env('APP_URL').'/users/avatars',
         ],
+        'adoptionImages' => [
+            'driver' => 'local',
+            'root' => public_path('/'),
+            'visibility' => 'public',
+            'url' => env('APP_URL').'/adoption/images',
+        ],
+        'adoptionMovies' => [
+            'driver' => 'local',
+            'root' => public_path('/'),
+            'visibility' => 'public',
+            'url' => env('APP_URL').'/adoption/movies',
+        ],
 
     ],
 

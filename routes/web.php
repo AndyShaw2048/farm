@@ -80,3 +80,4 @@ Route::prefix('adoption')->group(function(){
 
 
 Route::get('test','TestController@upload');
+Route::get('alipay','TestController@alipay');

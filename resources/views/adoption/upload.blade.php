@@ -42,7 +42,7 @@
             </button>
         </div>
     </div>
-    <div class="layui-form-item">
+    <div class="layui-form-item text-center">
         <div class="layui-input-block">
             <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
             <button type="reset" class="layui-btn layui-btn-primary">重置</button>
@@ -68,11 +68,16 @@
         //执行实例
         var uploadInst = upload.render({
             elem: '#img' //绑定元素
-            ,url: '/upload/' //上传接口
+            ,field:'img'
+            ,multiple:'true'
+            ,url: '/admin/adoptiondetails/uploadfile/img' //上传接口
             ,accept:'images'
+            ,data: {
+                '_token': $('meta[name="_token"]').attr('content')
+            }
             ,acceptMime:'image/png,image/jpg,image/jpeg'
             ,done: function(res){
-                //上传完毕回调
+                console.log(res);
             }
             ,error: function(){
                 //请求异常回调
