@@ -98,7 +98,7 @@
                         <div class="am-form-group">
                             <label for="user-name" class="am-u-sm-3 am-form-label">头像 / Logo</label>
                             <div class="am-u-sm-9">
-                                <img style="width: 100px;height: 100px" src="{{url($user->avatar)}}" alt="">
+                                <img style="width: 100px;height: 100px" src="{{url($user->avatar)}}" alt="" >
                             </div>
                         </div>
                         <div class="am-form-group">

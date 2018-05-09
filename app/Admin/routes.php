@@ -20,8 +20,10 @@ Route::group([
     $router->resource('adoptionorders', AdoptionOrderController::class);
     $router->resource('adoptiondetails', AdoptionDetailController::class);
 
-    $router->get('adoptiondetails/upload/{order_id}','AdoptionDetailController@upload');
+    $router->get('adoptiondetails/upload/{order_id}','AdoptionDetailController@upload')->where('id','[0-9]+');
+    $router->post('adoptiondetails/upload/detail','AdoptionDetailController@uploadDetail');
     $router->post('adoptiondetails/uploadfile/img','AdoptionDetailController@uploadimg');
+    $router->post('adoptiondetails/uploadfile/vdo','AdoptionDetailController@uploadvdo');
     $router->post('goods/shelf', 'PostController@onShelf');
 
 });

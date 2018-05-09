@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/gulouImg1.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* 导航 */
+
+.nav-table {
+    width: 100%;
+    height: 120px;
+}
+
+.head {
+    position: fixed;
+    height: 100px;
+    z-index: 9999;
+}
+
+.nav {
+    height: 100px;
+    background: none;
+}
+
+.nav-table td {
+    font-family: 微软雅黑;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nav-table td:hover {
+    color: black(53, 144, 218);
+}
+
+.logo {
+    width: 30%;
+}
+
+.logo span {
+    font-size: 2em;
+    font-family: 华文楷体;
+    color: rgb(240, 240, 240);
+}
+
+.logo-img {
+    float: right;
+}
+
+.logo-img img {
+    height: 120px;
+    /* padding-left: 260px; */
+    margin-top: 5px;
+}
+
+.logo-title {
+    padding-top: 25px;
+    float: right;
+}
+
+.title {
+    height: 80px;
+}
+
+.serch {
+    width: 20%；
+}
+
+.am-input-group {
+    width: 70%;
+}
+
+.nav-table a {
+    color: white;
+}
+
+/* end导航 */
+
+#main {
+    padding-top: 100px;
+    height: 1200px;
+}
+
+#provence {
+    padding-top: 100px;
+    height: 1270px;
+    display: none;
+}
+
+#city {
+    padding-top: 100px;
+    height: 1270px;
+    width: 100%;
+    display: none;
+}
+
+.city-img {
+    width: 1200px;
+    margin: 0 auto;
+    height: 1171px;
+}
+
+.city-img div {
+    cursor: pointer;
+}
+
+.city-img img {
+    width: 100%;
+    opacity: 0.8;
+}
+
+.city-img h1 {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 189px;
+}
+
+/* 合作地区列表 */
+
+.cooperate {
+    position: relative;
+    top: -140px;
+    left: 175px;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: none;
+}
+
+.cooperate ul {
+    padding-left: 0;
+    list-style: none;
+    font-size: 1.7em;
+}
+
+.cooperate ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.cooperate ul li a:hover {
+    color: orange;
+}
+
+/* 西充 */
+
+.xichong {
+    position: relative;
+    width: 194px;
+    height: 189px;
+    top: -600px;
+    left: 266px;
+}
+
+.xichong:hover .cooperate {
+    display: block;
+}
+
+/* 南充 */
+
+.nanchong {
+    position: relative;
+    width: 194px;
+    height: 189px;
+    top: -588px;
+    left: 417px;
+}
+
+.nanchong:hover h1 {
+    display: block;
+}
+
+.nanchong:hover .cooperate {
+    display: block;
+}
+
+/* 蓬安 */
+
+.pengan {
+    position: relative;
+    width: 180px;
+    height: 189px;
+    top: -911px;
+    left: 655px;
+    /* line-height: 100px; */
+}
+
+/* 营山 */
+
+.yingshan {
+    position: relative;
+    width: 180px;
+    height: 189px;
+    top: -1247px;
+    left: 853px;
+}
+
+/* 仪陇 */
+
+.yilong {
+    position: relative;
+    width: 180px;
+    height: 189px;
+    top: -1667px;
+    left: 751px;
+}
+
+/* 阆中 */
+
+.langzhong {
+    position: relative;
+    width: 180px;
+    height: 189px;
+    top: -1959px;
+    left: 382px;
+}
+
+/* 南部 */
+
+.nanbu {
+    position: relative;
+    width: 180px;
+    height: 189px;
+    top: -1945px;
+    left: 294px;
+}

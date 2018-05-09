@@ -31,7 +31,7 @@
                     </a>
                 </td>
                 <td>
-                    <a href="#">
+                    <a href="/cloudtravel">
                         云游天下
                         <br>
                         <span>Travel&nbsp;world</span>

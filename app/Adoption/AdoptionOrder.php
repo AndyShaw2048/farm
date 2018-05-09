@@ -22,4 +22,5 @@ class AdoptionOrder extends Model
     {
         return $this->hasOne('App\Farm','id','farm_id');
     }
+
 }

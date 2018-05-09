@@ -53,7 +53,7 @@ class InfoController extends Controller
         //判断是否上传头像
         if(!is_null($request->avatar) && $request->file('avatar')->isFile() )
         {
-            $path = $request->file('avatar')->storeAs('users/avatars',Auth::id(),'avatars');
+            $path = $request->file('avatar')->storeAs('users/avatars',Auth::id().rand(0,9),'avatars');
             User::where('id',Auth::id())
                 ->update([
                     'avatar' => $path

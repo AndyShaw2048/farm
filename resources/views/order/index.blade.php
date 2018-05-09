@@ -129,9 +129,9 @@
                                     </span>
                         </td>
                         <td>
-                            <button type="button" class="am-btn am-btn-default">再次购买</button>
+                            <button type="button" class="am-btn am-btn-primary">再次购买</button>
                             <br>
-                            <p style="color: red;margin: 2px 0 0 15px;cursor: pointer;">删除订单 </p>
+                            <button type="button" class="am-btn am-btn-danger" style="margin-top: 5px">删除订单</button>
                         </td>
                     </tr>
                     </tbody>
@@ -139,6 +139,9 @@
                     @endif
                 </table>
             </div>
+        </div>
+        <div class="admin-content-footer" style="height: 100px;">
+
         </div>
     </div>
 </div>

@@ -54,6 +54,7 @@ Route::middleware(['auth'])->group(function(){
     Route::prefix('adoption')->group(function(){
         Route::get('/grow/{order_id}','Adoption\AdoptionController@growDetail')->where('order_id','[0-9]+');
         Route::post('/order/del','Adoption\AdoptionController@delOrder');
+        Route::post('/order/comment','Adoption\AdoptionController@comment');
     });
 
 
@@ -78,6 +79,10 @@ Route::prefix('adoption')->group(function(){
     Route::post('/buy/{id}','Adoption\AdoptionController@store');
 });
 
+//云游天下模块
+Route::prefix('cloudtravel')->group(function(){
+   Route::get('/','CloudTravelController@index');
+});
 
 Route::get('test','TestController@upload');
 Route::get('alipay','TestController@alipay');

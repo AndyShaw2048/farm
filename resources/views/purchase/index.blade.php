@@ -84,7 +84,7 @@
                     </td>
                     <td style="padding-top: 80px;padding-left: 10px;">
                                 <span style="border-bottom: 1px solid  rgb(180, 180, 180);padding-bottom: 5px;">
-                                    总额￥25.00
+                                    总额￥{{$adoption->total_stage*$adoption->price_per_stage}}
                                 </span>
                         <br>
                         <span style="margin-left:10px; ">在线支付</span>

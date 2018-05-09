@@ -19,31 +19,42 @@
 <div class="am-g">
     <div class="am-u-lg-12" style="padding: 0;">
         <div class="am-g">
-            <div class="am-g dropdown-nav" style="position: absolute;top: 11vw;left: 16vw;">
+            <div class="am-g dropdown-nav" style="position: absolute;top: 22%;left: 15%;">
                 <div class="dropdown">
                     <ul class="buy-list">
                         <li id="left-0">
-                            <a href="">
+                            <span style="color: #fff;">
                                 全部商品
-                            </a>
+                            </span>
                         </li>
                         <li class="left-list" id="left-1">
-                            <a href="">新鲜水果类
+                            <a href="">
+                                <i class="am-icon-balance-scale"></i>
+                                新鲜水果类
                                 <i class="am-icon-angle-right"></i>
                             </a>
                         </li>
                         <li class="left-list" id="left-2">
-                            <a href="">新鲜蔬菜类
+
+                            <a href="">
+                                <i class="am-icon-shopping-basket"></i>
+                                新鲜蔬菜类
                                 <i class="am-icon-angle-right"></i>
                             </a>
                         </li>
                         <li class="left-list" id="left-3">
-                            <a href="">精品肉类
+
+                            <a href="">
+                                <i class="am-icon-shopping-bag"></i>
+                                精品肉类
                                 <i class="am-icon-angle-right"></i>
                             </a>
                         </li>
                         <li class="left-list" id="left-4">
-                            <a href="">各种蛋类
+
+                            <a href="">
+                                <i class="am-icon-circle-thin"></i>
+                                蛋类
                                 <i class="am-icon-angle-right"></i>
                             </a>
                         </li>
@@ -73,14 +84,10 @@
                 </div>
                 <div class="right-side" id="right-side-1">
                     <div class="foods-head">
-                        <h1>多汁类水果
-                                <span>
-                                    更多>>
-                                </span>
-                        </h1>
 
                     </div>
                     <div class="food-name">
+                        <h3>当季热门水果</h3>
                         @foreach($goods as $good)
                             @if($good->goods_type == 1)
                             <a href="/goods/buy/{{$good->id}}">{{$good->name}}</a>
@@ -90,13 +97,9 @@
                 </div>
                 <div class="right-side" id="right-side-2">
                     <div class="foods-head">
-                        <h1>新鲜蔬菜
-                                <span>
-                                    更多>>
-                                </span>
-                        </h1>
                     </div>
                     <div class="food-name">
+                        <h3>当季新鲜蔬菜</h3>
                         @foreach($goods as $good)
                             @if($good->goods_type == 4)
                                 <a href="/goods/buy/{{$good->id}}">{{$good->name}}</a>
@@ -106,14 +109,10 @@
                 </div>
                 <div class="right-side" id="right-side-3">
                     <div class="foods-head">
-                        <h1>精品肉类
-                                <span>
-                                    更多>>
-                                </span>
-                        </h1>
 
                     </div>
                     <div class="food-name">
+                        <h3>精品肉类</h3>
                         @foreach($goods as $good)
                             @if($good->goods_type == 3)
                                 <a href="/goods/buy/{{$good->id}}">{{$good->name}}</a>
@@ -123,14 +122,10 @@
                 </div>
                 <div class="right-side" id="right-side-4">
                     <div class="foods-head">
-                        <h1>蛋类
-                                <span>
-                                    更多>>
-                                </span>
-                        </h1>
 
                     </div>
                     <div class="food-name">
+                        <h3>特色蛋类</h3>
                         @foreach($goods as $good)
                             @if($good->goods_type == 5)
                                 <a href="/goods/buy/{{$good->id}}">{{$good->name}}</a>

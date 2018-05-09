@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="css/clouldTravel.css">
+    <title>农牧云-云游天下</title>
+
+</head>
+
+<body>
+@include('layouts.nav')
+<div id="main"></div>
+<div id="provence"></div>
+<div id="city">
+    <div class="city-img">
+        <img src="img/nanchong-noBack.png" alt="">
+        <div class="xichong">
+            <h1>西充县</h1>
+            <div class="cooperate">
+                <ul>
+                    <li>
+                        <a href="">
+                            <h5>古楼镇</h5>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">古楼镇鲜家坝村</a>
+                    </li>
+                    <li>
+                        <a href="">古楼镇唇牙村</a>
+                    </li>
+                    <li>
+                        <a href="">古楼镇冯二垭村</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="nanchong">
+            <h1>南充市</h1>
+            <div class="cooperate">
+                <ul>
+                    <li>
+                        <a href="">古楼镇鲜家坝村</a>
+                    </li>
+                    <li>
+                        <a href="">古楼镇唇牙村</a>
+                    </li>
+                    <li>
+                        <a href="">古楼镇冯二垭村</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pengan">
+            <h1>蓬安县</h1>
+        </div>
+        <div class="yingshan">
+            <h1>营山县</h1>
+        </div>
+        <div class="yilong">
+            <h1>仪陇县</h1>
+        </div>
+        <div class="langzhong">
+            <h1>阆中市</h1>
+        </div>
+        <div class="nanbu">
+            <h1>南部县</h1>
+        </div>
+    </div>
+</div>
+<div>2</div>
+<script src="js/jquery.min.js"></script>
+<script src="assets/echarts-2.2.7/build/dist/echarts.js"></script>
+<script src="assets/echarts-2.2.7/build/dist/echarts-all.js"></script>
+<script type="text/javascript">
+    $(window).bind("scroll", function () {
+        var top = $(this).scrollTop(); // 当前窗口的滚动距离
+        // console.log($(this))
+        if (top > 1) {
+            $(".nav").css({
+                "background": "white",
+                "opacity": "0.8",
+                "transition": "background-color 1s"
+            });
+            $(".nav-table a").css("color", "black");
+            $(".company a").css("color", "black");
+            $(".logo span").css("color", "black");
+            $(".am-input-group").css("opacity", "1")
+            $(".title").attr("src", "img/标题-黑.png")
+        }
+        if (top == 0) {
+            $(".nav").css({
+                "background": "none",
+                "opacity": "1",
+            });
+            $(".nav-table a").css("color", "white");
+            $(".company a").css("color", "white");
+            $(".logo span").css("color", "white");
+            $(".am-input-group").css("opacity", "0.5")
+            $(".title").attr("src", "img/标题.png")
+        }
+    });
+    // <!--地图 -->
+
+    require.config({
+        paths: {
+            echarts: 'assets/echarts-2.2.7/build/dist'
+        }
+    });
+    require(
+            [
+                'echarts',
+                'echarts/chart/map' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+
+                // --- 地图 ---
+                var myChart = ec.init(document.getElementById('main'));
+                myChart.setOption({
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: '{b}'
+                    },
+                    series: [{
+                        name: '中国',
+                        type: 'map',
+                        mapType: 'china',
+                        // tooltip: '1123',
+                        selectedMode: 'single',
+                        itemStyle: {
+                            normal: {
+                                areaStyle: {
+                                    color: 'rgba(255,255,255,0.8)',
+                                },
+                                borderColor: 'grey',
+                                label: {
+                                    show: true
+                                }
+                            },
+                            emphasis: {
+                                areaStyle: {
+                                    color: 'rgba(255,130,71)',
+
+                                },
+                                label: {
+                                    show: true
+                                }
+                            }
+                        },
+                        data: [{
+                            name: '四川',
+                            selected: true
+                        }]
+                    }]
+                });
+                var ecConfig = require('echarts/config');
+                myChart.on(ecConfig.EVENT.MAP_SELECTED, function (param) {
+                    var selected = param.selected;
+                    var provence = param.target; //获取所选定的省份
+                    console.log(param.target)
+                    document.getElementById("provence").style.display = "block";
+                    mapDisplay(provence);
+                    chinaDisapper();
+                });
+            }
+    );
+
+    function chinaDisapper() {
+        var t = document.getElementById("main");
+        t.style.display = "none"
+    };
+
+    function mapDisplay(provence) {
+        var myChart = echarts.init(document.getElementById('provence'));
+        var option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: function (a) { //鼠标移到某个州市上弹出的提示内容。包括显示样式可以自定义，利用return返回样式即可。
+                    return a[1] + ":" + a[2]; //a[1]:州市名称，a[2]:data中的valuez值。
+                }
+            },
+            // dataRange: {
+            // 	min: 0,
+            // 	max: 10,
+            // 	color: ['red', 'rgb(220,220,220)'],
+            // 	//color: ['orange', 'blue'],
+            // 	boder: 3,
+            // 	text: ['10', '0'], // 文本，默认为数值文本
+            // 	calculable: true
+            // },
+            series: [{
+                //name: '数据名称',
+                type: 'map',
+                mapType: provence, //如果是其他省份，也可以改变，例如：上海，北京，天津等地。
+                selectedMode: 'single',
+                itemStyle: {
+                    normal: {
+                        areaStyle: {
+                            color: 'rgba(255,255,255,0.8)',
+                        },
+                        label: {
+                            show: true
+                        },
+                    },
+                    emphasis: {
+                        areaStyle: {
+                            color: 'rgba(255,130,71)',
+
+                        },
+                        label: {
+                            show: true
+                        }
+                    }
+                },
+                //data一定要有，不然没有图
+                data: [{
+                    name: '阿坝藏族羌族自治州',
+                    value: 0
+                },
+                    {
+                        name: '巴中市',
+                        value: 0
+                    },
+                    {
+                        name: '成都市',
+                        value: 0
+                    },
+                    {
+                        name: '达州市',
+                        value: 0
+                    },
+                    {
+                        name: '德阳市',
+                        value: 0
+                    },
+                    {
+                        name: '甘孜藏族自治州',
+                        value: 0
+                    },
+                    {
+                        name: '广安市',
+                        value: 0
+                    },
+                    {
+                        name: '广元市',
+                        value: 0
+                    },
+                    {
+                        name: '乐山市',
+                        value: 0
+                    },
+                    {
+                        name: '凉山彝族自治州',
+                        value: 0
+                    },
+                    {
+                        name: '泸州市',
+                        value: 0
+                    },
+                    {
+                        name: '眉山市',
+                        value: 0
+                    },
+                    {
+                        name: '绵阳市',
+                        value: 0
+                    },
+                    {
+                        name: '内江市',
+                        value: 0
+                    },
+                    {
+                        name: '南充市',
+                        value: 3,
+                        selected: true
+                    },
+                    {
+                        name: '攀枝花市',
+                        value: 0
+                    },
+                    {
+                        name: '遂宁市',
+                        value: 0
+                    },
+                    {
+                        name: '雅安市',
+                        value: 0
+                    },
+                    {
+                        name: '宜宾市',
+                        value: 0
+                    },
+                    {
+                        name: '资阳市',
+                        value: 0
+                    },
+                    {
+                        name: '自贡市',
+                        value: 0
+                    }
+                ]
+            }]
+        };
+        myChart.setOption(option);
+        var ecConfig = require('echarts/config');
+        myChart.on(ecConfig.EVENT.MAP_SELECTED, function (param) {
+            var selected = param.selected;
+            var provence = param.target;
+            console.log(param.target)
+            document.getElementById("provence").style.display = "none";
+            document.getElementById("city").style.display = "block";
+        });
+
+    }
+</script>
+</body>
+
+</html>

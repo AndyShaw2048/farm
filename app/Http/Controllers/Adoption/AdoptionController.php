@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Adoption;
 
+use App\Adoption\AdoptionComment;
+use App\Adoption\AdoptionDetail;
 use App\Adoption\AdoptionGood;
 use App\Adoption\AdoptionOrder;
 use Illuminate\Http\Request;
@@ -40,7 +42,7 @@ class AdoptionController extends Controller
         $order->days_per_stage = $good->days_per_stage;
         $order->adopt_num = $request->adopt_num;
         $order->current_stage = 1;
-        $order->status = 1;
+        $order->status = 2;
         $order->delete = 0;
         $order->estimate_end_time = date("Y-m-d",strtotime("{$t} +".$good->total_stage*$good->days_per_stage." day"));
         $order->save();
@@ -52,8 +54,9 @@ class AdoptionController extends Controller
         $adoption = AdoptionOrder::where('order_id',$order_id)
                        ->where('user_id',Auth::id())->first();
         if(is_null($adoption)) return abort(404);
+        $comments = AdoptionComment::orderBy('created_at','desc')->limit(5)->get();
         $diff = floor((strtotime($adoption->estimate_end_time) - strtotime('now')) / 86400);
-        return view('adoption.grow',['adoption'=>$adoption,'diff'=>$diff]);
+        return view('adoption.grow',['adoption'=>$adoption,'diff'=>$diff,'comments'=>$comments]);
     }
 
     //Ajax删除订单
@@ -71,6 +74,20 @@ class AdoptionController extends Controller
                        ->update(['delete' => 1]);
         return response()->json(array(['code' => 200, 'msg' => '成功']));
 
+    }
+    
+    //订单评论
+    public function comment(Request $request)
+    {
+        $isSelf = AdoptionOrder::where('order_id',$request->orderID)
+                       ->where('user_id',Auth::id())->first();
+        if(is_null($isSelf)) return response()->json(array(['code' => 100, 'msg' => '失败']));
+        $comment = new AdoptionComment();
+        $comment->order_id = $request->orderID;
+        $comment->user_id = Auth::id();
+        $comment->comment = $request->comment;
+        $comment->save();
+        return response()->json(array(['code' => 200, 'msg' => '成功']));
     }
 }
 
