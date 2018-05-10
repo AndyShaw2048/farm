@@ -6,8 +6,8 @@ Route::get('/cloudfarm',function(){
     $goods = \App\Adoption\AdoptionGood::orderBy('created_at','asc')->limit(6)->get();
    return view('cloudfarm',['goods'=>$goods]);
 });
-Route::get('/about',function(){
-    return view('company');
+Route::get('/aboutus',function(){
+    return view('aboutus');
 });
 
 

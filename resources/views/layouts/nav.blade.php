@@ -45,7 +45,7 @@
 
                 </td>
                 <td class="company">
-                    <a href="#">
+                    <a href="/aboutus">
                         关于我们
                         <br>
                         <span>About&nbsp;Us</span>

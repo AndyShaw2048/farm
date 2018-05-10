@@ -126,20 +126,20 @@
     </div>
 </div>
 <div style="clear:both"></div>
-<div class="farm-lunbo">
-    <div class="farm-lunbo-img">
-        <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
-            <ul class="am-slides">
-                <li>
-                    <img src="{{url('img/bing-1.jpg')}}" />
-                </li>
-                <li>
-                    <img src="{{url('img/bing-2.jpg')}}" />
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+{{--<div class="farm-lunbo">--}}
+    {{--<div class="farm-lunbo-img">--}}
+        {{--<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">--}}
+            {{--<ul class="am-slides">--}}
+                {{--<li>--}}
+                    {{--<img src="{{url('img/bing-1.jpg')}}" />--}}
+                {{--</li>--}}
+                {{--<li>--}}
+                    {{--<img src="{{url('img/bing-2.jpg')}}" />--}}
+                {{--</li>--}}
+            {{--</ul>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</div>--}}
 <!-- 云牧场功能 -->
 <div class="am-g func ">
     <div class="title">

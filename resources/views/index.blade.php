@@ -15,7 +15,8 @@
 <div class="am-g">
     <div class="mp4" id="changeImg">
         <video id="vid" width="100%" height="100%" autoplay="autoplay" loop="loop">
-            <source src="{{url('audio/movie.mp4')}}" type="video/mp4"> 您的浏览器不支持此种视频格式。
+            <source src="https://yibanoss1.oss-cn-shenzhen.aliyuncs.com/movie.mp4" type="video/mp4"> 您的浏览器不支持此种视频格式。
+            {{--<source src="{{url('audio/movie.mp4')}}" type="video/mp4"> 您的浏览器不支持此种视频格式。--}}
         </video>
         <script>
             document.getElementById('vid').play();
@@ -23,7 +24,7 @@
     </div>
 </div>
 <div class="am-g desc-list">
-    <div class="am-g desc">
+    <div class="am-g desc" style="overflow: hidden">
         <h1>云养殖-线上养殖</h1>
         <p>每期定期支付，农户、农场、牧场帮您养殖；养殖属于您自己的健康食物。</p>
     </div>
