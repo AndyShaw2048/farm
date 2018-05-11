@@ -15,11 +15,77 @@
 </head>
 
 <body>
-@include('layouts.nav')
+<div class="am-g head">
+    <div class="nav">
+        <table class="nav-table">
+            <tr>
+                <td class="logo">
+                    <div class="logo-title">
+                        <img class="title" src="{{url('img/标题-黑.png')}}" alt="">
+                    </div>
+                    <div class="logo-img">
+                        <img src="{{url('img/农牧云3.png')}}" alt="">
+                    </div>
+                </td>
+                <td>
+                    <a href="/">首页
+                        <br>
+                        <span>Home&nbsp;Page</span>
+                    </a>
+
+                </td>
+                <td>
+                    <a href="/goods">
+                        云上集市
+                        <br>
+                        <span>Cloud&nbsp;Shop</span>
+                    </a>
+                </td>
+                <td>
+                    <a href="/cloudfarm">
+                        云上农场
+                        <br>
+                        <span>Cloud&nbsp;Farm</span>
+                    </a>
+                </td>
+                <td>
+                    <a href="/cloudtravel">云游天下
+                        <br>
+                        <span>Travel&nbsp;world</span>
+                    </a>
+                </td>
+                <td>
+                    <a href="/home"> 个人中心
+                        <br>
+                        <span>Personal&nbsp;Center</span>
+                    </a>
+
+                </td>
+                <td class="company">
+                    <a href="/aboutus">
+                        关于我们
+                        <br>
+                        <span>About&nbsp;Us</span>
+                    </a>
+                </td>
+                <td class="serch">
+                    <div class="am-input-group">
+                        <input type="text" class="am-form-field" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                            <span class="am-input-group-btn">
+                                <button class="am-btn am-btn-default" type="button" style="border-bottom-right-radius: 15px;border-top-right-radius: 15px;">
+                                    <span class="am-icon-search"></span>
+                                </button>
+                            </span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
 <div class="am-g body">
     <table class="detail-table">
         <tr>
-            <th colspan="6" style="font-size: 3em;">生长详情</th>
+            <th colspan="6" style="font-size: 3em;">认购物品成长详细</th>
         </tr>
         <tr>
             <th>订单号:
@@ -39,19 +105,21 @@
         </tr>
         <tr>
             <td colspan="6" style="padding-top: 5px;">
-                <ul class="am-nav am-nav-tabs">
-                    @for($i=1;$i<$adoption->total_stage+1;$i++)
-                        @if($i==1)
-                        <li id="number-{{$i}}" class="am-active">
-                            <a href="#">第 {{$i}} 期成长状态</a>
-                        </li>
-                        @else
-                        <li id="number-{{$i}}">
-                            <a href="#">第 {{$i}} 期成长状态</a>
-                        </li>
-                        @endif
-                    @endfor
-                </ul>
+                <div>
+                    <ul class="am-nav am-nav-tabs">
+                        @for($i=1;$i<$adoption->total_stage+1;$i++)
+                            @if($i==1)
+                                <li id="number-{{$i}}" class="am-active">
+                                    <a href="#">第 {{$i}} 期成长状态</a>
+                                </li>
+                            @else
+                                <li id="number-{{$i}}">
+                                    <a href="#">第 {{$i}} 期成长状态</a>
+                                </li>
+                            @endif
+                        @endfor
+                    </ul>
+                </div>
             </td>
         </tr>
         <tr>
@@ -67,7 +135,7 @@
                         @if(!is_null($detail->description))
                             <p>{{$detail->description}}</p>
                         @elseif(!is_null($detail->picture))
-                            <img src="{{url($detail->picture)}}" alt="">
+                            <img src="{{url($detail->picture)}}" alt="" width="100%">
                         @endif
                     @else
                         <p>亲，您订购的商品还处于第 {{$adoption->current_stage}} 期成长中。</p>
@@ -97,9 +165,10 @@
                                 {{--<h1>{{date("d",strtotime($comment->created_at))}}/{{date("m",strtotime($comment->created_at))}}</h1>--}}
                                 {{--<h2>{{date("Y",strtotime($comment->created_at))}}</h2>--}}
                                 <div style="margin-top: 10px;text-align: center" >
-                                    <img src="{{url(\App\User::getUser($comment->user_id)->avatar)}}" alt="" width="50">
-                                    <br>
-                                    {{\App\User::getUser($comment->user_id)->nickname}}
+
+                                    <p>
+                                        来自：{{\App\User::getUser($comment->user_id)->nickname}}
+                                    </p>
                                 </div>
                             </div>
                         </td>
@@ -111,11 +180,13 @@
                 </table>
             </td>
             <td rowspan="2" class="remark-img">
-                <img src="img/牛.jpg" alt="">
+                <img src="{{url('img/牛1.jpg')}}" alt="">
+                <img src="{{url('img/牛1.jpg')}}" alt="">
             </td>
         </tr>
     </table>
     @endforeach
+
     <div style="text-align: center;">
         <form action="/adoption/order/comment" method="post" class="layui-form">
             @csrf
@@ -148,7 +219,7 @@
         var form = layui.form;
         //监听提交
         form.on('submit(form1)', function(data){
-            layer.msg(JSON.stringify(data.field));
+//            layer.msg(JSON.stringify(data.field));
             $.ajax({
                 url: data.form.action,
                 type: data.form.method,
@@ -173,6 +244,36 @@
             return false;
         });
     });
+
+    {{--$(window).bind("scroll", function () {--}}
+        {{--var top = $(this).scrollTop(); // 当前窗口的滚动距离--}}
+        {{--// console.log($(this))--}}
+        {{--if (top > 1) {--}}
+            {{--$(".nav").css({--}}
+                {{--"background": "white",--}}
+                {{--"opacity": "1",--}}
+                {{--"transition": "background-color 1s",--}}
+                {{--"position": "fixed"--}}
+            {{--});--}}
+
+            {{--$(".nav-table a").css("color", "black");--}}
+            {{--$(".company a").css("color", "black");--}}
+            {{--$(".logo span").css("color", "white");--}}
+            {{--$(".am-input-group").css("opacity", "1")--}}
+            {{--$(".title").attr("src",{{url('img/标题-黑.png')}})--}}
+        {{--}--}}
+        {{--if (top == 0) {--}}
+            {{--$(".nav").css({--}}
+                {{--"background": "none",--}}
+                {{--"opacity": "1",--}}
+                {{--"position": "unset"--}}
+            {{--});--}}
+            {{--$(".nav-table a").css("color", "black");--}}
+            {{--$(".company a").css("color", "black");--}}
+            {{--$(".am-input-group").css("opacity", "0.5")--}}
+            {{--$(".title").attr("src", {{url('img/标题-黑.png')}})--}}
+        {{--}--}}
+    {{--});--}}
 
     var count;
     $(() => {

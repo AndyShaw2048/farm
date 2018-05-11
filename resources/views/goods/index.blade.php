@@ -4,141 +4,164 @@
 <head>
     <meta charset="utf-8" />
 
+
     <link href="{{url('css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="{{url('css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{url('css/amazeui.min.css')}}">
     <link rel="stylesheet" href="{{url('css/style.css')}}" type="text/css" media="all" />
     <link rel="stylesheet" type="text/css" href="{{url('css/cloudShop.css')}}" />
+    <link rel="stylesheet" href="css/pignose.layerslider.css">
+
     <script src="{{url('assets/js/jquery.js')}} " type="text/javascript " charset="utf-8 "></script>
+    <script src="{{url('js/jquery.easing.min.js')}}"></script>
+
     <script src="{{url('assets/js/amazeui.js')}} "></script>
+
     <title>农牧云|云上集市</title>
 </head>
 
 <body>
-@include('layouts.nav')
-<div class="am-g">
-    <div class="am-u-lg-12" style="padding: 0;">
-        <div class="am-g">
-            <div class="am-g dropdown-nav" style="position: absolute;top: 22%;left: 15%;">
-                <div class="dropdown">
-                    <ul class="buy-list">
-                        <li id="left-0">
-                            <span style="color: #fff;">
-                                全部商品
+<div class="am-g head">
+    <div class="nav">
+        <table class="nav-table">
+            <tr>
+                <td class="logo">
+                    <div class="logo-title">
+                        <img class="title" src="img/标题-黑.png" alt="">
+                    </div>
+                    <div class="logo-img">
+                        <img src="img/农牧云3.png" alt="">
+                    </div>
+
+                </td>
+                <td>
+                    <a href="/">首页
+                        <br>
+                        <span>Home&nbsp;Page</span>
+                    </a>
+
+                </td>
+                <td>
+                    <a href="/goods">
+                        云上集市
+                        <br>
+                        <span>Cloud&nbsp;Shop</span>
+                    </a>
+                </td>
+                <td>
+                    <a href="/cloudfarm">
+                        云上农场
+                        <br>
+                        <span>Cloud&nbsp;Farm</span>
+                    </a>
+                </td>
+                <td>
+                    <a href="/cloudtravel">云游天下
+                        <br>
+                        <span>Travel&nbsp;world</span>
+                    </a>
+                </td>
+                <td>
+                    <a href="/home"> 个人中心
+                        <br>
+                        <span>Personal&nbsp;Center</span>
+                    </a>
+
+                </td>
+                <td class="company">
+                    <a href="/aboutus">
+                        关于我们
+                        <br>
+                        <span>About&nbsp;Us</span>
+                    </a>
+                </td>
+                <td class="serch">
+                    <div class="am-input-group">
+                        <input type="text" class="am-form-field" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                            <span class="am-input-group-btn">
+                                <button class="am-btn am-btn-default" type="button" style="border-bottom-right-radius: 15px;border-top-right-radius: 15px;">
+                                    <span class="am-icon-search"></span>
+                                </button>
                             </span>
-                        </li>
-                        <li class="left-list" id="left-1">
-                            <a href="">
-                                <i class="am-icon-balance-scale"></i>
-                                新鲜水果类
-                                <i class="am-icon-angle-right"></i>
-                            </a>
-                        </li>
-                        <li class="left-list" id="left-2">
-
-                            <a href="">
-                                <i class="am-icon-shopping-basket"></i>
-                                新鲜蔬菜类
-                                <i class="am-icon-angle-right"></i>
-                            </a>
-                        </li>
-                        <li class="left-list" id="left-3">
-
-                            <a href="">
-                                <i class="am-icon-shopping-bag"></i>
-                                精品肉类
-                                <i class="am-icon-angle-right"></i>
-                            </a>
-                        </li>
-                        <li class="left-list" id="left-4">
-
-                            <a href="">
-                                <i class="am-icon-circle-thin"></i>
-                                蛋类
-                                <i class="am-icon-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="right-side right-side-carousel">
-                    <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
-                        <ul class="am-slides">
-                            <li>
-                                <img src="img/shop-carousel2.jpg" />
-                            </li>
-                            <li>
-                                <img src="img/shop-carousel3.jpg" />
-                            </li>
-                            <li>
-                                <img src="img/shop-carousel4.jpg" />
-                            </li>
-                        </ul>
                     </div>
-                </div>
-                <div class="right-side" id="right-side-0">
-                    <div>
-                        <h1>农牧云云上集市</h1>
-                        <h2>提供多种多样的绿色新鲜健康食品
-                            <br> 您的健康我们来护航</h2>
-                    </div>
-                </div>
-                <div class="right-side" id="right-side-1">
-                    <div class="foods-head">
-
-                    </div>
-                    <div class="food-name">
-                        <h3>当季热门水果</h3>
-                        @foreach($goods as $good)
-                            @if($good->goods_type == 1)
-                            <a href="/goods/buy/{{$good->id}}">{{$good->name}}</a>
-                            @endif
-                        @endforeach
-                    </div>
-                </div>
-                <div class="right-side" id="right-side-2">
-                    <div class="foods-head">
-                    </div>
-                    <div class="food-name">
-                        <h3>当季新鲜蔬菜</h3>
-                        @foreach($goods as $good)
-                            @if($good->goods_type == 4)
-                                <a href="/goods/buy/{{$good->id}}">{{$good->name}}</a>
-                            @endif
-                        @endforeach
-                    </div>
-                </div>
-                <div class="right-side" id="right-side-3">
-                    <div class="foods-head">
-
-                    </div>
-                    <div class="food-name">
-                        <h3>精品肉类</h3>
-                        @foreach($goods as $good)
-                            @if($good->goods_type == 3)
-                                <a href="/goods/buy/{{$good->id}}">{{$good->name}}</a>
-                            @endif
-                        @endforeach
-                    </div>
-                </div>
-                <div class="right-side" id="right-side-4">
-                    <div class="foods-head">
-
-                    </div>
-                    <div class="food-name">
-                        <h3>特色蛋类</h3>
-                        @foreach($goods as $good)
-                            @if($good->goods_type == 5)
-                                <a href="/goods/buy/{{$good->id}}">{{$good->name}}</a>
-                            @endif
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-            <img id="big-img" style="width: 100%" src="img/集市3.png" alt=" ">
-        </div>
-
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
+
+<!-- banner -->
+<div class="banner-grid">
+    <div id="visual">
+        <div class="slide-visual">
+            <!-- Slide Image Area (1000 x 424) -->
+            <ul class="slide-group">
+                <li>
+                    <img class="img-responsive" style="width: 1000px;height: 591px;" src="img/images/pic1.jpg" alt="Dummy Image" />
+                </li>
+                <li>
+                    <img class="img-responsive" style="width: 1000px;height: 591px;" src="img/images/pic2.jpg" alt="Dummy Image" />
+                </li>
+                <li>
+                    <img class="img-responsive" style="width: 1000px;height: 591px;" src="img/images/pic3.jpg" alt="Dummy Image" />
+                </li>
+            </ul>
+
+            <!-- Slide Description Image Area (316 x 328) -->
+            <div class="script-wrap">
+                <ul class="script-group">
+                    <li>
+                        <div class="inner-script">
+                            <img class="img-responsive" style="width: 276px;height: 286px;" src="img/images/pic1-1.jpg" alt="Dummy Image" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner-script">
+                            <img class="img-responsive" style="width: 276px;height: 286px;" src="img/images/pic2-2.jpg" alt="Dummy Image" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner-script">
+                            <img class="img-responsive" style="width: 276px;height: 286px;" src="img/images/pic3-3.jpg" alt="Dummy Image" />
+                        </div>
+                    </li>
+                </ul>
+                <div class="slide-controller">
+                    <a href="#" class="btn-prev">
+                        <img src="img/cloudshopBanner/btn_prev.png" alt="Prev Slide" />
+                    </a>
+                    <a href="#" class="btn-play">
+                        <img src="img/cloudshopBanner/btn_play.png" alt="Start Slide" />
+                    </a>
+                    <a href="#" class="btn-pause">
+                        <img src="img/cloudshopBanner/btn_pause.png" alt="Pause Slide" />
+                    </a>
+                    <a href="#" class="btn-next">
+                        <img src="img/cloudshopBanner/btn_next.png" alt="Next Slide" />
+                    </a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <script type="text/javascript" src="js/pignose.layerslider.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        $(window).load(function () {
+            $('#visual').pignoseLayerSlider({
+                play: '.btn-play',
+                pause: '.btn-pause',
+                next: '.btn-next',
+                prev: '.btn-prev'
+            });
+        });
+        //]]>
+    </script>
+
+
+</div>
+<!-- //banner -->
 
 <div class="body">
     <div class="am-g commodity-list">
@@ -465,14 +488,15 @@
 </div>
 
 <script type="text/javascript ">
-    $(window).bind("scroll", function() {
+    $(window).bind("scroll", function () {
         var top = $(this).scrollTop();
         if (top >= 1) {
             $(".nav").css({
                 "background": "white",
-                "opacity": "1",
+                "opacity": "0.8",
                 "transition": "background-color 1s"
             });
+            $(".head").css("position", "fixed");
             $(".nav-table a").css("color", "black");
             $(".company a").css("color", "black");
             $(".logo span").css("color", "black");
@@ -484,11 +508,11 @@
                 "background": "none",
                 "opacity": "1",
             });
-            $(".nav-table a").css("color", "white");
-            $(".company a").css("color", "white");
-            $(".logo span").css("color", "white");
+            $(".head").css("position", "unset");
+            $(".nav-table a").css("color", "black");
+            $(".company a").css("color", "black");
             $(".am-input-group").css("opacity", "0.5")
-            $(".title").attr("src", "img/标题.png")
+            $(".title").attr("src", "img/标题-黑.png")
         }
     });
     $("#big-img").mouseover(() => {

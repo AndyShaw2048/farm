@@ -63,7 +63,7 @@
                                         <a class="example-image-link" href="/adoption/buy/{{$good->id}}">
                                             <img src="{{url('uploads/'.$good->pic)}}" alt=""/>
                                             <figcaption>
-                                                <h3><span>{{$good->name}}</span></h3>
+                                                <h1><span>{{$good->name}}</span></h1>
                                                 <p></p>
                                                 <p>每期￥{{$good->price}} 共 {{$good->total_stage}} 期</p>
                                                 <p class="click-order">点击立即认购</p>
@@ -85,17 +85,17 @@
 
 <div class="farm-list">
     <div class="title">
-        <h1>优质牧场</h1>
-        <p class="disc">全国各地的优质农场共同加盟</p>
+        <h1>合作伙伴</h1>
+        <p class="disc">全国各地的优质农牧场共同加盟</p>
         <p class="line">&nbsp&nbsp&nbsp&nbsp</p>
     </div>
     <div class="farm-disc">
         <div class="am-g">
             <div class="farm-word farm-word-left"  style="margin-bottom: 10px;border: 1px solid lightgray">
-                <p style="margin: 80px 0 0 40px;width: 90%">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="farm-title">长鹿农庄</span>即长鹿旅游休博园，2014年11月成为国家5A级旅游景区。由广东长鹿集团于2001年投资兴建，位于顺德伦教三洲，毗邻珠江干流，占地40万平方米，预计总投资7.8亿元，是一个以岭南历史文化、顺德水乡风情、农家生活情趣为特色，集吃、住、玩、赏、娱、购于一体的综合性景区，主要由“长鹿休闲度假村”、“机动游乐主题公园”、“水世界主题公园”、“农家乐主题公园”和“动物主题公园”等五大园区组成，各具特色，精彩纷呈，是休闲娱乐、旅游度假、商务会议的最佳场所，更是团队拓展、集体旅游的首选基地。</p>
+                <p style="margin: 60px 0 0 40px;width: 90%">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="farm-title">古楼镇</span>位于西充北部，距西充县城19公里，距南充市30多公里，境内有广南、巴南两条高速，且巴南高速在距场镇3公里处有出入口，交通便利。古楼镇辖17个行政村，幅员面积37平方公里，人口约2万人。充国香桃挂果树树均单产达100公斤，亩产3000公斤左右，单价3-10元/公斤，产值0.9-3万元/亩。2017年，挂果面积逾万亩，总产量逾4000万公斤，年产值约1.2亿元。充国香桃远销川、渝、云、贵等周边市场，成为南充市“顺西优质农产品生产加工示范区"主栽水果，市场前景十分广阔。同时古楼镇被授予“中国充国香桃之乡”“四川省农业科技示范镇”“西充县有机食品示范镇”，也是川东北地区有机充国香桃产业第一镇。</p>
             </div>
             <div class="farm-img">
-                <img src="{{url('img/长鹿农庄.jpg')}}" alt="">
+                <img src="{{url('img/gulouzhen.jpg')}}" alt="" height="320px">
             </div>
         </div>
         <div class="am-g">
@@ -103,12 +103,12 @@
                 <img src="{{url('img/湖南锦绣生态农庄.jpg')}}" alt="">
             </div>
             <div class="farm-word farm-word-right"  style="margin-bottom: 10px;border: 1px solid lightgray">
-                <p style="margin: 80px 0 0 20px;width: 90%">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="farm-title">锦绣生态农庄</span>占地面积400亩，拥有各式豪华客房、会议室、风味餐厅、康体中心、钓鱼场以及按照国际标准建造的网球场等设施。79套豪华欧式客房，您能领略居于山水间的浪漫情怀；充满农庄风情的餐厅大厅和别致的贵宾包厢，无论是各种宴会还是三、五知己小聚，均能让您品尝到农庄为您精做的新鲜菜肴；洋溢着浓郁的锦绣农庄风情的大堂茶吧，又为您提供了会友、小憩之理想去处。</p>
+                <p style="margin: 80px 0 0 20px;width: 90%">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="farm-title">鲜家坝</span>为四川省重点扶贫乡村，交通落后，基础设施匮乏，村内道路坑洼不平，水利设施落后平均水平。由于这些劣势条件，全村整体经济水平偏低。</p>
             </div>
         </div>
         <div class="am-g" style="margin-bottom: 10px;">
             <div class="farm-word farm-word-left"   style="margin-bottom: 10px;border: 1px solid lightgray">
-                <p style="margin: 80px 0 0 20px;width: 90%">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="farm-title">内蒙古牧区</span></span>是我国最大的牧区。它东起大兴安岭，西至额济纳戈壁，面积88万多平方公里，草原面积13.2亿亩约占全国草场面积的1/4，全区生长着各种牧草近千种。大小牲畜4000万头，居全国首位，牛羊肉产量居全国第二，牛奶产量为全国第四，绵羊毛、山羊毛及驼毛产量居全国第一。</p>
+                <p style="margin: 80px 0 0 20px;width: 90%">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="farm-title">唇牙村</span></span>村民委员会地址设在“川北心脏”、“川北重镇”的南充，四川 南充 古楼镇唇牙山村，联系人是张育俊，主要经营 对农 、牧副业的管理和指导等，于2001年12月1日在南充工商局登记注册挂牌成立，村委注册资本未提供，在职员工607名</p>
             </div>
             <div class="farm-img">
                 <img src="{{url('img/内蒙古牧区.jpg')}}" height="320px" alt="">
@@ -119,7 +119,7 @@
                 <img src="{{url('img/西藏牧区.jpg')}}" alt="">
             </div>
             <div class="farm-word farm-word-right"   style="margin-bottom: 10px;border: 1px solid lightgray">
-                <p style="margin-top: 80px">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="farm-title">西藏牧区</span>是我国最大的高寒草甸草原畜牧区，草场面积约8亿亩，在全国居第三位。由于自然条件高寒，草场质量以藏东南的山地峡谷较好，主要畜种有藏牦牛、藏羊、藏马等。其中改良绵羊有10多万只，改良黄牛2000多头。此外，本区在近年还引进牧草和饲料作物品种80多种，种植人工牧草近万亩，草场网围栏面积达40多万亩。</p>
+                <p style="margin-top: 80px">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class="farm-title">冯二垭</span>位于南充古楼镇，距京承高速密云县城出口仅4公里，交通方便，农庄以“生态，环保，可持续发展”为经营理念，以绿色、生态、环保为目标，以资源有效利用为载体，以绿色蔬菜、农产品为支撑，以老百姓的口碑为已任，依据生物链原理，把农庄中的种植、养殖、农产品加工、销售、餐饮、乡村游、农家乐、蔬菜配送等产业构建成为相互依存，相互转会，互为资源的循环封闭系统。实现了生态平衡，建立了一个比较完善的循环农业产业模式，成为一个生态、高效、和谐、观光旅游的绿色农业生态园。</p>
             </div>
         </div>
 

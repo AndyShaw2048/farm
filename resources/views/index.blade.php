@@ -15,8 +15,8 @@
 <div class="am-g">
     <div class="mp4" id="changeImg">
         <video id="vid" width="100%" height="100%" autoplay="autoplay" loop="loop">
-            <source src="https://yibanoss1.oss-cn-shenzhen.aliyuncs.com/movie.mp4" type="video/mp4"> 您的浏览器不支持此种视频格式。
-            {{--<source src="{{url('audio/movie.mp4')}}" type="video/mp4"> 您的浏览器不支持此种视频格式。--}}
+            {{--<source src="https://yibanoss1.oss-cn-shenzhen.aliyuncs.com/movie.mp4" type="video/mp4"> 您的浏览器不支持此种视频格式。--}}
+            <source src="{{url('audio/movie.mp4')}}" type="video/mp4"> 您的浏览器不支持此种视频格式。
         </video>
         <script>
             document.getElementById('vid').play();
@@ -25,16 +25,16 @@
 </div>
 <div class="am-g desc-list">
     <div class="am-g desc" style="overflow: hidden">
-        <h1>云养殖-线上养殖</h1>
-        <p>每期定期支付，农户、农场、牧场帮您养殖；养殖属于您自己的健康食物。</p>
+        <h1>农牧云-精准扶贫</h1>
+        <p>走进贫困农户，帮助农户售卖农产品，精准提高农户收入。</p>
     </div>
     <div class="am-g desc">
-        <h1>云养殖-实时查看</h1>
-        <p>无论你在哪儿，你都可以随时可以查看订购商品的成长状态。</p>
+        <h1>农牧云-线上认购</h1>
+        <p>每期定期支付，农户帮您养殖属于您自己的绿色、健康食物。</p>
     </div>
     <div class="am-g desc">
-        <h1>云养殖-战略合作</h1>
-        <p>全国各大牧场农场共同联盟，保证商品的多样性、商品的新鲜性。</p>
+        <h1>农牧云-生态旅游</h1>
+        <p>发展农村旅游业，注重生态、绿色旅游。</p>
     </div>
 </div>
 <div class="foot">
@@ -46,7 +46,7 @@
 
 </body>
 <script src="{{url('assets/js/jquery.js')}}"></script>
-<script src="{{url('assets/js/amazeui.j')}}s"></script>
+<script src="{{url('assets/js/amazeui.j')}}"></script>
 <script>
     $(window).bind("scroll", function() {
         var top = $(this).scrollTop(); // 当前窗口的滚动距离

@@ -26,13 +26,14 @@ a::after {
 .head {
     /* position: fixed; */
     height: 100px;
-    z-index: 9999;
     position: unset;
+    z-index: 9999;
 }
 
 .nav {
     height: 100px;
-    background: black;
+    width: 100%;
+    background: unset;
 }
 
 .nav-table td {
@@ -77,7 +78,7 @@ a::after {
 }
 
 .head a {
-    color: white;
+    color: black;
 }
 
 /* 评论区CSS */
@@ -92,6 +93,8 @@ a::after {
 }
 
 .detail-table th {
+    height: 50px;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     border: 1px solid rgb(220, 220, 220);
 }
@@ -120,9 +123,8 @@ a::after {
 
 .remark-table {
     width: 100%;
-    background: rgb(242, 244, 248);
+    background: rgb(136, 251, 171);
     margin-bottom: 10px;
-    border-radius: 10px;
 }
 
 .remark-desc {
@@ -132,7 +134,7 @@ a::after {
 .remark-date {
     width: 150px;
     height: 150px;
-    border-right: 1px solid #dfdfdf;
+    background: rgb(96, 209, 86);
 }
 
 .remark-date h1,
@@ -148,7 +150,7 @@ p {
 
 .remark-article p {
     margin: 0;
-    margin-left: 20px;
+    margin-left: 5px;
     text-align: initial;
 }
 

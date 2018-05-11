@@ -132,7 +132,7 @@ a::after {
 }
 
 .serch {
-    width: 20%；
+    width: 20%;
 }
 
 .am-input-group {
@@ -157,6 +157,7 @@ a::after {
 .title h1 {
     color: #0d3172;
     font-size: 1.8em;
+    margin-top: 20px;
 }
 
 .disc {
@@ -165,7 +166,7 @@ a::after {
 }
 
 .line {
-    margin: -38px auto 0 auto;
+    margin: -50px auto 0 auto;
     font-size: 12px;
     margin-bottom: 10px;
     border-bottom: 2.3px solid #ffae00;

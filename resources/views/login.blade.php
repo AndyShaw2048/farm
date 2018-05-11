@@ -213,9 +213,11 @@
                                                     <label for="password">密码</label>
                                                     <input name="password" type="password" class="form-control" id="password">
                                             </div>
-
+                                            <div class="row form-group">
+                                                {!! Geetest::render('embed') !!}
+                                            </div>
                                             <div class="row form-group" style="text-align: center">
-                                                    <a onclick="send()" style="color: white" class="btn btn-primary">登录</a>
+                                                    <a onclick="setTimeout('send()',100)" style="color: white" class="btn btn-primary" id="login-btn">登录</a>
                                                     <a href="/register" class="btn btn-default">注册</a>
                                             </div>
                                         </form>
@@ -249,6 +251,11 @@
 <script>
     function send()
     {
+        if(!isCap)
+        {
+            return;
+        }
+
         var tel = $('#telephone').val();
         var pwd = $('#password').val();
         $.ajax({

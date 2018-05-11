@@ -217,6 +217,9 @@
                                                 <label for="password">确认密码</label>
                                                 <input name="password_confirmation" type="password" class="form-control" id="password_c">
                                             </div>
+                                            <div class="row form-group">
+                                                {!! Geetest::render('embed') !!}
+                                            </div>
                                             {{--<div class="row form-group">--}}
                                                 {{--<label>验证码</label>--}}
                                                 {{--<input name="code" type="text" class="form-control" width=50>--}}
@@ -224,7 +227,7 @@
                                             {{--</div>--}}
                                             <div class="row form-group login" style="text-align: center">
                                                 {{--<button type="submit" class="btn btn-primary" style="color: #fff;">注册</button>--}}
-                                                <a onclick="send()" class="btn btn-primary" style="color: #fff;">注册</a>
+                                                <a onclick="setTimeout('send()',100)" class="btn btn-primary" style="color: #fff;" id="login-btn">注册</a>
                                                 <a href="/login" class="">已有账号，点击登录</a>
                                             </div>
                                         </form>
@@ -256,6 +259,11 @@
 <script>
     function send()
     {
+        if(!isCap)
+        {
+            return;
+        }
+
         var tel = $('#telephone').val();
         var pwd = $('#password').val();
         var pwd_c = $('#password_c').val();

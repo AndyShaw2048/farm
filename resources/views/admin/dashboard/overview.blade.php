@@ -3,29 +3,29 @@
 <div style="display: inline-block;">
     <div style="display: inline-block;width: 200px;height: 100px;background-color: white;box-shadow: 0px 2px 5px #888888;">
         <img src="img/overview/访问量.jpg" alt="" width="100px"  height="100px" style="float: left">
-        <p style="color: #5f5c5c;margin-left: 110px">今日访问量</p>
-        <p style="font-weight:bold;margin-left: 110px">213,112</p>
+        <div style="color: #5f5c5c;margin-left: 110px">今日访问量</div>
+        <div style="font-weight:bold;margin-left: 110px;margin-top: 20px;">213,112</div>
     </div>
 </div>
 <div style="display: inline-block;margin-left: 30px">
-    <div style="display: inline-block;width: 250px;height: 100px;background-color: white;box-shadow: 0px 2px 5px #888888;">
+    <div style="display: inline-block;width: 200px;height: 100px;background-color: white;box-shadow: 0px 2px 5px #888888;">
         <img src="img/overview/新增量.jpg" alt="" width="100px"  height="100px" style="float: left">
         <p style="color: #5f5c5c;margin-left: 110px">用户新增量</p>
-        <p style="font-weight:bold;margin-left: 110px">10,561</p>
+        <p style="font-weight:bold;margin-left: 110px;margin-top: 20px;">10,561</p>
     </div>
 </div>
 <div style="display: inline-block;margin-left: 30px">
     <div style="display: inline-block;width: 250px;height: 100px;background-color: white;box-shadow: 0px 2px 5px #888888;">
         <img src="img/overview/订单量.jpg" alt="" width="100px"  height="100px" style="float: left">
         <p style="color: #5f5c5c;margin-left: 110px">今日订单数</p>
-        <p style="font-weight:bold;margin-left: 110px">11,563</p>
+        <p style="font-weight:bold;margin-left: 110px;margin-top: 20px;">11,563</p>
     </div>
 </div>
 <div style="display: inline-block;margin-left: 30px">
     <div style="display: inline-block;width: 250px;height: 100px;background-color: white;box-shadow: 0px 2px 5px #888888;">
         <img src="img/overview/认购数.jpg" alt="" width="100px"  height="100px" style="float: left">
         <p style="color: #5f5c5c;margin-left: 110px">今日认购数</p>
-        <p style="font-weight:bold;margin-left: 110px">6,523</p>
+        <p style="font-weight:bold;margin-left: 110px;margin-top: 20px;">6,523</p>
     </div>
 </div>
 

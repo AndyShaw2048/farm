@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>云谷驴图</title>
+    <title>Home</title>
     <!-- custom-theme -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -18,26 +18,24 @@
     </script>
     <!-- //custom-theme -->
     <script type="text/javascript" src="{{url('about/js/jquery-1.11.1.min.js')}}"></script>
+    <script src="{{url('assets/js/amazeui.min.js')}} "></script>
+    <script src="{{url('assets/js/app.js ')}}"></script>
     <!-- stylesheet -->
     <link href="{{url('about/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{url('about/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{url('assets/css/amazeui.min.css')}}">
     <!-- //stylesheet -->
-    <!-- online fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <!-- //online fonts -->
+
     <!-- font-awesome-icons -->
     <link href="{{url('about/css/font-awesome.css')}}" type="text/css" rel="stylesheet">
     <!-- //font-awesome-icons -->
     <style>
-        .web a {
-            color: black;
-            font-size: 1.8em;
-            font-weight: bold;
+        .xiangmu a{
+            color: #000;
+            font-size: 1.5em;
         }
-        .web a:hover {
-            color: orange;
+        .xiangmu a:hover {
+            color:orange;
         }
     </style>
 </head>
@@ -48,7 +46,7 @@
     <div class="w3_agile_logo">
 
         <h1 class="text-center">
-            <a href="">
+            <a href="index.html">
                 <img style="width: 400px;" src="{{url('about/images/云谷驴图.png')}}" alt="">
             </a>
         </h1>
@@ -68,7 +66,7 @@
                         </li>
                         <li>
                             <div class="banner_text_w3layouts">
-                                <h3>打造绿色、共享、众筹、扶贫一体的服务平台</h3>
+                                <h3>打造绿色、共享、众筹、扶贫的服务平台</h3>
                                 <span> </span>
                                 <p>公司定位</p>
                             </div>
@@ -118,7 +116,7 @@
             <div class="collapse navbar-collapse top-nav w3l" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav linkEffects linkHoverEffect_11 custom-menu">
                     <li class="agile_active">
-                        <a href="/" class="scroll">
+                        <a href="index.html" class="scroll">
                             <span>首页</span>
                         </a>
                     </li>
@@ -156,17 +154,75 @@
         <h3 class="title">公司项目</h3>
         <div class="about_main">
             <div class="col-md-6 col-sm-6 col-xs-6 about_agileits"></div>
-            <div class="col-md-6 col-sm-6 col-xs-6 about_text_w3l web" >
+            <div class="col-md-6 col-sm-6 col-xs-6 about_text_w3l xiangmu">
                 <a href="/">农牧云</a>
-                <div style="height: 20px"></div>
-                <p>随着中国市场化进程的深入和现代信息化技术的应用，推动了农业全产业链改造升级。近年来农牧业存在粗放式管理、资金不足、供需失衡、产业链松散、食品安全等难题，并且农产品无法避开的销售半径特性，形成成熟盈利模式的电商平台很少。利用互联网信息的扁平化、透明化，致力实现农业产业链去中间化，加速推进农牧产品的品牌化是我们的目标。农业和互联网融合，绝不是简单的加法，而是通过产业的融合和创新，以最新的互联网行业之长，补最传统的农业之短，甚至是创造全新的产业模式。就此，南充市云谷驴图互联网科技有限公司制定了详细的战略计划。
-                </p>
+                <P style="margin-top: 0">随着中国市场化进程的深入和现代信息化技术的应用，推动了农业全产业链改造升级。近年来农牧业存在粗放式管理、资金不足、供需失衡、产业链松散、食品安全等难题，并且农产品无法避开的销售半径特性，形成成熟盈利模式的电商平台很少。利用互联网信息的扁平化、透明化，致力实现农业产业链去中间化，加速推进农牧产品的品牌化是我们的目标。农业和互联网融合，绝不是简单的加法，而是通过产业的融合和创新，以最新的互联网行业之长，补最传统的农业之短，甚至是创造全新的产业模式。就此，南充市云谷驴图互联网科技有限公司制定了详细的战略计划。
+                </P>
             </div>
             <div class="clearfix"></div>
         </div>
     </div>
 </div>
 <!-- //about -->
+<div class="about_agileinfo" style="padding-top: 0;" id="about">
+    <div class="container">
+        <h3 class="title">新闻动态</h3>
+        <div class="about_main">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div id="number-disc-0" class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+                    <ul class="am-slides">
+                        <li>
+                            <img src="{{url('about/images/xianjiabaChun.JPG')}}" />
+                        </li>
+                        <li>
+                            <img src="{{url('about/images/xianjiabaShuji.JPG')}}" />
+                        </li>
+                        <li>
+                            <img src="{{url('about/images/zhangjiagou.JPG')}}" />
+                        </li>
+                        <li>
+                            <img src="{{url('about/images/fenghuangli.JPG')}}" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6 about_text_w3l">
+                <ul class="kaocha">
+                    <li>
+                        <a href="">考察总结会议</a>
+                        <span>2018/05/04</span>
+                    </li>
+                    <li>
+                        <a href="">南充市西充县古楼镇鲜家坝村考察
+                            <span>2018/05/03</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">南充市西充县古楼镇唇牙村村考察</a>
+                        <span>2018/05/03</span>
+                    </li>
+                    <li>
+                        <a href="">南充市西充县古楼镇冯二垭考察</a>
+                        <span>2018/05/03</span>
+                    </li>
+                    <li>
+                        <a href="">公司第一个项目--农牧云</a>
+                        <span>2018/04/19</span>
+                    </li>
+                    <li>
+                        <a href="">公司第一次正式大会</a>
+                        <span>2018/04/18</span>
+                    </li>
+                    <li>
+                        <a href="">公司正式成立</a>
+                        <span>2018/04/17</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
 <!-- coperation -->
 <div class="gallery_wthree" id="gallery">
     <div class="container">
@@ -175,7 +231,7 @@
             <div class="col-md-6  col-sm-6 col-xs-6 grid_w3">
                 <div class="grid-1">
                     <a class="cm-overlay" href="images/2.jpg">
-                        <img src="about/images/peach.JPG" alt=" " class="img-responsive" />
+                        <img src="{{url('about/images/peach.JPG')}}" alt=" " class="img-responsive" />
                         <div class="w3agile-text w3agile-text-smal1">
                             <h5>古楼镇香桃基地</h5>
                         </div>
@@ -183,16 +239,16 @@
                 </div>
                 <div class="sub_grid gallery_w3l">
                     <div class="col-md-6 col-sm-6 col-xs-6 grid-1 grid-c grid_w3l">
-                        <a class="cm-overlay" href="images/14.jpg">
-                            <img src="about/images/14.jpg" alt=" " class="img-responsive" />
+                        <a class="cm-overlay" href="images/tuzhu.JPG">
+                            <img src="{{url('about/images/tuzhu.JPG')}}" alt=" " class="img-responsive" />
                             <div class="w3agile-text w3agile-text-small">
                                 <h5>古楼镇家养土猪</h5>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6 grid-1 grid-b grid_w3l">
-                        <a class="cm-overlay" href="images/13.jpg">
-                            <img src="about/images/13.jpg" alt=" " class="img-responsive" />
+                        <a class="cm-overlay" href="images/zangxiangzhu.jpg">
+                            <img src="{{url('about/images/zangxiangzhu.jpg')}}" alt=" " class="img-responsive" />
                             <div class="w3agile-text w3agile-text-smal1">
                                 <h5>古楼镇藏香猪</h5>
                             </div>
@@ -204,16 +260,16 @@
             <div class="col-md-6 col-sm-6 col-xs-6 grid_w3">
                 <div class="sub_grid">
                     <div class="col-md-6 col-sm-6 col-xs-6 grid-1 grid-c grid_w3l">
-                        <a class="cm-overlay" href="images/15.jpg">
-                            <img src="about/images/15.jpg" alt=" " class="img-responsive" />
+                        <a class="cm-overlay" href="images/tuji.jpg">
+                            <img src="{{url('about/images/tuji.jpg')}}" alt=" " class="img-responsive" />
                             <div class="w3agile-text w3agile-text-small">
                                 <h5>古楼镇散养土鸡</h5>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6 grid-1 grid-d grid_w3l">
-                        <a class="cm-overlay" href="images/16.jpg">
-                            <img src="about/images/16.jpg" alt=" " class="img-responsive" />
+                        <a class="cm-overlay" href="images/lvkeEgg.jpg">
+                            <img src="{{url('about/images/lvkeEgg.jpg')}}" alt=" " class="img-responsive" />
                             <div class="w3agile-text w3agile-text-smal1">
                                 <h5>古楼镇绿壳鸡蛋</h5>
                             </div>
@@ -222,8 +278,8 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="grid-1 grid-2">
-                    <a class="cm-overlay" href="images/7.jpg">
-                        <img src="about/images/7.jpg" alt=" " class="img-responsive" />
+                    <a class="cm-overlay" href="images/fenghuangli.JPG">
+                        <img src="{{url('about/images/fenghuangli.JPG')}}" alt=" " class="img-responsive" />
                         <div class="w3agile-text w3agile-text-smal1">
                             <h5>古楼镇鲜家坝凤凰李</h5>
                         </div>
@@ -237,9 +293,9 @@
 </div>
 
 <!-- section -->
-<div class="w3layouts-section" id="blog">
+<div style="height:400px;" class="w3layouts-section" id="blog">
     <div class="container">
-        <h3 class="title">合作农场</h3>
+        <!-- <h3 class="title">合作农场</h3> -->
         <h2 style="color: white">南充市西充香桃村</h2>
         <a href="#myModal" class="agilebtn" data-toggle="modal" data-target="#myModal">
             <span>更多农牧场</span>
@@ -253,10 +309,10 @@
         <h3 class="title">公司成员</h3>
         <div class="team-w3ls">
             <div class="col-md-4 col-sm-4 col-xs-4 team-grid w3_agileits">
-                <img class="img-w3l t1-wthree img-responsive" src="about/images/t2.jpg" alt="">
+                <!-- <img class="img-w3l t1-wthree img-responsive" src="images/t2.jpg" alt=""> -->
                 <h5>蔡汶宏</h5>
                 <p>公司法人代表</p>
-                <div class="social-icons">
+                <!-- <div class="social-icons">
                     <ul>
                         <li>
                             <a href="#" class="fa fa-facebook icon icon-border facebook"> </a>
@@ -269,13 +325,13 @@
                         </li>
                     </ul>
                     <div class="clearfix"> </div>
-                </div>
+                </div> -->
             </div>
             <div class="col-md-4 col-sm-4 col-xs-4 team-grid w3_agileits t2">
-                <img class="img-w3l t1-wthree img-responsive" src="about/images/t1.jpg" alt="">
+                <!-- <img class="img-w3l t1-wthree img-responsive" src="images/t1.jpg" alt=""> -->
                 <h5>余思慧</h5>
                 <p>经理</p>
-                <div class="social-icons">
+                <!-- <div class="social-icons">
                     <ul>
                         <li>
                             <a href="#" class="fa fa-facebook icon icon-border facebook"> </a>
@@ -288,13 +344,13 @@
                         </li>
                     </ul>
                     <div class="clearfix"> </div>
-                </div>
+                </div> -->
             </div>
             <div class="col-md-4 col-sm-4 col-xs-4 w3_agileits team-grid">
-                <img class="img-w3l t1-wthree img-responsive" src="about/images/t3.jpg" alt="">
+                <!-- <img class="img-w3l t1-wthree img-responsive" src="images/t3.jpg" alt=""> -->
                 <h5>柏景潇</h5>
                 <p>监事</p>
-                <div class="social-icons agile">
+                <!-- <div class="social-icons agile">
                     <ul>
                         <li>
                             <a href="#" class="fa fa-facebook icon icon-border facebook"> </a>
@@ -307,7 +363,7 @@
                         </li>
                     </ul>
                     <div class="clearfix"> </div>
-                </div>
+                </div> -->
             </div>
             <div class="clearfix"> </div>
         </div>
@@ -366,7 +422,7 @@
 </div>
 <!-- //contact -->
 <!-- subscribe -->
-<div class="subscribe w3_agile">
+<!-- <div class="subscribe w3_agile">
     <div class="container">
         <h3 class="title text-center">subscribe</h3>
         <div class="subscribe-wthree">
@@ -376,28 +432,12 @@
             </form>
         </div>
     </div>
-</div>
+</div> -->
 <!-- //subscribe -->
 <!-- copy-right -->
 <div class="copy-right agileits-w3layouts">
     <div class="container">
-        <!-- <div class="social-icons agileits">
-            <ul>
-                <li>
-                    <a href="#" class="fa fa-facebook icon icon-border facebook"> </a>
-                </li>
-                <li>
-                    <a href="#" class="fa fa-twitter icon icon-border twitter"> </a>
-                </li>
-                <li>
-                    <a href="#" class="fa fa-google-plus icon icon-border googleplus"> </a>
-                </li>
-                <li>
-                    <a href="#" class="fa fa-dribbble icon icon-border dribbble"> </a>
-                </li>
-            </ul>
-            <div class="clearfix"> </div>
-        </div> -->
+
         <p>Copyright &copy; 2018
             <br> 南充市云谷驴图互联网科技有限责任公司.
         </p>
@@ -405,8 +445,8 @@
 </div>
 <!-- //copy-right -->
 <!-- Gallery-plugin -->
-<script src="about/js/jquery.mobile.custom.min.js"></script>
-<script src="about/js/jquery.cm-overlay.js"></script>
+<script src="{{url('about/js/jquery.mobile.custom.min.js')}}"></script>
+<script src="{{url('about/js/jquery.cm-overlay.js')}}"></script>
 <script>
     $(document).ready(function () {
         $('.cm-overlay').cmOverlay();
@@ -414,8 +454,8 @@
 </script>
 <!-- //Gallery-plugin -->
 <!-- start-smooth-scrolling -->
-<script type="text/javascript" src="about/js/move-top.js"></script>
-<script type="text/javascript" src="about/js/easing.js"></script>
+<script type="text/javascript" src="{{url('about/js/move-top.js')}}"></script>
+<script type="text/javascript" src="{{url('about/js/easing.js')}}"></script>
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
         $(".scroll").click(function (event) {
@@ -427,7 +467,7 @@
         });
     });
 </script>
-<script src="about/js/SmoothScroll.min.js"></script>
+<script src="{{url('about/js/SmoothScroll.min.js')}}"></script>
 <!-- //end-smooth-scrolling -->
 <!-- smooth-scrolling-of-move-up -->
 <script type="text/javascript">
@@ -445,7 +485,7 @@
         });
     });
 </script>
-<script type="text/javascript" src="about/js/bootstrap.js"></script>
+<script type="text/javascript" src="{{url('about/js/bootstrap.js')}}"></script>
 </body>
 
 </html>
