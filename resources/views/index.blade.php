@@ -30,23 +30,23 @@
     </div>
     <div class="am-g desc">
         <h1>农牧云-线上认购</h1>
-        <p>每期定期支付，农户帮您养殖属于您自己的绿色、健康食物。</p>
+        <p>定期支付，农户帮您养殖属于您自己的绿色、健康食物。</p>
     </div>
     <div class="am-g desc">
-        <h1>农牧云-生态旅游</h1>
-        <p>发展农村旅游业，注重生态、绿色旅游。</p>
+        <h1>农牧云-轻旅游</h1>
+        <p>走出户门，走向自然，来一场放松自己的“轻旅游”</p>
     </div>
 </div>
 <div class="foot">
-    <p>©2018 - 版权所有 </p>
+    <p>©2018 -南充市云谷驴图互联网科技有限公司-版权所有 </p>
     <p>PC版 | 本站自己手动搭建 |
-        <a href="/admin">管理登录</a>
+        <a href="/admin">网站管理</a>
     </p>
 </div>
 
 </body>
 <script src="{{url('assets/js/jquery.js')}}"></script>
-<script src="{{url('assets/js/amazeui.j')}}"></script>
+<script src="{{url('assets/js/amazeui.js')}}"></script>
 <script>
     $(window).bind("scroll", function() {
         var top = $(this).scrollTop(); // 当前窗口的滚动距离

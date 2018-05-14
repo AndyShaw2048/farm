@@ -39,7 +39,7 @@ a::after {
 }
 
 .nav-table td:hover {
-    color: black(53, 144, 218);
+    color: black;
 }
 
 .logo {
@@ -72,7 +72,7 @@ a::after {
 }
 
 .serch {
-    width: 20%；
+    width: 20%;
 }
 
 .am-input-group {
@@ -119,14 +119,17 @@ a::after {
 
 .desc:first-child {
     background-image: url("../img/sky.png");
+    /*opacity: 0.5;*/
 }
 
 .desc:nth-child(2) {
     background-image: url("../img/desc1 (2).jpg");
+    /*opacity: 0.5;*/
 }
 
 .desc:last-child {
     background-image: url("../img/desc1 (1).jpg");
+    /*opacity: 0.5;*/
     margin-bottom: 20px;
 }
 

@@ -27,19 +27,19 @@
                 <a href="#" class="am-text-warning">
                     <span class="am-icon-btn am-icon-plane"></span>
                     <br/>集市订单数量
-                    <br/>10</a>
+                    <br/>5</a>
             </li>
             <li>
                 <a href="#" class="am-text-warning">
                     <span class="am-icon-btn am-icon-briefcase"></span>
                     <br/>农场认购数量
-                    <br/>10</a>
+                    <br/>4</a>
             </li>
             <li>
                 <a href="#" class="am-text-danger">
                     <span class="am-icon-btn am-icon-recycle"></span>
                     <br/>完成订单
-                    <br/>82</a>
+                    <br/>14</a>
             </li>
 
         </ul>
@@ -158,7 +158,7 @@
             <div class="am-panel am-panel-default">
                 <div class="am-panel-hd am-cf" data-am-collapse="{target: '#collapse-panel-2'}">订购商品&nbsp;&nbsp;&nbsp;
                     <small>
-                        <a href="">详细>></a>
+                        <a href="/home/purchase">详细>></a>
                     </small>
                     <span class="am-icon-chevron-down am-fr"></span>
                 </div>

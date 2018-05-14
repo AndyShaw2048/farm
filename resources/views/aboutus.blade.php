@@ -175,6 +175,9 @@
                             <img src="{{url('about/images/xianjiabaChun.JPG')}}" />
                         </li>
                         <li>
+                            <img style="width: 540px;height: 360px" src="{{url('img/yglt.jpg')}}" />
+                        </li>
+                        <li>
                             <img src="{{url('about/images/xianjiabaShuji.JPG')}}" />
                         </li>
                         <li>

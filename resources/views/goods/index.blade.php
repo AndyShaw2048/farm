@@ -480,10 +480,10 @@
 </div>
 <div style="clear:both"></div>
 
-<div class="foot" style="margin-top: 20px">
-    <p>©2018 - 版权所有 </p>
+<div class="foot">
+    <p>©2018 -南充市云谷驴图互联网科技有限公司-版权所有 </p>
     <p>PC版 | 本站自己手动搭建 |
-        <a href=" ">管理登录</a>
+        <a href="/admin">网站管理</a>
     </p>
 </div>
 
@@ -493,7 +493,7 @@
         if (top >= 1) {
             $(".nav").css({
                 "background": "white",
-                "opacity": "0.8",
+                "opacity": "1",
                 "transition": "background-color 1s"
             });
             $(".head").css("position", "fixed");
@@ -511,7 +511,7 @@
             $(".head").css("position", "unset");
             $(".nav-table a").css("color", "black");
             $(".company a").css("color", "black");
-            $(".am-input-group").css("opacity", "0.5")
+            $(".am-input-group").css("opacity", "1")
             $(".title").attr("src", "img/标题-黑.png")
         }
     });

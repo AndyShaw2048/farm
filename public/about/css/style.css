@@ -74,7 +74,7 @@ p {
 /*-- header styling starts here --*/
 
 .agileits_main {
-	background: url(../images/bigNum.jpg) no-repeat center;
+	background: url(../images/headBkImg.jpg) no-repeat center;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -82,9 +82,9 @@ p {
 	-ms-background-size: cover;
 }
 
-.w3_agile_logo {
-	padding: 4em 0 0;
-}
+/*.w3_agile_logo {*/
+	/*padding: 4em 0 0;*/
+/*}*/
 
 .w3_agile_logo h1 a {
 	font-size: 1.5em;
@@ -101,7 +101,7 @@ p {
 
 .banner_text_w3layouts {
 	text-align: center;
-	padding: 11.5em 0;
+	padding: 1.5em 0;
 }
 
 .banner_text_w3layouts h3 {

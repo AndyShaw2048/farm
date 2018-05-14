@@ -9,27 +9,26 @@
 
 
 {{--@if($errors->any())--}}
-    {{--@foreach($errors->all() as $error)--}}
-        {{--<div>{{$error}}</div>--}}
-    {{--@endforeach--}}
+{{--@foreach($errors->all() as $error)--}}
+{{--<div>{{$error}}</div>--}}
+{{--@endforeach--}}
 {{--@endif--}}
 {{--<form action="self" method="post">--}}
-    {{--@csrf--}}
-    {{--<input type="text" name="goods_id" value="{{$goods->id}}" hidden>--}}
-    {{--<p>购买数量：<input type="text" name="num"></p>--}}
-    {{--<p>真实姓名：<input type="text" name="name"></p>--}}
-    {{--<p>固定电话：<input type="text" name="phone"></p>--}}
-    {{--<p>移动电话：<input type="text" name="mobile"></p>--}}
-    {{--<p>省份：<input type="text" name="province"></p>--}}
-    {{--<p>城市：<input type="text" name="city"></p>--}}
-    {{--<p>区县：<input type="text" name="district"></p>--}}
-    {{--<p>地址：<input type="text" name="address"></p>--}}
-    {{--<p>邮编：<input type="text" name="zip"></p>--}}
-    {{--<button type="submit">Sub</button>--}}
+{{--@csrf--}}
+{{--<input type="text" name="goods_id" value="{{$goods->id}}" hidden>--}}
+{{--<p>购买数量：<input type="text" name="num"></p>--}}
+{{--<p>真实姓名：<input type="text" name="name"></p>--}}
+{{--<p>固定电话：<input type="text" name="phone"></p>--}}
+{{--<p>移动电话：<input type="text" name="mobile"></p>--}}
+{{--<p>省份：<input type="text" name="province"></p>--}}
+{{--<p>城市：<input type="text" name="city"></p>--}}
+{{--<p>区县：<input type="text" name="district"></p>--}}
+{{--<p>地址：<input type="text" name="address"></p>--}}
+{{--<p>邮编：<input type="text" name="zip"></p>--}}
+{{--<button type="submit">Sub</button>--}}
 {{--</form>--}}
 
-
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -58,41 +57,41 @@
 
                 </td>
                 <td>
-                    <a href="">首页
+                    <a href="/">首页
                         <br>
                         <span>Home&nbsp;Page</span>
                     </a>
 
                 </td>
                 <td>
-                    <a href="">
+                    <a href="/goods">
                         云上集市
                         <br>
                         <span>Cloud&nbsp;Shop</span>
                     </a>
                 </td>
                 <td>
-                    <a href="">
+                    <a href="/cloudfarm">
                         云上农场
                         <br>
                         <span>Cloud&nbsp;Farm</span>
                     </a>
                 </td>
                 <td>
-                    <a href="">云游天下
+                    <a href="/cloudtravel">云游天下
                         <br>
                         <span>Travel&nbsp;world</span>
                     </a>
                 </td>
                 <td>
-                    <a href=""> 个人中心
+                    <a href="/home"> 个人中心
                         <br>
                         <span>Personal&nbsp;Center</span>
                     </a>
 
                 </td>
                 <td class="company">
-                    <a href="">
+                    <a href="/aboutus">
                         关于我们
                         <br>
                         <span>About&nbsp;Us</span>
@@ -116,7 +115,7 @@
 <div class="detail am-g">
     <div class="am-u-sm-12">
         <div class="am-u-sm-6">
-            <img style="width: 90%;border: 1px solid;" src="/uploads/{{$goods->logo}}" alt="">
+            <img style="width: 90%;" src="/uploads/{{$goods->logo}}" alt="">
         </div>
         <div class="am-u-sm-6">
             <ul class="am-list" style="height:100%">
@@ -160,16 +159,9 @@
                         </span>
                 </li>
                 <li>
-                        <span>
-                            <strong>总价:
-                                <span id="total-price" style="margin-left: 40px;color: red;font-size: 1.5em;">35</span>
-                            </strong>
-                        </span>
-                </li>
-                <li>
                     <form action="/goods/buy/{{$goods->id}}" method="post">
                         @csrf
-                    <button style="margin-left: 80px;" id="add-cart" type="button" class="am-btn am-btn-danger">加入购物车</button>
+                        <button style="margin-left: 80px;" id="add-cart" type="button" class="am-btn am-btn-danger">加入购物车</button>
                         <input name="goods_id" value="{{$goods->id}}" hidden>
                         <input name="num" value="100" hidden>
                         <button style="margin-left: 30px;" id="add-cart" type="submit" class="am-btn am-btn-danger">立即购买</button>
@@ -233,4 +225,4 @@
 </script>
 </body>
 
-</html></html>
+</html>
