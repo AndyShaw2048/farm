@@ -1,33 +1,3 @@
-{{--<p>商品名称：{{$goods->name}}</p>--}}
-{{--<p>商品描述：{{$goods->description}}</p>--}}
-{{--<p>商品logo：{{$goods->logo}}</p>--}}
-{{--<p>商品实物图：{{$goods->pics}}</p>--}}
-{{--<p>商品类型：{{$goods->goods_type}}</p>--}}
-{{--<p>商品单价：{{$goods->price}}</p>--}}
-{{--<p>商品库存：{{$goods->stocks}}</p>--}}
-{{--<p>商品销量：{{$goods->sales}}</p>--}}
-
-
-{{--@if($errors->any())--}}
-{{--@foreach($errors->all() as $error)--}}
-{{--<div>{{$error}}</div>--}}
-{{--@endforeach--}}
-{{--@endif--}}
-{{--<form action="self" method="post">--}}
-{{--@csrf--}}
-{{--<input type="text" name="goods_id" value="{{$goods->id}}" hidden>--}}
-{{--<p>购买数量：<input type="text" name="num"></p>--}}
-{{--<p>真实姓名：<input type="text" name="name"></p>--}}
-{{--<p>固定电话：<input type="text" name="phone"></p>--}}
-{{--<p>移动电话：<input type="text" name="mobile"></p>--}}
-{{--<p>省份：<input type="text" name="province"></p>--}}
-{{--<p>城市：<input type="text" name="city"></p>--}}
-{{--<p>区县：<input type="text" name="district"></p>--}}
-{{--<p>地址：<input type="text" name="address"></p>--}}
-{{--<p>邮编：<input type="text" name="zip"></p>--}}
-{{--<button type="submit">Sub</button>--}}
-{{--</form>--}}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,6 +8,8 @@
     <link rel="stylesheet" href="{{url('assets/css/amazeui.min.css')}}" />
     <link rel="stylesheet" href="{{url('assets/css/admin.css')}}">
     <link rel="stylesheet" href="{{url('css/order.css')}}">
+    <link rel="stylesheet" href="{{url('css/message.css')}}">
+    <meta name="_token" content="{{ csrf_token() }}">
     <title>Document</title>
 
 </head>
@@ -155,14 +127,14 @@
                 </li>
                 <li>
                         <span id="count">购买数量
-                            <input style="height: 40px;margin-left: 15px;" id="count-input" type="number" value="1" min="1" max="99">
+                            <input style="height: 40px;margin-left: 15px;" id="amount" type="number" value="1" min="1" max="99">
                         </span>
                 </li>
                 <li>
                     <form action="/goods/buy/{{$goods->id}}" method="post">
                         @csrf
                         <button style="margin-left: 80px;" id="add-cart" type="button" class="am-btn am-btn-danger">加入购物车</button>
-                        <input name="goods_id" value="{{$goods->id}}" hidden>
+                        <input id="goods_id" name="goods_id" value="{{$goods->id}}" hidden>
                         <input name="num" value="100" hidden>
                         <button style="margin-left: 30px;" id="add-cart" type="submit" class="am-btn am-btn-danger">立即购买</button>
                     </form>
@@ -215,12 +187,41 @@
 <script src="{{url('assets/js/jquery.js ')}}"></script>
 <script src="{{url('assets/js/amazeui.min.js ')}}"></script>
 <script src="{{url('assets/js/app.js')}} "></script>
+<script src="{{url('js/message.min.js')}}"></script>
 <script>
     var price = $("#price").text();
     $("#add-cart").click(function() {
-        alert("成功加入购物车");
-//        $("#count-input").val(1);
-//        $("#total-price").html(price);
+        var goods_id = $('#goods_id').val();
+        var amount = $('#amount').val();
+        $.ajax({
+            type: 'POST',
+            url: '/home/cart/add',
+            data: {goods_id:goods_id,amount:amount},
+            dataType: 'json',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            },
+            success: function(data){
+                if (data[0].code == 200){
+
+                    $.message({
+                        message:'添加成功',
+                        time:'1000',
+                        type:'success'
+                    });
+                }
+                else{
+                    $.message({
+                        message: '添加失败',
+                        type: 'error'
+                    });
+
+                }
+            },
+            error: function(xhr, type){
+                alert('Ajax error!')
+            }
+        });
     });
 </script>
 </body>

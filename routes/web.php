@@ -37,6 +37,7 @@ Route::middleware(['auth'])->group(function(){
 
         //购物车
         Route::get('/account/cart','Cart\CartController@index');
+        Route::post('/cart/add','Cart\CartController@add');
 
         //订购管理
         Route::get('/purchase/{option?}','Order\PurchaseController@index');
@@ -86,3 +87,5 @@ Route::prefix('cloudtravel')->group(function(){
 
 Route::get('test','TestController@upload');
 Route::get('alipay','TestController@alipay');
+Route::get('cart','CartController@index');
+Route::get('cart/add','CartController@add');
