@@ -9,7 +9,9 @@ Route::get('/cloudfarm',function(){
 Route::get('/aboutus',function(){
     return view('aboutus');
 });
-
+Route::get('/cooperateFarm',function(){
+    return view('cooperateFarm');
+});
 
 //游客访问
 Route::middleware(['guest'])->group(function(){
