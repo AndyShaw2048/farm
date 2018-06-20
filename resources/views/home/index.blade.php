@@ -27,19 +27,19 @@
                 <a href="#" class="am-text-warning">
                     <span class="am-icon-btn am-icon-plane"></span>
                     <br/>集市订单数量
-                    <br/>5</a>
+                    <br/>{{\App\Order::where('user_id',Auth::id())->count()}}</a>
             </li>
             <li>
                 <a href="#" class="am-text-warning">
                     <span class="am-icon-btn am-icon-briefcase"></span>
                     <br/>农场认购数量
-                    <br/>4</a>
+                    <br/>{{DB::table('adoption_orders')->where('user_id',Auth::id())->count()}}</a>
             </li>
             <li>
                 <a href="#" class="am-text-danger">
                     <span class="am-icon-btn am-icon-recycle"></span>
                     <br/>完成订单
-                    <br/>14</a>
+                    <br/>{{DB::table('orders')->where('user_id',Auth::id())->where('status','5')->count()}}</a>
             </li>
 
         </ul>
@@ -49,12 +49,12 @@
                 <table class="am-table am-table-bd am-table-striped admin-content-table">
                     <thead>
                     <tr>
-                        <a href="/home/order">详细订单</a>
+
                     </tr>
                     <tr>
-                        <th>订单号</th>
+                        <th width="200">订单号</th>
                         <th>农场</th>
-                        <th>种类</th>
+                        <th>名称</th>
                         <th>成交订单数</th>
                         <th>管理</th>
                     </tr>
@@ -77,10 +77,10 @@
                         <td>{{$order->order_id}}</td>
                         <td>农牧云水果基地</td>
                         <td>
-                            <a href="#">水果</a>
+                            <a href="#">{{$order->OrderGoods->title}}</a>
                         </td>
                         <td>
-                            <span class="am-badge am-badge-success">20</span>
+                            <span class="am-badge am-badge-success">{{$order->OrderGoods->num}}</span>
                         </td>
                         <td>
                             <div class="am-dropdown" data-am-dropdown>
@@ -100,6 +100,9 @@
                         </td>
                     </tr>
                     @endforeach
+                    <tr>
+                        <td width="300">更多信息请进入<a href="/home/order" style="color: #00a2d4">详细订单</a>查看</td>
+                    </tr>
                     @endif
                     </tbody>
                 </table>

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{url('css/order.css')}}">
     <link rel="stylesheet" href="{{url('css/message.css')}}">
     <meta name="_token" content="{{ csrf_token() }}">
-    <title>Document</title>
+    <title>农牧云|{{$goods->description}}</title>
 
 </head>
 
@@ -73,9 +73,9 @@
                     <div class="am-input-group">
                         <button class="am-btn am-btn-default" type="button">
                             <span class="am-icon-shopping-bag"></span>
-                                <span class="shopCart-span">我的购物车
-                                    <span style="color: red;">5</span>
-                                </span>
+                                <a href="/home/account/cart" class="shopCart-span">我的购物车
+                                    <span style="color: red;">{{Cart::count()}}</span>
+                                </a>
                         </button>
                     </div>
                 </td>
@@ -106,10 +106,10 @@
                             <span style="font-size: 30px;color: red;margin-left: 20px;" id="price">￥{{$goods->price}}/期</span>
                         </span>
                 </li>
-                <li>
-                    <span>总共期数:</span>
-                    <span style="margin-left: 10px;color: red;font-size: 1.2em;">3期</span>
-                </li>
+                {{--<li>--}}
+                    {{--<span>总共期数:</span>--}}
+                    {{--<span style="margin-left: 10px;color: red;font-size: 1.2em;">3期</span>--}}
+                {{--</li>--}}
                 <li>
                         <span>
                             月销量
