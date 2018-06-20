@@ -25,9 +25,16 @@
                 </td>
                 <td>
                     <a href="/cloudfarm">
-                        云上农场
+                        认购中心
                         <br>
-                        <span>Cloud&nbsp;Farm</span>
+                        <span>Subscription&nbsp;Farm</span>
+                    </a>
+                </td>
+                <td>
+                    <a href="/cooperateFarm">
+                        合作农场
+                        <br>
+                        <span>cooperate&nbsp;Farm</span>
                     </a>
                 </td>
                 <td>
