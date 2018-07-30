@@ -1,6 +1,6 @@
 <?php
 Route::get('/', function () {
-    return view('index');
+    return view('v2.home');
 });
 Route::get('/cloudfarm',function(){
     $goods = \App\Adoption\AdoptionGood::orderBy('created_at','asc')->limit(6)->get();

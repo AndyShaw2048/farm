@@ -31,13 +31,6 @@
                     </a>
                 </td>
                 <td>
-                    <a href="/cooperateFarm">
-                        合作农场
-                        <br>
-                        <span>cooperate&nbsp;Farm</span>
-                    </a>
-                </td>
-                <td>
                     <a href="/cloudtravel">
                         云游天下
                         <br>
