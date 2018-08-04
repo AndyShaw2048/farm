@@ -100,42 +100,42 @@
     <p class="line">&nbsp;&nbsp;&nbsp;</p>
     <div class="goods-list">
         <div class="list-content list1">
-            <img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt="">
+            <a href="/buydetail"><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
             <span class="name">霞脆桃</span>
             <span class="new-price">￥3.99/斤</span>
             <span class="old-price">￥5.99/斤</span>
             <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息生产信息</p>
         </div>
         <div class="list-content list2">
-            <img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt="">
+            <a href="/buydetail"><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
             <span class="name">黄金梨</span>
             <span class="new-price">￥3.99/斤</span>
             <span class="old-price">￥5.99/斤</span>
             <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息</p>
         </div>
         <div class="list-content list3">
-            <img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt="">
+            <a href="/buydetail"><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
             <span class="name">霞脆桃</span>
             <span class="new-price">￥3.99/斤</span>
             <span class="old-price">￥5.99/斤</span>
             <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息</p>
         </div>
         <div class="list-content list1">
-            <img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt="">
+            <a href="/buydetail"><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
             <span class="name">霞脆桃</span>
             <span class="new-price">￥3.99/斤</span>
             <span class="old-price">￥5.99/斤</span>
             <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息</p>
         </div>
         <div class="list-content list2">
-            <img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt="">
+            <a href="/buydetail"><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
             <span class="name">黄金梨</span>
             <span class="new-price">￥3.99/斤</span>
             <span class="old-price">￥5.99/斤</span>
             <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息</p>
         </div>
         <div class="list-content list3">
-            <img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt="">
+            <a href="/buydetail"><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
             <span class="name">霞脆桃</span>
             <span class="new-price">￥3.99/斤</span>
             <span class="old-price">￥5.99/斤</span>
@@ -144,21 +144,21 @@
     </div>
     <div class="goods-list">
         <div class="list-content list1">
-            <img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt="">
+            <a href=""><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
             <span class="name">霞脆桃</span>
             <span class="new-price">￥3.99/斤</span>
             <span class="old-price">￥5.99/斤</span>
             <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息</p>
         </div>
         <div class="list-content list2">
-            <img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt="">
+            <a href=""><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
             <span class="name">黄金梨</span>
             <span class="new-price">￥3.99/斤</span>
             <span class="old-price">￥5.99/斤</span>
             <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息</p>
         </div>
         <div class="list-content list3">
-            <img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt="">
+            <a href=""><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
             <span class="name">霞脆桃</span>
             <span class="new-price">￥3.99/斤</span>
             <span class="old-price">￥5.99/斤</span>

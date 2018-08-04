@@ -4,13 +4,17 @@ Route::get('/', function () {
 });
 Route::get('/cloudfarm',function(){
     $goods = \App\Adoption\AdoptionGood::orderBy('created_at','asc')->limit(6)->get();
-   return view('cloudfarm',['goods'=>$goods]);
+//   return view('cloudfarm',['goods'=>$goods]);
+    return view('v2.cloudorder');
 });
 Route::get('/aboutus',function(){
     return view('aboutus');
 });
 Route::get('/cooperateFarm',function(){
     return view('cooperateFarm');
+});
+Route::get('/buydetail',function(){
+    return view('v2.buydetail');
 });
 
 //游客访问

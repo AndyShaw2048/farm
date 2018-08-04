@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/amazeui.min.css">
-    <link rel="stylesheet" href="css/nav_foot.css">
-    <link rel="stylesheet" href="css/clouldTravel.css">
+    <link rel="stylesheet" href="{{url('v2/css/nav_foot.css')}}">
+    <link rel="stylesheet" href="{{url('v2/css/clouldTravel.css')}}">
 
-    <title>农牧云|云上农场</title>
+    <title>Document</title>
 
 </head>
 
@@ -20,10 +20,10 @@
             <tr>
                 <td class="logo">
                     <div class="logo-title">
-                        <img class="title" src="img/标题.png" alt="">
+                        <img class="title" src="{{url('v2/img/标题.png')}}" alt="">
                     </div>
                     <div class="logo-img">
-                        <img src="img/农牧云3.png" alt="">
+                        <img src="{{url('v2/img/农牧云3.png')}}" alt="">
                     </div>
                 </td>
                 <td>
@@ -76,7 +76,7 @@
 <div id="provence"></div>
 <div class="am-g" id="city">
     <div class="city-img">
-        <img src="img/cloudTravel-img/nanchong2.png" alt="">
+        <img src="{{url('v2/img/cloudTravel-img/nanchong2.png')}}" alt="">
         <div class="xichong">
             <h1>西充县</h1>
 
@@ -88,7 +88,7 @@
                 <p></p>
             </div>
             <div id="gulou-cooperate0-img">
-                <img src="img/cloudTravel-img/gulou-slider0.JPG" />
+                <img src="{{url('v2/img/cloudTravel-img/gulou-slider0.JPG')}}" />
             </div>
 
         </div>
@@ -116,11 +116,126 @@
 <div style="clear: both;"></div>
 <div class="am-g travel-list">
     <div class="travel-title">
-        <p>绿之韵乡之约云之旅</p>
+        <p>绿之
+            <big>韵</big>∙
+            <big>乡</big> 之约∙
+            <big>云</big> 之旅
+        </p>
+        <h3>PROGRAMMES</h3>
+        <h1>旅游方案</h1>
+        <p class="line"></p>
     </div>
     <div class="travel-desc">
-        <div class=""></div>
+        <div class="desc-img">
+            <img src="{{url('v2/img/cloudTravel-img/travel1.jpg')}}" alt="">
+        </div>
+        <div class="desc-content">
+            <span class="travel-place">四川省南充市仪陇县县岩村两天一晚</span>
+            <p class="travel-time">出行时间:
+                <span>3月-7月</span>
+            </p>
+            <p class="start-place">出发地:
+                <span>南充市内</span>
+            </p>
+            <p class="bright-spot">玩乐亮点:
+                <span>参观5A级红色景区朱德故居，入住特色农家乐，赏桃花、李花（3月），桃李采摘（6月），特色农家烧烤，农家菜品尝。</span>
+            </p>
+            <p class="travel-price">
+                <span class="price">￥149</span>
+                <span class="qi">起</span>
+                <button class="order-button">立即预定</button>
+					<span>
+						<span class="score">4.7</span>
+						<span class="estimate">分&nbsp;&nbsp;&nbsp;已有57人评价</span>
+					</span>
+            </p>
+            <p class="more">详情>></p>
+        </div>
     </div>
+    <div style="clear: both;"></div>
+    <div class="travel-desc">
+
+        <div class="desc-content">
+            <span class="travel-place">四川省南充市仪陇县县岩村两天一晚</span>
+            <p class="travel-time">出行时间:
+                <span>3月-7月</span>
+            </p>
+            <p class="start-place">出发地:
+                <span>南充市内</span>
+            </p>
+            <p class="bright-spot">玩乐亮点:
+                <span>参观5A级红色景区朱德故居，入住特色农家乐，赏桃花、李花（3月），桃李采摘（6月），特色农家烧烤，农家菜品尝。</span>
+            </p>
+            <p class="travel-price">
+                <span class="price">￥149</span>
+                <span class="qi">起</span>
+                <button class="order-button">立即预定</button>
+					<span>
+						<span class="score">4.7</span>
+						<span class="estimate">分&nbsp;&nbsp;&nbsp;已有57人评价</span>
+					</span>
+            </p>
+            <p class="more">详情>></p>
+        </div>
+        <div class="desc-img">
+            <img src="{{url('v2/img/cloudTravel-img/travel1.jpg')}}" alt="">
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+    <div class="travel-desc">
+        <div class="desc-img">
+            <img src="{{url('v2/img/cloudTravel-img/travel1.jpg')}}" alt="">
+        </div>
+        <div class="desc-content">
+            <span class="travel-place">四川省南充市仪陇县县岩村两天一晚</span>
+            <p class="travel-time">出行时间:
+                <span>3月-7月</span>
+            </p>
+            <p class="start-place">出发地:
+                <span>南充市内</span>
+            </p>
+            <p class="bright-spot">玩乐亮点:
+                <span>参观5A级红色景区朱德故居，入住特色农家乐，赏桃花、李花（3月），桃李采摘（6月），特色农家烧烤，农家菜品尝。</span>
+            </p>
+            <p class="travel-price">
+                <span class="price">￥149</span>
+                <span class="qi">起</span>
+                <button class="order-button">立即预定</button>
+					<span>
+						<span class="score">4.7</span>
+						<span class="estimate">分&nbsp;&nbsp;&nbsp;已有57人评价</span>
+					</span>
+            </p>
+            <p class="more">详情>></p>
+        </div>
+    </div>
+</div>
+<div style="clear: both;"></div>
+<div class="grey-line"></div>
+<div class="foot">
+    <div class="foot-desc">
+        <div class="foot-part part1">
+            <img src="{{url('v2/img/农牧云3.png')}}" alt="">
+        </div>
+        <div class="foot-part part2">
+            <p>网站首页 / HOME</p>
+            <p>公司简介 / INTRODUCTION</p>
+            <p>公司动态 / NEWS</p>
+        </div>
+        <div class="foot-part part3">
+            <p>电子邮箱 / 132456789@163.com</p>
+            <p>联系电话 / 12345678901</p>
+        </div>
+        <div class="foot-part part4">
+            <p>农牧云官方微信</p>
+            <img src="{{url('v2/img/农牧云3.png')}}" alt="">
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+    <p class="manage">版权所有:云谷驴图有限公司&nbsp;&nbsp;&nbsp;&nbsp;©2018 - 川ICP备180000001号
+        <a href="">站点管理</a>
+    </p>
+
 </div>
 <script src="js/jquery.min.js"></script>
 <script src="assets/js/amazeui.js "></script>
@@ -141,6 +256,9 @@
                 "display": "none",
             });
         });
+        $(".gulou-cooperate0").click(function () {
+            $(".travel-list").css("display", "block")
+        })
     });
     $(window).bind("scroll", function () {
         var top = $(this).scrollTop(); // 当前窗口的滚动距离

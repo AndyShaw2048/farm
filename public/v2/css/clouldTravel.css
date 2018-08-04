@@ -244,4 +244,123 @@ body {
 .travel-list {
     width: 1200px;
     margin: 0 auto;
+    display: none;
+}
+
+.travel-title {
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+    font-size: 2em;
+    letter-spacing: 10px;
+}
+
+.travel-title h3 {
+    margin-bottom: 0;
+}
+
+.travel-title h1 {
+    margin-top: 0;
+}
+
+.line {
+    margin: 0 auto;
+    width: 70px;
+    height: 20px;
+    border-bottom: 5px solid green;
+}
+
+.travel-desc {
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.desc-img {
+    width: 50%;
+    float: left;
+}
+
+.desc-content {
+    width: 50%;
+    float: left;
+}
+
+.desc-img img {
+    width: 92%;
+}
+
+.travel-place {
+    border: 2px solid green;
+    border-radius: 5px;
+    color: green;
+    padding: 3px;
+    font-size: 1.6em;
+    margin: 10px 0;
+    letter-spacing: 2px;
+}
+
+.travel-time {
+    color: grey;
+    margin: 10px 0;
+}
+
+.travel-time span {
+    color: orange;
+}
+
+.start-place {
+    color: grey;
+    margin: 10px 0;
+}
+
+.start-place span {
+    color: orange;
+}
+
+.bright-spot {
+    width: 80%;
+    color: grey;
+    margin: 10px 0;
+}
+
+.bright-spot span {
+    color: orange;
+}
+
+.travel-price {
+    margin: 5px 0;
+}
+
+.price {
+    color: red;
+    font-size: 2em;
+}
+
+.qi {
+    color: orange;
+}
+
+.order-button {
+    position: relative;
+    top: -7px;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 0 25px 0 2px;
+}
+
+.score {
+    color: red;
+}
+
+.estimate {
+    color: grey;
+}
+
+.more {
+    color: orange;
+    margin: 0
 }
