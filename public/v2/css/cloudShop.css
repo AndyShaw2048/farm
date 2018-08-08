@@ -60,19 +60,19 @@
 }
 
 .name {
-    font-size: 1.6em;
+    font-size: 1.2em;
     color: orange;
     letter-spacing: 3px;
 }
 
 .new-price {
-    font-size: 2em;
+    font-size: 1.0em;
     color: orange;
-    margin-left: 20px;
+    margin-left: 6px;
 }
 
 .old-price {
-    margin-left: 18px;
+    margin-left: 10px;
     text-decoration: line-through;
 }
 

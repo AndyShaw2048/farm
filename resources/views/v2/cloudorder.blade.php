@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>农牧云|认购中心</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="{{url('v2/css/chart.css')}}" />
     <link rel="stylesheet" type="text/css" media="screen" href="{{url('layui/css/layui.css')}}" />
@@ -128,24 +128,26 @@
     <!-- //////////////////////////// -->
     <div class="marg">
         <div class="ma">
-            <div class="marg-ch">
+            @foreach($goods as $item)
+            <div class="marg-ch" style="margin-top: 100px">
                 <div class="marg-img">
-                    <img src="{{url('v2/img/buy-detail/video边框.png')}}" alt="">
+                    <img src="{{url('uploads/'.$item->logo)}}" alt="">
                 </div>
                 <div class="marg-text">
                     <div class="product-text" id="pro">
                         <div class="text-chlid1">产品跟踪</div>
                         <div class="text-child2">
-                            <p>
-                                    <span style="color: rgb(206, 168, 110);font-size: 1.5em;">
-                                        <a href="" style="list-style: none; color: rgb(206, 168, 110);">霞脆桃</a>
-                                    </span>&nbsp;&nbsp;产地&nbsp;&nbsp;西充</p>
+                        <p>
+                            <span style="color: rgb(206, 168, 110);font-size: 1.5em;">
+                                <a href="" style="list-style: none; color: rgb(206, 168, 110);">{{$item->name}}</a>
+                            </span>&nbsp;&nbsp;产地&nbsp;&nbsp;西充
+                        </p>
                         </div>
                         <div class="text-child3">
-                            <p style="color: rgb(189, 184, 184); letter-spacing: 3px;font-size: 1.1em;">好吃的鲜家坝村的特产，鲜家坝村的特产。（介绍）好吃的鲜家坝村的特产，鲜家坝村的特产。（介绍）好吃的鲜家坝村的特产，鲜家坝村的特产。（介绍）</p>
+                            <p style="color: rgb(189, 184, 184); letter-spacing: 3px;font-size: 1.1em;">{{$item->description}}</p>
                             <p id="more">价格：
-                                <big>¥3.99/斤</big>&nbsp;&nbsp;订单数：
-                                <big>25只</big>
+                                <big>¥{{$item->price}}/{{$item->unit}}</big>&nbsp;&nbsp;订单数：
+                                <big>10只</big>
                                 <span>(截止7月25日)</span>
                             </p>
                             <a href="#">详情>></a>
@@ -153,31 +155,7 @@
                     </div>
                 </div>
             </div>
-            <div class="marg-ch" style="margin-top: 30px;">
-                <div class="marg-img">
-                    <img src="{{url('v2/img/buy-detail/video边框.png')}}" alt="">
-                </div>
-                <div class="marg-text">
-                    <div class="product-text" id="pro">
-                        <div class="text-chlid1">产品跟踪</div>
-                        <div class="text-child2">
-                            <p>
-                                    <span style="color: rgb(206, 168, 110);font-size: 1.5em;">
-                                        <a href="" style="list-style: none; color: rgb(206, 168, 110);">霞脆桃</a>
-                                    </span>&nbsp;&nbsp;产地&nbsp;&nbsp;西充</p>
-                        </div>
-                        <div class="text-child3">
-                            <p style="color: rgb(189, 184, 184); letter-spacing: 3px;font-size: 1.1em;">好吃的鲜家坝村的特产，鲜家坝村的特产。（介绍）好吃的鲜家坝村的特产，鲜家坝村的特产。（介绍）好吃的鲜家坝村的特产，鲜家坝村的特产。（介绍）</p>
-                            <p id="more">价格：
-                                <big>¥3.99/斤</big>&nbsp;&nbsp;订单数：
-                                <big>25只</big>
-                                <span>(截止7月25日)</span>
-                            </p>
-                            <a href="#">详情>></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>

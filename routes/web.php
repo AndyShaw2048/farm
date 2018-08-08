@@ -3,9 +3,9 @@ Route::get('/', function () {
     return view('v2.home');
 });
 Route::get('/cloudfarm',function(){
-    $goods = \App\Adoption\AdoptionGood::orderBy('created_at','asc')->limit(6)->get();
+    $goods = \App\Goods::where('goods_type',7)->get();
 //   return view('cloudfarm',['goods'=>$goods]);
-    return view('v2.cloudorder');
+    return view('v2.cloudorder',compact('goods'));
 });
 Route::get('/aboutus',function(){
     return view('aboutus');
@@ -13,9 +13,7 @@ Route::get('/aboutus',function(){
 Route::get('/cooperateFarm',function(){
     return view('cooperateFarm');
 });
-Route::get('/buydetail',function(){
-    return view('v2.buydetail');
-});
+
 
 //游客访问
 Route::middleware(['guest'])->group(function(){

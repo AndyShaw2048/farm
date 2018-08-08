@@ -12,10 +12,9 @@ class GoodsController extends Controller
 {
     public function index()
     {
-        $goods = Goods::where('status',1)
-                        ->orderBy('stocks','desc')
+        $goods = Goods::where('goods_type',6)
                         ->get();
-        return view('v2.cloudshop');
+        return view('v2.cloudshop',compact('goods'));
 //        return view('goods.index',['goods'=>$goods]);
     }
 

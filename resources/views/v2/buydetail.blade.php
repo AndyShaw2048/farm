@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>农牧云|{{$goods->name}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{url('v2/css/nav_foot.css')}}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{url('v2/css/buy-detail.css')}}" />
@@ -79,23 +79,23 @@
 <div class="body">
     <div class="nav-one">
         <div class="nav-img">
-            <img src="{{url('v2/img/peach.jpg')}}" alt="">
+            <img src="{{url('uploads/'.$goods->logo)}}" alt="">
             <img src="{{url('v2/img/woodborder.png')}}" alt="">
         </div>
         <div class="nav-text">
             <div class="text-one">
-                绿壳鸡蛋
+                {{$goods->name}}
             </div>
             <div class="text-two">
                 <i class="layui-icon layui-icon-face-smile" style="font-size: 30px; color: rgb(132, 160, 182);"></i>
             </div>
             <div class="text-three">
                 <p>
-                    <big>¥1.2/</big>个&nbsp;&nbsp;
-                    <span class="ds">¥1.8/个</span>
+                    <big>¥{{$goods->price}}/</big>{{$goods->unit}}&nbsp;&nbsp;
+                    <span class="ds">¥{{$goods->price+3.36}}/{{$goods->unit}}</span>
                 </p>
             </div>
-            <div class="text-four">绿壳鸡蛋中的蛋白质对人体的肝脏有修复作用，而且绿壳鸡蛋的蛋黄中的卵磷脂可促进肝细胞的再生。</div>
+            <div class="text-four"></div>
             <div class="text-five">
                 <div class="but">
                     <input class="b" type="button" value="+" onclick="jia()" style="width: 30px;height: 30px;border-radius: 15px 0 0 15px;">
@@ -124,26 +124,12 @@
     <div class="marg-page">
         <div class="marg-page-ch1">
             <div class="marg-img">
-                <img src="{{url('v2/img/peach.jpg')}}" alt="">
+                <img src="{{url('uploads/'.$goods->logo)}}" alt="">
             </div>
             <div class="marg-text">
-                <p>五黑鸡产地介绍</p>
-                <p> &nbsp;&nbsp;西充是一个五黑鸡的好地方，五黑鸡的好地方，好地方。 西充是一个五黑鸡的好地方，五黑鸡的好地方，好地方。 西充是一个五黑鸡的好地方，五黑鸡的好地方，好地方。 西充是一个五黑鸡的好地方，五黑鸡的好地方，好地方。
-                    西充是一个五黑鸡的好地方，五黑鸡的好地方，好地方。 西充是一个五黑鸡的好地方，五黑鸡的好地方，好地方。
+                <p>{{$goods->name}}介绍</p>
+                <p> &nbsp;&nbsp;{{$goods->description}}
                 </p>
-            </div>
-        </div>
-        <div class="marg-page-ch2" style="margin-top: 100px;">
-            <div class="marg-page-ch1">
-                <div class="marg-img">
-                    <img src="{{url('v2/img/peach.jpg')}}" alt="">
-                </div>
-                <div class="marg-text">
-                    <p>五黑鸡产地介绍</p>
-                    <p> &nbsp;&nbsp;西充是一个五黑鸡的好地方，五黑鸡的好地方，好地方。 西充是一个五黑鸡的好地方，五黑鸡的好地方，好地方。 西充是一个五黑鸡的好地方，五黑鸡的好地方，好地方。 西充是一个五黑鸡的好地方，五黑鸡的好地方，好地方。
-                        西充是一个五黑鸡的好地方，五黑鸡的好地方，好地方。 西充是一个五黑鸡的好地方，五黑鸡的好地方，好地方。
-                    </p>
-                </div>
             </div>
         </div>
     </div>
@@ -151,7 +137,7 @@
     <!-- /////////////// -->
     <!-- 锚点 -->
     <div class="nav-pos" style="margin-top: 50px;">
-        <a href="#am-head" class="toplink">
+        <a href="#" class="toplink">
             <img src="{{url('v2/img/顶部.jpg')}}" alt="" width="66px;" height="115px;">
         </a>
     </div>

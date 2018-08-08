@@ -90,22 +90,22 @@
         <p class="service-content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们主要运用结合国家精准扶贫政策，集合中小农户力量，运用“互联网”+“大数据”+“物联网”相关技术，从种植，养殖，发展旅游业等方面帮助乡村能够更广更好的利用当地特色农业资源，解决享农场、线上乡村旅游预定为服务创新点，消费者能够通过我们的平台实现特色新鲜农产品在线购买；认养、投资。</p>
         <div class="am-g service-list">
             <div class="service-sub-list">
-                <img src="{{url('v2/img/home-img/6P0A3676.jpg')}}" alt="">
+                <img src="{{url('v2/img/peach.jpg')}}" alt="">
                 <h1 class="catalogue">云上集市</h1>
-                <p class="catalogue-desc">云上集市云上集市云上集市</p>
-                <span class="more">更多>></span>
+                <p class="catalogue-desc">云上集市分类别、分季度、分品牌陈列农牧产品，用户可以根据选择喜好搜索出自己想要...</p>
+                <a href="/goods" class="more">前往>></a>
             </div>
             <div class="service-sub-list farm">
-                <img src="{{url('v2/img/home-img/6P0A3676.jpg')}}" alt="">
+                <img src="{{url('v2/img/blackPig.jpg')}}" alt="">
                 <h1 class="catalogue">云上养殖</h1>
-                <p class="catalogue-desc">云上集市云上集市云上集市</p>
-                <span class="more">更多>></span>
+                <p class="catalogue-desc">认购的商品可以通过农户、农场、牧场的实时监控录像来实时查看自己所认购商品的...</p>
+                <a href="/cloudfarm" class="more">前往>></a>
             </div>
             <div class="service-sub-list travel">
-                <img src="{{url('v2/img/home-img/6P0A3676.jpg')}}" alt="">
+                <img src="{{url('v2/img/scenery.jpg')}}" alt="">
                 <h1 class="catalogue">云游天下</h1>
-                <p class="catalogue-desc">云上集市云上集市云上集市</p>
-                <span class="more">更多>></span>
+                <p class="catalogue-desc">用户可以在云游天下板块通过定位查看自己附近的农家位置，以及农家的环境、特色...</p>
+                <a href="/cloudtravel" class="more">前往>></a>
             </div>
         </div>
     </div>
@@ -118,19 +118,18 @@
                 <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
                     <ul class="am-slides">
                         <li>
-                            <img src="{{url('v2/img/home-img/6P0A3676.jpg')}}" alt="">
+                            <img src="{{url('v2/img/peach.jpg')}}" alt="">
                         </li>
 
                         <li>
-                            <img src="{{url('v2/img/home-img/6P0A3676.jpg')}}" alt="">
+                            <img src="{{url('v2/img/peach.jpg')}}" alt="">
                         </li>
                         <li>
-                            <img src="{{url('v2/img/home-img/6P0A3676.jpg')}}" alt="">
+                            <img src="{{url('v2/img/peach.jpg')}}" alt="">
                         </li>
                     </ul>
                 </div>
                 <h1>云养殖动态第一期</h1>
-                <p>云养殖动态第一期云养殖动态第一期云养殖动态第一期云养殖动态第一期云养殖动态第一期</p>
                 <div class="news-more">
                     <div class="more-left">more</div>
                     <div class="more-right">+</div>
@@ -141,16 +140,16 @@
                 <div class="news-list">
                     <div class="news-date">
                         <div class="news-date-day">
-                            <span>10</span>
+                            <span>27</span>
                         </div>
-                        <div class="news-date-yearMonth">2018-06</div>
+                        <div class="news-date-yearMonth">2018-07</div>
                     </div>
                     <div class="news-content-desc">
                         <div class="news-title">
-                            <h2>公司新闻【6-10】</h2>
+                            <h2>公司新闻【7-27】</h2>
                         </div>
                         <div class="news-desc">
-                            <p>农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云</p>
+                            <a href="http://url.cn/5eFfzKI" style="color: black">四川大学生走进朱德故里 重温红色赤子心</a>
                         </div>
                     </div>
                 </div>
@@ -158,16 +157,16 @@
                 <div class="news-list">
                     <div class="news-date">
                         <div class="news-date-day">
-                            <span>10</span>
+                            <span>26</span>
                         </div>
-                        <div class="news-date-yearMonth">2018-06</div>
+                        <div class="news-date-yearMonth">2018-07</div>
                     </div>
                     <div class="news-content-desc">
                         <div class="news-title">
-                            <h2>公司新闻【6-10】</h2>
+                            <h2>公司新闻【7-26】</h2>
                         </div>
                         <div class="news-desc">
-                            <p>农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云</p>
+                            <a href="http://url.cn/5eFfzKI" style="color: black">西华师大学子扬青春风帆 ：助力脱贫攻坚 聚焦电商扶贫</a>
                         </div>
                     </div>
                 </div>
@@ -175,16 +174,16 @@
                 <div class="news-list">
                     <div class="news-date">
                         <div class="news-date-day">
-                            <span>10</span>
+                            <span>26</span>
                         </div>
-                        <div class="news-date-yearMonth">2018-06</div>
+                        <div class="news-date-yearMonth">2018-07</div>
                     </div>
                     <div class="news-content-desc">
                         <div class="news-title">
-                            <h2>公司新闻【6-10】</h2>
+                            <h2>公司新闻【7-26】</h2>
                         </div>
                         <div class="news-desc">
-                            <p>农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云</p>
+                            <a href="http://url.cn/5DXep2e" style="color: black">西华师范大学学子走进瓦子坪村 实地调研脱贫攻坚</a>
                         </div>
                     </div>
                 </div>
@@ -192,16 +191,16 @@
                 <div class="news-list">
                     <div class="news-date">
                         <div class="news-date-day">
-                            <span>10</span>
+                            <span>26</span>
                         </div>
-                        <div class="news-date-yearMonth">2018-06</div>
+                        <div class="news-date-yearMonth">2018-07</div>
                     </div>
                     <div class="news-content-desc">
                         <div class="news-title">
-                            <h2>公司新闻【6-10】</h2>
+                            <h2>公司新闻【7-26】</h2>
                         </div>
                         <div class="news-desc">
-                            <p>农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云农牧云</p>
+                            <a href="http://url.cn/508CmS2" style="color: black">大学子生调研险岩村香菇种植基地 了解贫困村脱贫摘帽新面貌</a>
                         </div>
                     </div>
                 </div>

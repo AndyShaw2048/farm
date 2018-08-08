@@ -99,80 +99,24 @@
     <p class="chin-word">我们的产品</p>
     <p class="line">&nbsp;&nbsp;&nbsp;</p>
     <div class="goods-list">
-        <div class="list-content list1">
-            <a href="/buydetail"><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
-            <span class="name">霞脆桃</span>
-            <span class="new-price">￥3.99/斤</span>
-            <span class="old-price">￥5.99/斤</span>
-            <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息生产信息</p>
-        </div>
-        <div class="list-content list2">
-            <a href="/buydetail"><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
-            <span class="name">黄金梨</span>
-            <span class="new-price">￥3.99/斤</span>
-            <span class="old-price">￥5.99/斤</span>
-            <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息</p>
-        </div>
-        <div class="list-content list3">
-            <a href="/buydetail"><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
-            <span class="name">霞脆桃</span>
-            <span class="new-price">￥3.99/斤</span>
-            <span class="old-price">￥5.99/斤</span>
-            <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息</p>
-        </div>
-        <div class="list-content list1">
-            <a href="/buydetail"><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
-            <span class="name">霞脆桃</span>
-            <span class="new-price">￥3.99/斤</span>
-            <span class="old-price">￥5.99/斤</span>
-            <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息</p>
-        </div>
-        <div class="list-content list2">
-            <a href="/buydetail"><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
-            <span class="name">黄金梨</span>
-            <span class="new-price">￥3.99/斤</span>
-            <span class="old-price">￥5.99/斤</span>
-            <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息</p>
-        </div>
-        <div class="list-content list3">
-            <a href="/buydetail"><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
-            <span class="name">霞脆桃</span>
-            <span class="new-price">￥3.99/斤</span>
-            <span class="old-price">￥5.99/斤</span>
-            <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息</p>
-        </div>
-    </div>
-    <div class="goods-list">
-        <div class="list-content list1">
-            <a href=""><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
-            <span class="name">霞脆桃</span>
-            <span class="new-price">￥3.99/斤</span>
-            <span class="old-price">￥5.99/斤</span>
-            <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息</p>
-        </div>
-        <div class="list-content list2">
-            <a href=""><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
-            <span class="name">黄金梨</span>
-            <span class="new-price">￥3.99/斤</span>
-            <span class="old-price">￥5.99/斤</span>
-            <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息</p>
-        </div>
-        <div class="list-content list3">
-            <a href=""><img src="{{url('v2/img/cloudShop-img/6P0A3676.jpg')}}" alt=""></a>
-            <span class="name">霞脆桃</span>
-            <span class="new-price">￥3.99/斤</span>
-            <span class="old-price">￥5.99/斤</span>
-            <p class="goods-desc">生产信息生产信息生产信息生产信息生产信息</p>
-        </div>
+        @foreach($goods as $key => $item)
+            <a href="/goods/buy/{{$item->id}}" style="color: black">
+        <div class="list-content list{{$key%3 + 1}}">
+            <img src="{{url('uploads/'.$item->logo)}}" alt="">
+            <span class="name">{{$item->name}}</span>
+            <span class="new-price">￥{{$item->price}}/{{$item->unit}}</span>
+            <span class="old-price">￥{{$item->price+3.36}}/斤</span>
+            <p class="goods-desc">{{$item->description}}</p>
+        </div></a>
+        @endforeach
     </div>
 </div>
-
 <div class="am-g product-source">
     <div class="word-desc">
         <h1 class="product-track">产品追踪</h1>
         <h1 class="desc-name">霞脆桃</h1>
         <span class="location">产地 &nbsp;&nbsp;西充</span>
-        <p class="detail">霞脆桃产自广西西充县，霞脆桃产自广西西充县，霞脆桃产自广西西充县，霞脆桃产自广西西充县，霞脆桃产自广西西充县，霞脆桃产自广西西充县，霞脆桃产自广西西充县，霞脆桃产自广西西充县，霞脆桃产自广西西充县，</p>
+        <p class="detail">中熟品种，果面绒毛中多，底色乳白，着玫瑰红霞；果肉白色。不溶质,肉质细，纤维少，汁液中多，味甜，香气四溢。</p>
             <span class="more">
                 <a href="">更多>></a>
             </span>

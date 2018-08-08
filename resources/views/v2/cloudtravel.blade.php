@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{url('v2/css/nav_foot.css')}}">
     <link rel="stylesheet" href="{{url('v2/css/clouldTravel.css')}}">
 
-    <title>Document</title>
+    <title>农牧云|云游天下</title>
 
 </head>
 
