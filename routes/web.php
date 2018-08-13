@@ -63,7 +63,6 @@ Route::middleware(['auth'])->group(function(){
         Route::post('/order/comment','Adoption\AdoptionController@comment');
     });
 
-
 });
 
 //商品购买
@@ -89,8 +88,3 @@ Route::prefix('adoption')->group(function(){
 Route::prefix('cloudtravel')->group(function(){
    Route::get('/','CloudTravelController@index');
 });
-
-Route::get('test','TestController@upload');
-Route::get('alipay','TestController@alipay');
-Route::get('cart','CartController@index');
-Route::get('cart/add','CartController@add');

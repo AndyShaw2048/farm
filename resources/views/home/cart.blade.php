@@ -20,7 +20,7 @@
                         <tr>
                             <th style="color: red">
                                 <span>全部商品&nbsp;&nbsp;&nbsp;</span>
-                                <span>{{Cart::count()}}</span>
+                                <span>{{Cart::content()->count()}}</span>
                             </th>
 
                             <th style="padding-left: 50px;">
@@ -58,10 +58,10 @@
                                         <input type="checkbox" name="item" value="{{$item->rowId}}">
                                     </td>
                                     <td style="line-height:40px;">
-                                        <img style="width:120px;height:120px;float: left;margin-right: 10px;" src="{{url('uploads/'.$item->model->logo)}}" alt="">
+                                        <img style="width:120px;height:120px;float: left;margin-right: 10px;" src="{{url('uploads').'/'.$item->model->logo}}" alt="">
                                         <span>{{\App\Farm::GetNameByID($item->model->farm)}}</span>
                                         <br>
-                                        <span>{{$item->model->description}}</span>
+                                        <div style="width: 500px;;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">{{($item->model->description)}}</div>
                                         <br>
                                         <span>500g/份</span>
                                     </td>

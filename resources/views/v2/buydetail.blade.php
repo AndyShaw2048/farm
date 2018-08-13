@@ -8,10 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{url('v2/css/nav_foot.css')}}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{url('v2/css/buy-detail.css')}}" />
-    <link rel="stylesheet" href="{{url('v2/layui/css/layui.css')}}" />
+    <link rel="stylesheet" href="{{url('layui/css/layui.css')}}" />
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/chart.css" /> -->
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/chart.css" /> -->
-    <link rel="stylesheet" href="{{url('v2/assets/css/amazeui.css')}}">
+    <link rel="stylesheet" href="{{url('assets/css/amazeui.css')}}">
+    <meta name="_token" content="{{ csrf_token() }}">
 
 </head>
 
@@ -99,10 +100,11 @@
             <div class="text-five">
                 <div class="but">
                     <input class="b" type="button" value="+" onclick="jia()" style="width: 30px;height: 30px;border-radius: 15px 0 0 15px;">
-                    <input class="aa" id="zhi" type="text" value="0" style="width: 40px;height: 32px; text-align: center;">
+                    <input class="aa" id="qty" type="text" value="1" style="width: 40px;height: 32px; text-align: center;" max="99" min="1">
                     <input class="bb" type="button" value="-" onclick="jian()" style="width: 30px;height: 30px;border-radius:0 15px 15px 0;">
                 </div>
-                <a href="">
+                <a style="cursor: pointer" onclick="addToCart()">
+                    <input type="text" value="{{$goods->id}}" id="id" hidden>
                     <div class="shop">添加到购物车</div>
                 </a>
             </div>
@@ -173,7 +175,7 @@
 </div>
 </body>
 <!-- <script src="assets/js/amazeui.js"></script> -->
-<script src="js/jquery.min.js"></script>
+<script src="{{url('js/jquery.min.js')}}"></script>
 <script type="text/javascript">
     $(window).bind("scroll", function () {
         var top = $(this).scrollTop(); // 当前窗口的滚动距离
@@ -192,7 +194,7 @@
             $(".company a").css("color", "black");
             $(".logo span").css("color", "black");
             $(".am-input-group").css("opacity", "1")
-            $(".title").attr("src", "img/标题-黑.png")
+            $(".title").attr("src", "{{url('v2/img/标题-黑.png')}}")
         }
         if (top == 0) {
             $(".head").css({
@@ -205,7 +207,7 @@
             });
             $(".nav-table a").css("color", "black");
             $(".am-input-group").css("opacity", "0.5")
-            $(".title").attr("src", "img//标题-黑.png")
+            $(".title").attr("src", "{{url('v2/img/标题-黑.png')}}")
         }
     });
     ///////////////////////////
@@ -222,13 +224,50 @@
     });
     ///////////////////
     function jia() {
-        var zhi = document.getElementById("zhi");
-        zhi.value = parseInt(zhi.value) + 1;
+        var value = $('#qty').val()
+        if(value>=99)
+            return
+        $('#qty').val(parseInt(value)+1)
     }
 
     function jian() {
-        var zhi = document.getElementById("zhi");
-        zhi.value = parseInt(zhi.value) - 1;
+        var value = $('#qty').val()
+        if(value<=1)
+                return
+        $('#qty').val(parseInt(value)-1)
+    }
+
+    function addToCart(){
+        var goods_id = $('#id').val();
+        var amount = $('#qty').val();
+        $.ajax({
+            type: 'POST',
+            url: '/home/cart/add',
+            data: {goods_id:goods_id,amount:amount},
+            dataType: 'json',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            },
+            success: function(data){
+                if (data[0].code == 200){
+                    $.message({
+                        message:'添加成功',
+                        time:'1000',
+                        type:'success'
+                    });
+                }
+                else{
+                    $.message({
+                        message: '添加失败',
+                        type: 'error'
+                    });
+
+                }
+            },
+            error: function(xhr, type){
+                alert('Ajax error!')
+            }
+        });
     }
 </script>
 

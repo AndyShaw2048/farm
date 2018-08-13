@@ -29,4 +29,5 @@ class Goods extends Model
     {
         return json_decode($pics, true);
     }
+
 }

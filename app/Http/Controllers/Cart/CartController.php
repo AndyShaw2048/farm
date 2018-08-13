@@ -14,9 +14,10 @@ class CartController extends Controller
 {
     public function index()
     {
-
         Cart::restore(Auth::id());
         Cart::store(Auth::id());
+//        Cart::destroy();
+//        dd(Cart::content());
         return view('home.cart');
     }
 
