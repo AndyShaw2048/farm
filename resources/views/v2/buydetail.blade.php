@@ -13,6 +13,7 @@
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/chart.css" /> -->
     <link rel="stylesheet" href="{{url('assets/css/amazeui.css')}}">
     <meta name="_token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="{{url('css/message.css')}}">
 
 </head>
 
@@ -176,6 +177,7 @@
 </body>
 <!-- <script src="assets/js/amazeui.js"></script> -->
 <script src="{{url('js/jquery.min.js')}}"></script>
+<script src="{{url('js/message.min.js')}}"></script>
 <script type="text/javascript">
     $(window).bind("scroll", function () {
         var top = $(this).scrollTop(); // 当前窗口的滚动距离
