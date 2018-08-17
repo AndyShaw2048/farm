@@ -236,7 +236,7 @@
         </div>
         <div class="foot-part part2">
             <p>网站首页 / HOME</p>
-            <p>公司简介 / INTRODUCTION</p>
+            <a href="http://upload.xhsdyb.cn/ppt.pdf" style="color: #000;" target="_blank">公司简介 / INTRODUCTION</a>
             <p>公司动态 / NEWS</p>
         </div>
         <div class="foot-part part3">
