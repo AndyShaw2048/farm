@@ -58,7 +58,7 @@
                                         <input type="checkbox" name="item" value="{{$item->rowId}}">
                                     </td>
                                     <td style="line-height:40px;">
-                                        <img style="width:120px;height:120px;float: left;margin-right: 10px;" src="" alt="">
+                                        <img style="width:120px;height:120px;float: left;margin-right: 10px;" src="{{url('uploads').'/'.$item->model->logo}}" alt="">
                                         <span>{{\App\Farm::GetNameByID($item->model->farm)}}</span>
                                         <br>
                                         <div style="width: 500px;;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">{{($item->model->description)}}</div>
