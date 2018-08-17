@@ -16,7 +16,7 @@ class HomeController extends Controller
     public function index()
     {
         $id = Auth::id();
-        $orders = Order::where('user_id',$id)->get();
+        $orders = Order::where('user_id',$id)->limit(5)->get();
         $addresses = UserAddress::where('user_id',$id)->get();
         return view('home.index',['user'=>Auth::user(),'orders'=>$orders,'addresses'=>$addresses]);
     }

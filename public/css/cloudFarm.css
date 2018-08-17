@@ -17,18 +17,18 @@ a::after {
 }
 
 .head a {
-     color: white;
- }
+    color: white;
+}
 
 .head a:hover {
     color: white;
     text-decoration: none;
 }
+
 .head a:visited {
     color: white;
     text-decoration: none;
 }
-
 
 .head {
     width: 100%;
@@ -161,7 +161,7 @@ a::after {
 }
 
 .disc {
-    margin-top:-16px ;
+    margin-top: -16px;
     color: darkgray;
 }
 
@@ -188,6 +188,7 @@ a::after {
     -webkit-line-clamp: 9;
     overflow: hidden;
 }
+
 .farm-word:hover {
     background-color: #f6f6f6;
 }
@@ -325,7 +326,9 @@ a::after {
 
 .subscription-body {
     width: 1200px;
+    margin-bottom: 30px;
 }
+
 .order-nav {
     border-bottom: 1px solid gray;
 }

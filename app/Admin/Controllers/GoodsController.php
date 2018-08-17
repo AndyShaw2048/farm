@@ -97,6 +97,7 @@ class GoodsController extends Controller
             $grid->logo('Logo')->image('http://farm.com/uploads/', 100, 100);
             $grid->pics('实物图')->image('http://farm.com/uploads/', 100, 100);
             $grid->price('单价');
+            $grid->unit('单位');
             $grid->stocks('库存');
             $grid->sales('销量');
             $states = [
@@ -126,6 +127,7 @@ class GoodsController extends Controller
             $form->text('name','名称');
             $form->textarea('description','描述');
             $form->currency('price','单价')->symbol('￥');
+            $form->text('unit','单位');
             $form->number('stocks','库存');
             $states = [
                 'off' => ['value' => 2, 'text' => '下架', 'color' => 'danger'],

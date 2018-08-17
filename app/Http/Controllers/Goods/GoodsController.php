@@ -14,7 +14,8 @@ class GoodsController extends Controller
     {
         $goods = Goods::where('status',1)
                         ->get();
-        return view('goods.index',['goods'=>$goods]);
+        return view('v2.cloudshop',compact('goods'));
+//        return view('goods.index',['goods'=>$goods]);
     }
 
     public function detail($id)

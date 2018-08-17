@@ -17,7 +17,8 @@ class BuyController extends Controller
         if(!$id) return redirect('/goods');
 
         $goods = Goods::where('id',$id)->first();
-        return view('order.buy',['goods'=>$goods]);
+//        return view('order.buy',['goods'=>$goods]);
+        return view('v2.buydetail',compact('goods'));
     }
 
     public function store(Request $request)

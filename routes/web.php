@@ -1,13 +1,17 @@
 <?php
 Route::get('/', function () {
-    return view('index');
+    return view('v2.home');
 });
 Route::get('/cloudfarm',function(){
-    $goods = \App\Adoption\AdoptionGood::orderBy('created_at','asc')->limit(6)->get();
-   return view('cloudfarm',['goods'=>$goods]);
+    $goods = \App\Goods::where('goods_type',7)->get();
+//   return view('cloudfarm',['goods'=>$goods]);
+    return view('v2.cloudorder',compact('goods'));
 });
 Route::get('/aboutus',function(){
     return view('aboutus');
+});
+Route::get('/cooperateFarm',function(){
+    return view('cooperateFarm');
 });
 
 
@@ -59,7 +63,6 @@ Route::middleware(['auth'])->group(function(){
         Route::post('/order/comment','Adoption\AdoptionController@comment');
     });
 
-
 });
 
 //商品购买
@@ -85,6 +88,3 @@ Route::prefix('adoption')->group(function(){
 Route::prefix('cloudtravel')->group(function(){
    Route::get('/','CloudTravelController@index');
 });
-
-Route::get('test','TestController@upload');
-Route::get('alipay','TestController@alipay');
