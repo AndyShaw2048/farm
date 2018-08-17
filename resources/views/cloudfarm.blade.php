@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{url('css/amazeui.min.css')}}">
     <link rel="stylesheet" href="{{url('css/style.css')}}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{url('css/cloudFarm.css')}}">
+    <link rel="stylesheet" href="{{url('v2/css/nav_foot.css')}}">
     <title>农牧云|云上农场</title>
 </head>
 

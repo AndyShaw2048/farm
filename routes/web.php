@@ -37,6 +37,8 @@ Route::middleware(['auth'])->group(function(){
 
         //购物车
         Route::get('/account/cart','Cart\CartController@index');
+        Route::post('/cart/add','Cart\CartController@add');
+        Route::post('/cart/del','Cart\CartController@del');
 
         //订购管理
         Route::get('/purchase/{option?}','Order\PurchaseController@index');

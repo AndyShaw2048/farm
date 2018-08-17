@@ -13,7 +13,6 @@ class GoodsController extends Controller
     public function index()
     {
         $goods = Goods::where('status',1)
-                        ->orderBy('stocks','desc')
                         ->get();
         return view('goods.index',['goods'=>$goods]);
     }
@@ -21,7 +20,7 @@ class GoodsController extends Controller
     public function detail($id)
     {
         $goods = Goods::where('id',$id)->first();
-        return view('goods.detail',['goods'=>$goods]);
+        return view('v2.buydetail',['goods'=>$goods]);
     }
 
     public function category($id = null)

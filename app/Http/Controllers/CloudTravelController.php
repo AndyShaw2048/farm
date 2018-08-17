@@ -8,6 +8,6 @@ class CloudTravelController extends Controller
 {
     public function index()
     {
-        return view('travel.index');
+        return view('v2.cloudtravel');
     }
 }

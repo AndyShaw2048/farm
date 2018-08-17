@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{url('css/amazeui.min.css')}}">
     <link rel="stylesheet" href="{{url('css/style.css')}}" type="text/css" media="all" />
     <link rel="stylesheet" type="text/css" href="{{url('css/cloudShop.css')}}" />
+    <link rel="stylesheet" href="{{url('v2/css/nav_foot.css')}}">
     <link rel="stylesheet" href="css/pignose.layerslider.css">
 
     <script src="{{url('assets/js/jquery.js')}} " type="text/javascript " charset="utf-8 "></script>
@@ -27,19 +28,17 @@
             <tr>
                 <td class="logo">
                     <div class="logo-title">
-                        <img class="title" src="img/标题-黑.png" alt="">
+                        <img class="title" src="{{url('v2/img/标题.png')}}" alt="">
                     </div>
                     <div class="logo-img">
-                        <img src="img/农牧云3.png" alt="">
+                        <img src="{{url('v2/img/农牧云3.png')}}" alt="">
                     </div>
-
                 </td>
                 <td>
                     <a href="/">首页
                         <br>
-                        <span>Home&nbsp;Page</span>
+                        <span>Home&nbsp; Page</span>
                     </a>
-
                 </td>
                 <td>
                     <a href="/goods">
@@ -50,13 +49,14 @@
                 </td>
                 <td>
                     <a href="/cloudfarm">
-                        云上农场
+                        认购中心
                         <br>
-                        <span>Cloud&nbsp;Farm</span>
+                        <span>Subscription&nbsp;Farm</span>
                     </a>
                 </td>
                 <td>
-                    <a href="/cloudtravel">云游天下
+                    <a href="/cloudtravel">
+                        云游天下
                         <br>
                         <span>Travel&nbsp;world</span>
                     </a>
@@ -75,21 +75,11 @@
                         <span>About&nbsp;Us</span>
                     </a>
                 </td>
-                <td class="serch">
-                    <div class="am-input-group">
-                        <input type="text" class="am-form-field" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
-                            <span class="am-input-group-btn">
-                                <button class="am-btn am-btn-default" type="button" style="border-bottom-right-radius: 15px;border-top-right-radius: 15px;">
-                                    <span class="am-icon-search"></span>
-                                </button>
-                            </span>
-                    </div>
-                </td>
+
             </tr>
         </table>
     </div>
 </div>
-
 <!-- banner -->
 <div class="banner-grid">
     <div id="visual">
@@ -177,41 +167,16 @@
                         <div style="height: 10px"></div>
                     </td>
                 </tr>
-                <tr class="kinds">
-                    <td id="kinds1" class="hot-goods-class">
-                        <p>
-                            <i class="fa fa-bars " aria-hidden="true "></i>
-                        </p>
-                        <p>全部商品</p>
-                    </td>
-                    <td id="kinds2">
-                        <p>
-                            <i class="fa fa-coffee " aria-hidden="true "></i>
-                        </p>
-                        <p>瓜果类</p>
-                    </td>
-                    <td id="kinds3">
-                        <p>
-                            <i class="fa fa-graduation-cap " aria-hidden="true "></i>
-                        </p>
-                        <p>蔬菜类</p>
-                    </td>
-                    <td id="kinds4">
-                        <p>
-                            <i class="fa fa-mobile " aria-hidden="true "></i>
-                        </p>
-                        <p>其他类</p>
-                    </td>
-                </tr>
+
 
             </table>
             <ul class="hot-goods-img" id="hot-goods-1">
                 @foreach($goods as $good)
-                    @if($good->goods_type == 1 || $good->goods_type == 4)
+                    @if($good->goods_type == 1)
                     <li>
                         <div class="goods-li">
                             <div class="goods-imgs">
-                                <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
+                                <a href="/goods/detail/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
                             </div>
                             <span class="goods-price">￥{{$good->price}}</span>
                             <span class="sales-volume">月销量: {{$good->stocks}}</span>
@@ -226,69 +191,6 @@
                     @endif
                 @endforeach
             </ul>
-            <ul class="hot-goods-img" id="hot-goods-2">
-                @foreach($goods as $good)
-                    @if($good->goods_type == 1)
-                        <li>
-                            <div class="goods-li">
-                                <div class="goods-imgs">
-                                    <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
-                                </div>
-                                <span class="goods-price">￥{{$good->price}}</span>
-                                <span class="sales-volume">月销量: {{$good->stocks}}</span>
-                                <br>
-                                <p class="goods-desc">
-                                    <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
-                                </p>
-                                <span class="goods-origin">{{$good->thisFarm->name}}</span>
-                                <br>
-                            </div>
-                        </li>
-                    @endif
-                @endforeach
-            </ul>
-            <ul class="hot-goods-img" id="hot-goods-3">
-                @foreach($goods as $good)
-                    @if($good->goods_type == 4)
-                        <li>
-                            <div class="goods-li">
-                                <div class="goods-imgs">
-                                    <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
-                                </div>
-                                <span class="goods-price">￥{{$good->price}}</span>
-                                <span class="sales-volume">月销量: {{$good->stocks}}</span>
-                                <br>
-                                <p class="goods-desc">
-                                    <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
-                                </p>
-                                <span class="goods-origin">{{$good->thisFarm->name}}</span>
-                                <br>
-                            </div>
-                        </li>
-                    @endif
-                @endforeach
-            </ul>
-            <ul class="hot-goods-img" id="hot-goods-4">
-                @foreach($goods as $good)
-                    @if($good->goods_type == 1)
-                        <li>
-                            <div class="goods-li">
-                                <div class="goods-imgs">
-                                    <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
-                                </div>
-                                <span class="goods-price">￥{{$good->price}}</span>
-                                <span class="sales-volume">月销量: {{$good->stocks}}</span>
-                                <br>
-                                <p class="goods-desc">
-                                    <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
-                                </p>
-                                <span class="goods-origin">{{$good->thisFarm->name}}</span>
-                                <br>
-                            </div>
-                        </li>
-                    @endif
-                @endforeach
-            </ul>
         </div>
         <div style="clear:both"></div>
         <div class="hot-goods" id="hot-goods">
@@ -300,104 +202,16 @@
                         <div style="height:10px;"></div>
                     </td>
                 </tr>
-                <tr class="kinds">
-                    <td id="meat1" class="hot-goods-class">
-                        <p>
-                            <i class="fa fa-bars " aria-hidden="true"></i>
-                        </p>
-                        <p>所有商品</p>
-                    </td>
-                    <td id="meat2">
-                        <p>
-                            <i class="fa fa-coffee" aria-hidden="true"></i>
-                        </p>
-                        <p>家禽类</p>
-                    </td>
-                    <td id="meat3">
-                        <p>
-                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                        </p>
-                        <p>禽蛋类</p>
-                    </td>
-                    <td id="meat4">
-                        <p>
-                            <i class="fa fa-mobile" aria-hidden="true"></i>
-                        </p>
-                        <p>鲜肉类</p>
-                    </td>
-                </tr>
+
 
             </table>
             <ul class="hot-goods-img" id="hot-meat-1">
-                @foreach($goods as $good)
-                    @if($good->goods_type == 2 || $good->goods_type == 3 || $good->goods_type == 5 )
-                        <li>
-                            <div class="goods-li">
-                                <div class="goods-imgs">
-                                    <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
-                                </div>
-                                <span class="goods-price">￥{{$good->price}}</span>
-                                <span class="sales-volume">月销量: {{$good->stocks}}</span>
-                                <br>
-                                <p class="goods-desc">
-                                    <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
-                                </p>
-                                <span class="goods-origin">{{$good->thisFarm->name}}</span>
-                                <br>
-                            </div>
-                        </li>
-                    @endif
-                @endforeach
-            </ul>
-            <ul class="hot-goods-img" id="hot-meat-2">
                 @foreach($goods as $good)
                     @if($good->goods_type == 2)
                         <li>
                             <div class="goods-li">
                                 <div class="goods-imgs">
-                                    <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
-                                </div>
-                                <span class="goods-price">￥{{$good->price}}</span>
-                                <span class="sales-volume">月销量: {{$good->stocks}}</span>
-                                <br>
-                                <p class="goods-desc">
-                                    <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
-                                </p>
-                                <span class="goods-origin">{{$good->thisFarm->name}}</span>
-                                <br>
-                            </div>
-                        </li>
-                    @endif
-                @endforeach
-            </ul>
-            <ul class="hot-goods-img" id="hot-meat-3">
-                @foreach($goods as $good)
-                    @if($good->goods_type == 5)
-                        <li>
-                            <div class="goods-li">
-                                <div class="goods-imgs">
-                                    <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
-                                </div>
-                                <span class="goods-price">￥{{$good->price}}</span>
-                                <span class="sales-volume">月销量: {{$good->stocks}}</span>
-                                <br>
-                                <p class="goods-desc">
-                                    <a href="/goods/buy/{{$good->id}}">{{$good->description}}</a>
-                                </p>
-                                <span class="goods-origin">{{$good->thisFarm->name}}</span>
-                                <br>
-                            </div>
-                        </li>
-                    @endif
-                @endforeach
-            </ul>
-            <ul class="hot-goods-img" id="hot-meat-4">
-                @foreach($goods as $good)
-                    @if($good->goods_type == 3)
-                        <li>
-                            <div class="goods-li">
-                                <div class="goods-imgs">
-                                    <a href="/goods/buy/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
+                                    <a href="/goods/detail/{{$good->id}}"><img src="/uploads/{{$good->logo}}" alt=" "></a>
                                 </div>
                                 <span class="goods-price">￥{{$good->price}}</span>
                                 <span class="sales-volume">月销量: {{$good->stocks}}</span>

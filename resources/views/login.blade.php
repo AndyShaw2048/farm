@@ -28,9 +28,10 @@
     <link rel="stylesheet" href="css/login-style.css">
     <link rel="stylesheet" href="assets/css/amazeui.min.css" />
     <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="{{url('v2/css/nav_foot.css')}}">
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
-    <link rel="stylesheet" href="css/nav.css">
+
 
     <style>
         .head a {
@@ -42,7 +43,7 @@
         }
 
         .nav-table {
-            width: 100%;
+
             height: 120px;
         }
 
@@ -50,11 +51,14 @@
             position: fixed;
             height: 100px;
             z-index: 9999;
+
         }
 
         .nav {
             height: 100px;
             background: none;
+            width: 1200px;
+            margin:0 auto;
         }
 
         .nav-table td {
@@ -111,16 +115,16 @@
 </head>
 
 <body style="overflow:hidden">
-<div class="am-g head" style="background: none;color: white;">
+<div class="am-g head">
     <div class="nav">
         <table class="nav-table">
             <tr>
                 <td class="logo">
                     <div class="logo-title">
-                        <img class="title" src="{{url('img/标题.png')}}" alt="">
+                        <img class="title" src="{{url('v2/img/标题.png')}}" alt="">
                     </div>
                     <div class="logo-img">
-                        <img src="{{url('img/农牧云3.png')}}" alt="">
+                        <img src="{{url('v2/img/农牧云3.png')}}" alt="">
                     </div>
                 </td>
                 <td>
@@ -138,9 +142,9 @@
                 </td>
                 <td>
                     <a href="/cloudfarm">
-                        云上农场
+                        认购中心
                         <br>
-                        <span>Cloud&nbsp;Farm</span>
+                        <span>Subscription&nbsp;Farm</span>
                     </a>
                 </td>
                 <td>
@@ -164,16 +168,7 @@
                         <span>About&nbsp;Us</span>
                     </a>
                 </td>
-                <td class="serch">
-                    <div class="am-input-group">
-                        <input type="text" class="am-form-field" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
-                            <span class="am-input-group-btn">
-                                <button class="am-btn am-btn-default" type="button" style="border-bottom-right-radius: 15px;border-top-right-radius: 15px;">
-                                    <span class="am-icon-search"></span>
-                                </button>
-                            </span>
-                    </div>
-                </td>
+
             </tr>
         </table>
     </div>

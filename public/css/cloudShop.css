@@ -314,15 +314,17 @@ body {
 .goods-desc {
     width: 92%;
     height: 46px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
+
+
 }
 
 .goods-desc a {
     color: black;
     text-decoration: none;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 
 .goods-desc a:hover {

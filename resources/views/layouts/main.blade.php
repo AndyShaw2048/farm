@@ -24,10 +24,10 @@
             <tr>
                 <td class="logo">
                     <div class="logo-title">
-                        <img class="title" src="{{url('img/标题-黑.png')}}" alt="">
+                        <img class="title" src="{{url('v2/img/标题-黑.png')}}" alt="">
                     </div>
                     <div class="logo-img">
-                        <img src="{{url('img/农牧云3.png')}}" alt="">
+                        <img src="{{url('v2/img/农牧云3.png')}}" alt="">
                     </div>
                 </td>
                 <td>
@@ -35,7 +35,6 @@
                         <br>
                         <span>Home&nbsp; Page</span>
                     </a>
-
                 </td>
                 <td>
                     <a href="/goods">
@@ -46,9 +45,9 @@
                 </td>
                 <td>
                     <a href="/cloudfarm">
-                        云上农场
+                        认购中心
                         <br>
-                        <span>Cloud&nbsp;Farm</span>
+                        <span>Subscription&nbsp;Farm</span>
                     </a>
                 </td>
                 <td>
@@ -59,8 +58,7 @@
                     </a>
                 </td>
                 <td>
-                    <a href="/home">
-                        个人中心
+                    <a href="/home"> 个人中心
                         <br>
                         <span>Personal&nbsp;Center</span>
                     </a>
@@ -73,16 +71,7 @@
                         <span>About&nbsp;Us</span>
                     </a>
                 </td>
-                <td class="serch">
-                    <div class="am-input-group">
-                        <input type="text" class="am-form-field" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
-                            <span class="am-input-group-btn">
-                                <button class="am-btn am-btn-default" type="button" style="border-bottom-right-radius: 15px;border-top-right-radius: 15px;">
-                                    <span class="am-icon-search"></span>
-                                </button>
-                            </span>
-                    </div>
-                </td>
+
             </tr>
         </table>
     </div>

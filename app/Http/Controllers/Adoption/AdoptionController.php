@@ -21,7 +21,7 @@ class AdoptionController extends Controller
     {
         if(!$id) return redirect('/cloudfarm');
         $goods = AdoptionGood::where('id',$id)->firstOrFail();
-        return view('adoption.detail',['goods' => $goods]);
+        return view('v2.buydetail',['goods' => $goods]);
     }
 
     public function store($id,Request $request)
