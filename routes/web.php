@@ -3,7 +3,7 @@ Route::get('/', function () {
     return view('v2.home');
 });
 Route::get('/cloudfarm',function(){
-    $goods = \App\Goods::where('goods_type',7)->get();
+    $goods = \App\Goods::where('goods_type',2)->get();
 //   return view('cloudfarm',['goods'=>$goods]);
     return view('v2.cloudorder',compact('goods'));
 });
