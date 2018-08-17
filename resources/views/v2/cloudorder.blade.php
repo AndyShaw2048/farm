@@ -150,7 +150,7 @@
                                 <big>10只</big>
                                 <span>(截止7月25日)</span>
                             </p>
-                            <a href="#">详情>></a>
+                            <a href="{{url('goods/buy/'.$item->id)}}">详情>></a>
                         </div>
                     </div>
                 </div>
