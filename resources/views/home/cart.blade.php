@@ -89,20 +89,11 @@
                                 <a onclick="delArray()">删除选中商品</a>
                             </td>
                             @endif
-                            {{--<td>--}}
-                                    {{--<span>已选择--}}
-                                        {{--<span style="color: red">4</span> 件商品</span>--}}
-                            {{--</td>--}}
-
                             <td style="text-align: right">
                                 总价
                                 <span style="color: red;font-size: 1.4em">￥ {{Cart::subtotal()}}</span>&nbsp;&nbsp;&nbsp;
                                 <button type="button" class="am-btn am-btn-danger">结算</button>
                             </td>
-                        {{--<td>--}}
-                        {{--<span>已选择--}}
-                        {{--<span style="color: red">4</span> 件商品</span>--}}
-                        {{--</td>--}}
                                 </tr>
                         </table>
             <div style="height: 100px"></div>
