@@ -60,7 +60,11 @@
 .sucess-info {
     width: 50%;
     float: left;
-    padding: 2em 3em;
+    padding: 1.2em 3em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
 }
 
 .sucess-info h1 {
