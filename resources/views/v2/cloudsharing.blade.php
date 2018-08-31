@@ -95,15 +95,21 @@
     <div class="finish-list">
 
         <ul class="am-list">
-            <li><a href="#" class="am-text-truncate"><i class="am-icon-check-circle am-icon-fw"></i>
-                    <span>四川省仪陇县</span><br>
-                    每个人都有一个死角， 自己走不出来，别人也闯不进去别人也闯不进去别人也闯不进去别人也闯不进去别人也闯不进去。
-                </a></li>
-            <li><a href="#" class="am-text-truncate"> <i class="am-icon-check-circle am-icon-fw"></i> <span>四川省仪陇县</span><br>
-                    我把最深沉的秘密放在那里。</a></li>
-            <li><a href="#" class="am-text-truncate"><i class="am-icon-check-circle am-icon-fw"></i> <span>四川省仪陇县</span><br>你不懂我，我不怪你。</a></li>
-            <li><a href="#" class="am-text-truncate"><i class="am-icon-check-circle am-icon-fw"></i> <span>四川省仪陇县</span><br>
-                    每个人都有一个死角， 自己走不出来，别人也闯不进去。</a></li>
+            <li><a href="http://edu.cnr.cn/list/20180727/t20180727_524313987.shtml" class="am-text-truncate"><i class="am-icon-check-circle am-icon-fw"></i>
+                    <span>四川凉山彝族自治州喜德县</span><br>
+                    1.	普通话普及率较低2.	幼儿教师教学水平亟待提升
+                </a>
+            </li>
+            <li><a href="https://xiaoyuan.cycnet.com.cn/s?uid=115544&app_version=1.0.5&sid=73629&time=1533710722&signature=pAG6vDYbegoP2Owr90x84KqRKSqKVbajVBXQnmqNLEMRyzZ3lW&sign=58f010cf98f8672288535026aa62e5c6" class="am-text-truncate"><i class="am-icon-check-circle am-icon-fw"></i>
+                    <span>四川省南充市仪陇县险岩村</span><br>
+                    1.	山高、地势险要交通不是特别方便。2.	年轻人外出务工，村里缺乏劳动力进行生产。3.	村民互联网意识薄弱，没有很好地运用互联网提供更大的方便。
+                </a>
+            </li>
+            <li><a href="https://xiaoyuan.cycnet.com.cn/s?uid=115544&app_version=1.0.5&sid=77193&time=1533710593&signature=mwkzYx0ngZLqblOM65PN7LzBwuPjV21E3GQoepJDX9dv8AB2WR&sign=e2e12b947eb11b34b8ff0c2bd7d1a14a" class="am-text-truncate"><i class="am-icon-check-circle am-icon-fw"></i>
+                    <span>四川省南充市仪陇县玉兰村</span><br>
+                    1.  村民垃圾分类意识薄弱。 2.  仍有乱排放的现象。
+                </a>
+            </li>
         </ul>
         <a href="" class="more">更多>></a>
     </div>
@@ -125,8 +131,8 @@
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;西华师范大学数学与信息学院小分队西华师范大学数学与信息学院小分队西华师范大学数学与信息学院小分队西华师范大学数学与信息学院小分队</p>
         <button type="button" class="am-btn am-btn-warning">阅读更多</button>
     </div>
-    <div class="sucess-img"><img src="{{url('v2/img/chicken.jpg')}}" alt=""></div>
-    <div class="sucess-img"><img src="{{url('v2/img/chicken.jpg')}}" alt=""></div>
+    <div class="sucess-img"><img src="{{url('v2/img/sharing_1.jpg')}}" alt=""></div>
+    <div class="sucess-img"><img src="{{url('v2/img/sharing_2.jpg')}}" alt=""></div>
     <div class="sucess-info">
         <h1>西华师范大学数学与信息学院小分队</h1>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;西华师范大学数学与信息学院小分队西华师范大学数学与信息学院小分队西华师范大学数学与信息学院小分队西华师范大学数学与信息学院小分队</p>
