@@ -111,6 +111,7 @@
         <div class="list-content list{{$key%3 + 1}}">
             <img src="{{url('uploads/'.$item->logo)}}" alt="">
             <span class="name">{{$item->name}}</span>
+            <br>
             <span class="new-price">￥{{$item->price}}/{{$item->unit}}</span>
             <span class="old-price">￥{{$item->price+4.25}}/{{$item->unit}}</span>
             <p class="goods-desc">{{$item->description}}</p>
