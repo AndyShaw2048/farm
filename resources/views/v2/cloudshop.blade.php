@@ -52,6 +52,13 @@
                     </a>
                 </td>
                 <td>
+                    <a href="/cloudsharing">
+                        云公益
+                        <br>
+                        <span>Cloud&nbsp;Sharing</span>
+                    </a>
+                </td>
+                <td>
                     <a href="/home"> 个人中心
                         <br>
                         <span>Personal&nbsp;Center</span>

@@ -1,0 +1,126 @@
+.slider {
+    margin-bottom: 10px;
+}
+
+.sharing {
+    width: 1200px;
+    margin: 30px auto;
+}
+
+.sharing h1 {
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 5px;
+    font-weight: normal;
+}
+
+.sharing span {
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+.finish-list {
+    width: 42%;
+    float: left;
+}
+
+.finish-slider {
+    width: 50%;
+    float: right;
+}
+
+.sharing h3 {
+    font-size: 1.2em;
+    font-weight: normal;
+    text-align: center;
+    color: orange;
+    margin-top: 0;
+}
+
+.sharing .more {
+    float: right;
+}
+
+.am-list>li>a {
+    padding: 0.7rem 0;
+}
+
+.sucess {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.sucess h1 {
+    margin-top: 50px;
+    font-size: 2.6em;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.sucess-info {
+    width: 50%;
+    float: left;
+    padding: 2em 3em;
+}
+
+.sucess-info h1 {
+    font-size: 1.6em;
+}
+
+.sucess-img {
+    width: 50%;
+    float: left;
+}
+
+.sucess-img img {
+    width: 100%;
+}
+
+.nice-team {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.nice-team h1 {
+    margin-top: 50px;
+    font-size: 2.6em;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.cooperate-desc {
+    width: 100%;
+    height: 400px;
+    background: url(../img/blackPig.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.list-desc {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    letter-spacing: 5px;
+}
+
+.list-desc h1 {
+    padding-top: 80px;
+}
+
+.list-desc h2 {
+    margin-top: 0.5em;
+    margin-right: 170px;
+    float: left;
+}
+
+.list-desc h2:last-child {
+    margin-right: 0px;
+}
+
+.list-desc h2 span {
+    color: orange;
+    letter-spacing: 5px;
+    font-weight: normal;
+}

@@ -52,6 +52,13 @@
                     </a>
                 </td>
                 <td>
+                    <a href="/cloudsharing">
+                        云公益
+                        <br>
+                        <span>Cloud&nbsp;Sharing</span>
+                    </a>
+                </td>
+                <td>
                     <a href="/home"> 个人中心
                         <br>
                         <span>Personal&nbsp;Center</span>
@@ -73,7 +80,7 @@
 <div class="am-g">
     <div class="mp4" id="changeImg">
         <video id="vedio" width="100%" height="100%" autoplay loop="true">
-            <source src="{{url('audio/movie.mp4')}}" type="video/mp4"> 您的浏览器不支持此种视频格式。
+            <source src="{{url('audio/index.mp4')}}" type="video/mp4"> 您的浏览器不支持此种视频格式。
         </video>
     </div>
 </div>

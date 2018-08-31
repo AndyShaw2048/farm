@@ -3,26 +3,24 @@
     padding: 0;
 }
 
-body {
-    /* background-image: url(../img/cloudTravel-img/gulouImg1.JPG);
-    background-size: cover;
-    background-repeat: no-repeat; */
+/* end导航 */
+
+.return {
+    position: fixed;
+    opacity: 0.6;
 }
 
-/* end导航 */
+.return button {
+    background: orange;
+    color: white;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+}
 
 #main {
     padding-top: 100px;
     height: 1200px;
-    background-image: url(../img/cloudTravel-img/gulouImg1.JPG);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#provence {
-    padding-top: 100px;
-    height: 1270px;
-    display: none;
     background-image: url(../img/cloudTravel-img/gulouImg1.JPG);
     background-size: cover;
     background-repeat: no-repeat;
@@ -219,6 +217,19 @@ body {
     height: 189px;
     top: -1775px;
     left: 739px;
+}
+
+.yilong-cooperate0 {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+    animation: scale infinite 1s;
+    top: -156px;
+    left: 112px;
+    z-index: 9999;
+    cursor: pointer;
 }
 
 /* 阆中 */

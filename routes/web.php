@@ -7,6 +7,9 @@ Route::get('/cloudfarm',function(){
 //   return view('cloudfarm',['goods'=>$goods]);
     return view('v2.cloudorder',compact('goods'));
 });
+Route::get('/cloudsharing',function(){
+    return view('v2.cloudsharing');
+});
 Route::get('/aboutus',function(){
     return view('aboutus');
 });
