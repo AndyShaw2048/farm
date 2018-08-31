@@ -24,11 +24,11 @@
         <table class="nav-table">
             <tr>
                 <td class="logo">
-                    <div class="logo-title">
-                        <img class="title" src="{{url('v2/img/标题-黑.png')}}" alt="">
-                    </div>
+                    <!-- <div class="logo-title">
+                        <img class="title" src="img/标题.png" alt="">
+                    </div> -->
                     <div class="logo-img">
-                        <img src="{{url('v2/img/农牧云3.png')}}" alt="">
+                        <img src="{{url('v2/img/logo.png')}}" alt="">
                     </div>
                 </td>
                 <td>
