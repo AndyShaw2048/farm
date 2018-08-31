@@ -128,14 +128,14 @@
     <h1>公益足迹</h1>
     <div class="sucess-info">
         <h1>西华师范大学数学与信息学院小分队</h1>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;西华师范大学数学与信息学院小分队西华师范大学数学与信息学院小分队西华师范大学数学与信息学院小分队西华师范大学数学与信息学院小分队</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2018年7月17日至18日，西华师范大学“走进仪陇红色老区，助力乡村电商扶贫”暑假实践队一行来到了四川省南充市仪陇县马鞍镇瓦子坪村进行了实地的调研，学习该村的脱贫经验。村支部书记代旭初热情地接待了实践队员，并向他们讲解村中现在的脱贫的基本情况，并带领团队走访村中农户，实地考察脱贫后的现状，讲解之后村中脱贫攻坚工作的开展……</p>
         <button type="button" class="am-btn am-btn-warning">阅读更多</button>
     </div>
     <div class="sucess-img"><img src="{{url('v2/img/sharing_1.jpg')}}" alt=""></div>
     <div class="sucess-img"><img src="{{url('v2/img/sharing_2.jpg')}}" alt=""></div>
     <div class="sucess-info">
-        <h1>西华师范大学数学与信息学院小分队</h1>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;西华师范大学数学与信息学院小分队西华师范大学数学与信息学院小分队西华师范大学数学与信息学院小分队西华师范大学数学与信息学院小分队</p>
+        <h1>西华师范大学学前与初等教育学院小分队</h1>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;南充市嘉陵区木老乡有是一个村，但其中百分之八十左右的幼儿父母在外打工或者做生意。由于父母不在身边，而留守在村里的老年人由于思想陈旧，无法认识到学龄前儿童幼小衔接的重要性，以导致孩子无法很好地适应小学生活。为了普及幼小衔接的重要意义，并帮助处于乡村的家长们充分认识到幼小衔接教育的重要性。7月12日上午8点，西华师范大学学前与初等教育学院"你我童在，爱心启航"社会实践团队出发前往木老村唐家嘴社区开展幼小衔接教育知识调研和宣讲活动……</p>
         <button type="button" class="am-btn am-btn-warning">阅读更多</button>
     </div>
 </div>
