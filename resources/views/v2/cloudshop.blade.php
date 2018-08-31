@@ -112,7 +112,7 @@
             <img src="{{url('uploads/'.$item->logo)}}" alt="">
             <span class="name">{{$item->name}}</span>
             <span class="new-price">￥{{$item->price}}/{{$item->unit}}</span>
-            <span class="old-price">￥{{$item->price+3.36}}/斤</span>
+            <span class="old-price">￥{{$item->price+4.25}}/{{$item->unit}}</span>
             <p class="goods-desc">{{$item->description}}</p>
         </div></a>
         @endforeach
